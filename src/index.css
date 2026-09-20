@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --bg-obsidian: #08080A;
+    --bg-card: #0F0F14;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --neon-magenta: #D926A9;
+    --neon-cyan: #00D2FF;
+  }
+
+  body {
+    background-color: #08080A;
+    color: #F3F4F6;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Minimal custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #08080A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #20202A;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D926A9;
+  }
+}
+
+@layer utilities {
+  .luxury-glass {
+    background: linear-gradient(180deg, rgba(20, 20, 26, 0.75) 0%, rgba(12, 12, 16, 0.85) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .luxury-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .luxury-card-hover:hover {
+    border-color: rgba(217, 38, 169, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(217, 38, 169, 0.15);
+  }
+
+  .text-glow-subtle {
+    text-shadow: 0 0 20px rgba(217, 38, 169, 0.4);
+  }
+}

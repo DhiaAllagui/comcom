@@ -1,0 +1,37 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Agent skills cache
+.agents/
+
+# Large media files exceeding GitHub 100MB limit
+*.mov
+*.mp4
+public/*.mov
+public/*.mp4
+src/images/*.mov
+src/images/*.mp4
+comcom/*.xml
+comcom/*.docx
