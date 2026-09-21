@@ -8,6 +8,7 @@ const categories = ['All', 'Events & Expo', 'Studios', 'Advertising'];
 
 function ProjectCard({ project, idx, onSelect }) {
   const [ref, isVisible] = useReveal();
+  const [activeImg, setActiveImg] = useState(project.thumbnail);
   // Bento layout: first card spans 2 columns on large screens
   const spanClass = idx === 0 ? 'lg:col-span-2' : '';
 
@@ -23,17 +24,17 @@ function ProjectCard({ project, idx, onSelect }) {
       className={`reveal ${isVisible ? 'is-visible' : ''} spotlight-card group cursor-pointer rounded-sm overflow-hidden card-surface flex flex-col ${spanClass}`}
       style={{ transitionDelay: `${(idx % 3) * 80}ms` }}
     >
-      {/* Thumbnail */}
+      {/* Thumbnail with interactive gallery */}
       <div className={`relative w-full overflow-hidden bg-black ${idx === 0 ? 'h-72 sm:h-96' : 'h-64 sm:h-72'}`}>
         <img
-          src={project.thumbnail}
+          src={activeImg || project.thumbnail}
           alt={project.title}
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, transparent 40%, rgba(6,7,10,0.75) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, transparent 40%, rgba(6,7,10,0.85) 100%)' }} />
 
-        <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
+        <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
           <span className="badge-mono">
             {project.division}
           </span>
@@ -41,6 +42,31 @@ function ProjectCard({ project, idx, onSelect }) {
             {project.location}
           </span>
         </div>
+
+        {/* Gallery Preview Badges if project has multiple images */}
+        {project.gallery && project.gallery.length > 1 && (
+          <div className="absolute bottom-3 left-4 flex items-center gap-1.5 z-10">
+            {project.gallery.map((img, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveImg(img);
+                }}
+                className={`w-9 h-7 rounded-sm overflow-hidden border transition-all ${
+                  activeImg === img ? 'border-accent ring-1 ring-accent' : 'border-white/30 opacity-70 hover:opacity-100'
+                }`}
+                title={`Preview image ${i + 1}`}
+              >
+                <img src={img} alt="" className="w-full h-full object-cover" />
+              </button>
+            ))}
+            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-sm bg-void/80 text-ink-primary border border-border-subtle ml-1">
+              {project.gallery.length} Images
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Text */}
@@ -63,6 +89,21 @@ function ProjectCard({ project, idx, onSelect }) {
             ))}
           </div>
         </div>
+
+        {project.externalUrl && (
+          <div className="pt-2">
+            <a
+              href={project.externalUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-sm bg-accent/15 border border-accent/30 text-accent-strong hover:bg-accent hover:text-white text-[11px] font-mono transition-all"
+            >
+              <span>globalvillagetunisia.com</span>
+              <ArrowUpRight className="w-3 h-3" />
+            </a>
+          </div>
+        )}
 
         <div className="pt-4 border-t border-border-subtle flex items-center justify-between">
           <span className="text-[11px] font-mono text-ink-tertiary">
@@ -96,6 +137,7 @@ export default function Portfolio() {
 
   return (
     <section id="portfolio" className="relative py-28 bg-surface-base border-t border-border-subtle">
+      <div id="flagship" className="absolute -top-20" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -147,7 +189,9 @@ export default function Portfolio() {
             category: selectedProject.division,
             client: "COMCOM Group Portfolio",
             year: "Documented Achievement",
-            deliverables: selectedProject.highlights
+            deliverables: selectedProject.highlights,
+            gallery: selectedProject.gallery,
+            externalUrl: selectedProject.externalUrl
           }}
           onClose={() => setSelectedProject(null)}
         />

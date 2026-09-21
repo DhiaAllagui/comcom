@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { X, MapPin, Calendar, ArrowRight, ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
+import { X, MapPin, Calendar, ArrowRight, ChevronLeft, ChevronRight, MessageCircle, ExternalLink } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   const [activeImageIdx, setActiveImageIdx] = useState(0);
@@ -184,7 +184,19 @@ export default function ProjectModal({ project, onClose }) {
             Direct coordination available via Dubai Executive Desk.
           </div>
 
-          <div className="flex items-center gap-3 w-full sm:w-auto">
+          <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+            {project.externalUrl && (
+              <a
+                href={project.externalUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary flex-1 sm:flex-none flex items-center justify-center gap-2 !py-2.5 border-accent/40 text-accent-strong hover:bg-accent hover:text-white"
+              >
+                <span>Visit Official Website</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+
             <a
               href={`https://wa.me/971552538556?text=Hello%20COMCOM%20Group%2C%20I%20am%20interested%20in%20a%20production%20similar%20to%20your%20case%20study%3A%20${encodeURIComponent(project.title)}`}
               target="_blank"

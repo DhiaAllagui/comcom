@@ -1,8 +1,10 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import AudienceRouter from './components/AudienceRouter';
 import Services from './components/Services';
 import Ventures from './components/Ventures';
+import TunisiaLab from './components/TunisiaLab';
 import Portfolio from './components/Portfolio';
 import About from './components/About';
 import ContactSection from './components/ContactSection';
@@ -13,23 +15,40 @@ import { MessageCircle } from 'lucide-react';
 export default function App() {
   return (
     <div className="min-h-screen bg-void text-ink-primary selection:bg-accent selection:text-white relative">
-      {/* Header */}
+      {/* Header Navigation */}
       <Navbar />
 
-      {/* Main Agency Sections */}
+      {/* Main Agency & Conglomerate Architecture */}
       <main>
+        {/* 1. Global Holding & Tri-Engine Hero with Transcoded Video Background */}
         <Hero />
+
+        {/* 2. Three Intent Pathways (Investors, Brands & Governments, Talent) */}
+        <AudienceRouter />
+
+        {/* 3. The Tri-Engine Model & 8 Operational Divisions */}
         <Services />
+
+        {/* 4. Proprietary Labels, Digital Magazines & Featured Podcast ("Drawers — أدراج") */}
         <Ventures />
+
+        {/* 5. "The Lab" & Regional Production Hub (Tunisia: Winkom, COM COM, Pro Skills, Magic Box) */}
+        <TunisiaLab />
+
+        {/* 6. Proven Track Record & Global Summits (AAIC Riyadh, Street Food Fest Tunis, Rap Tour) */}
         <Portfolio />
+
+        {/* 7. Institutional Corporate Governance & Delaware Holding */}
         <About />
+
+        {/* 8. Global Briefing & Institutional Inquiries */}
         <ContactSection />
       </main>
 
-      {/* Footer */}
+      {/* 9. Global Footprint 4-Hub Pillars & Unified Footer */}
       <Footer />
 
-      {/* Direct WhatsApp Action */}
+      {/* Direct WhatsApp Action Button */}
       <aside aria-label="Direct contact" className="fixed bottom-6 right-6 z-40">
         <a
           href={agencyInfo.whatsappUrl}

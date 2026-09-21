@@ -28,10 +28,11 @@ dist-ssr
 
 # Large media files exceeding GitHub 100MB limit
 *.mov
-*.mp4
 public/*.mov
-public/*.mp4
-src/images/*.mov
-src/images/*.mp4
+src/video/*.mov
+*.mp4
+!public/comcom-logo.mp4
+!public/comcom-logo-mobile.mp4
+!public/comcom-bg.mp4
 comcom/*.xml
 comcom/*.docx
