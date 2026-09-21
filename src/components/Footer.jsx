@@ -1,5 +1,5 @@
 import React from 'react';
-import { agencyInfo, navLinks, divisions, proprietaryLabels, digitalMagazines } from '../data/agencyData';
+import { agencyInfo } from '../data/agencyData';
 import { MessageCircle } from 'lucide-react';
 
 const InstagramIcon = () => (
@@ -27,38 +27,38 @@ const YoutubeIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#070709] border-t border-white/[0.08] pt-20 pb-12">
+    <footer className="relative bg-void border-t border-border-subtle pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Top Sitemap Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
-          
+
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-3.5">
-              <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-white shadow-md p-1">
+              <div className="flex items-center justify-center h-11 w-11 rounded-sm bg-white p-1">
                 <img
-                  src="/comcom-emblem.webp"
+                  src="/comcom-logo-wordmark.png"
                   alt="COMCOM Group Emblem"
                   className="h-full w-full object-contain"
                 />
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
-                  <span className="font-heading font-black tracking-tight text-lg text-white">
+                  <span className="font-display font-medium tracking-tight text-lg text-ink-primary">
                     COMCOM
                   </span>
-                  <span className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-white/[0.08] text-slate-300 uppercase tracking-widest">
-                    GROUP
+                  <span className="font-mono text-[9px] px-1.5 py-0.5 rounded-sm bg-white/[0.06] text-ink-secondary uppercase tracking-widest">
+                    Group
                   </span>
                 </div>
-                <span className="text-[10px] tracking-wider uppercase font-mono text-slate-400">
-                  Creative Solutions • UAE Holding
+                <span className="text-[10px] tracking-wider uppercase font-mono text-ink-tertiary">
+                  Creative Solutions · UAE Holding
                 </span>
               </div>
             </div>
 
-            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+            <p className="text-ink-tertiary text-xs sm:text-sm leading-relaxed max-w-sm">
               An international creative solutions holding based in the United Arab Emirates. Operating Free Zone accredited specialized agencies in audiovisual production, large-scale exhibitions, multichannel advertising, venture academies, and digital publishing.
             </p>
 
@@ -67,7 +67,7 @@ export default function Footer() {
                 href={agencyInfo.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/[0.04] hover:bg-emerald-950/60 border border-white/[0.08] hover:border-emerald-500/40 text-slate-400 hover:text-emerald-400 flex items-center justify-center transition-colors"
+                className="w-11 h-11 rounded-sm border border-border-subtle hover:border-border-default text-ink-tertiary hover:text-ink-primary flex items-center justify-center transition-colors"
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="w-4 h-4" />
@@ -76,7 +76,7 @@ export default function Footer() {
                 href={agencyInfo.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] border border-white/[0.08] text-slate-400 hover:text-white flex items-center justify-center transition-colors"
+                className="w-11 h-11 rounded-sm border border-border-subtle hover:border-border-default text-ink-tertiary hover:text-ink-primary flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <InstagramIcon />
@@ -85,7 +85,7 @@ export default function Footer() {
                 href={agencyInfo.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] border border-white/[0.08] text-slate-400 hover:text-white flex items-center justify-center transition-colors"
+                className="w-11 h-11 rounded-sm border border-border-subtle hover:border-border-default text-ink-tertiary hover:text-ink-primary flex items-center justify-center transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedinIcon />
@@ -94,7 +94,7 @@ export default function Footer() {
                 href={agencyInfo.socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] border border-white/[0.08] text-slate-400 hover:text-white flex items-center justify-center transition-colors"
+                className="w-11 h-11 rounded-sm border border-border-subtle hover:border-border-default text-ink-tertiary hover:text-ink-primary flex items-center justify-center transition-colors"
                 aria-label="YouTube"
               >
                 <YoutubeIcon />
@@ -104,93 +104,49 @@ export default function Footer() {
 
           {/* Operating Divisions */}
           <div className="space-y-3">
-            <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-white mb-4">
+            <h4 className="font-display font-medium text-xs uppercase tracking-widest text-ink-primary mb-4">
               Operating Divisions
             </h4>
-            <ul className="space-y-2 text-xs text-slate-400">
-              <li>
-                <a href="#divisions" className="hover:text-white transition-colors">
-                  COMCOM Studios
-                </a>
-              </li>
-              <li>
-                <a href="#divisions" className="hover:text-white transition-colors">
-                  COMCOM Events &amp; Expo
-                </a>
-              </li>
-              <li>
-                <a href="#divisions" className="hover:text-white transition-colors">
-                  COMCOM Advertising &amp; Media
-                </a>
-              </li>
-              <li>
-                <a href="#divisions" className="hover:text-white transition-colors">
-                  COMCOM Training
-                </a>
-              </li>
-              <li>
-                <a href="#divisions" className="hover:text-white transition-colors">
-                  COMCOM Tourism
-                </a>
-              </li>
-              <li>
-                <a href="#divisions" className="hover:text-white transition-colors">
-                  COMCOM Trading
-                </a>
-              </li>
+            <ul className="space-y-2 text-xs text-ink-tertiary">
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">COMCOM Studios</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">COMCOM Events &amp; Expo</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">COMCOM Advertising &amp; Media</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">COMCOM Training</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">COMCOM Tourism</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">COMCOM Trading</a></li>
             </ul>
           </div>
 
           {/* Proprietary Labels */}
           <div className="space-y-3">
-            <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-white mb-4">
+            <h4 className="font-display font-medium text-xs uppercase tracking-widest text-ink-primary mb-4">
               Labels &amp; Academies
             </h4>
-            <ul className="space-y-2 text-xs text-slate-400">
-              <li>
-                <a href="#labels" className="hover:text-pink-300 transition-colors">
-                  CIA (Central Influencers Agency)
-                </a>
-              </li>
-              <li>
-                <a href="#labels" className="hover:text-white transition-colors">
-                  Influencers International Academy
-                </a>
-              </li>
-              <li>
-                <a href="#labels" className="hover:text-white transition-colors">
-                  Start Up Academy
-                </a>
-              </li>
-              <li>
-                <a href="#labels" className="hover:text-white transition-colors">
-                  IMS (Medical Services)
-                </a>
-              </li>
-              <li>
-                <a href="#labels" className="hover:text-white transition-colors">
-                  ITS (Tourism Services)
-                </a>
-              </li>
+            <ul className="space-y-2 text-xs text-ink-tertiary">
+              <li><a href="#labels" className="hover:text-accent-strong transition-colors">CIA (Central Influencers Agency)</a></li>
+              <li><a href="#labels" className="hover:text-ink-primary transition-colors">Influencers International Academy</a></li>
+              <li><a href="#labels" className="hover:text-ink-primary transition-colors">Start Up Academy</a></li>
+              <li><a href="#labels" className="hover:text-ink-primary transition-colors">IMS (Medical Services)</a></li>
+              <li><a href="#labels" className="hover:text-ink-primary transition-colors">ITS (Tourism Services)</a></li>
             </ul>
           </div>
 
           {/* Digital Magazines & Headquarters */}
-          <div className="space-y-4 font-mono text-xs text-slate-400">
+          <div className="space-y-4 font-mono text-xs text-ink-tertiary">
             <div>
-              <h4 className="font-heading font-bold text-xs uppercase tracking-widest text-white mb-3">
+              <h4 className="font-display font-medium text-xs uppercase tracking-widest text-ink-primary mb-3">
                 Digital Publishing
               </h4>
-              <ul className="space-y-1.5 text-xs text-slate-400">
-                <li><a href="#media" className="hover:text-neon-cyan transition-colors">Influencers Mag</a></li>
-                <li><a href="#media" className="hover:text-neon-cyan transition-colors">Start Up Mag</a></li>
-                <li><a href="#media" className="hover:text-neon-cyan transition-colors">Mag Santé</a></li>
-                <li><a href="#media" className="hover:text-neon-cyan transition-colors">Destinations Mag</a></li>
+              <ul className="space-y-1.5 text-xs text-ink-tertiary">
+                <li><a href="#media" className="hover:text-accent-strong transition-colors">Influencers Mag</a></li>
+                <li><a href="#media" className="hover:text-accent-strong transition-colors">Start Up Mag</a></li>
+                <li><a href="#media" className="hover:text-accent-strong transition-colors">Mag Santé</a></li>
+                <li><a href="#media" className="hover:text-accent-strong transition-colors">Destinations Mag</a></li>
               </ul>
             </div>
 
-            <div className="pt-2 border-t border-white/[0.08]">
-              <div className="text-white font-semibold mb-1">Dubai Headquarters</div>
+            <div className="pt-2 border-t border-border-subtle">
+              <div className="text-ink-primary font-semibold mb-1">Dubai Headquarters</div>
               <div>{agencyInfo.hq}</div>
               <div>Phone: {agencyInfo.phone}</div>
               <div>Email: {agencyInfo.email}</div>
@@ -200,16 +156,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
+        <div className="pt-8 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-ink-tertiary">
           <div>
             © {new Date().getFullYear()} COMCOM GROUP FZC LLC. All rights reserved. Free Zone Accredited, Dubai, UAE.
           </div>
           <div className="flex items-center gap-6">
             <span>comcomgroup.com</span>
-            <span>•</span>
-            <a href="#divisions" className="hover:text-white transition-colors">Privacy Policy</a>
-            <span>•</span>
-            <a href="#contact" className="hover:text-white transition-colors">Terms of Service</a>
+            <span>·</span>
+            <a href="#divisions" className="hover:text-ink-primary transition-colors">Privacy Policy</a>
+            <span>·</span>
+            <a href="#contact" className="hover:text-ink-primary transition-colors">Terms of Service</a>
           </div>
         </div>
 

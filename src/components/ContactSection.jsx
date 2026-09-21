@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { agencyInfo } from '../data/agencyData';
-import { Phone, Mail, MapPin, MessageCircle, Send, CheckCircle2 } from 'lucide-react';
+import { MessageCircle, Send, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { useReveal } from '../hooks/useReveal';
 
 const departmentContacts = [
   { name: "Group Headquarters", email: "contact@comcomgroup.ae", phone: "+971 4 567 8901" },
@@ -23,6 +24,9 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+  const [headerRef, headerVisible] = useReveal();
+  const [leftRef, leftVisible] = useReveal();
+  const [rightRef, rightVisible] = useReveal();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -43,10 +47,10 @@ export default function ContactSection() {
       setSubmitted(true);
       try {
         confetti({
-          particleCount: 70,
-          spread: 60,
+          particleCount: 50,
+          spread: 55,
           origin: { y: 0.65 },
-          colors: ['#D926A9', '#00D2FF', '#FFFFFF']
+          colors: ['#E31A94', '#E843A7', '#F5F6F8']
         });
       } catch (err) {}
     }, 700);
@@ -62,48 +66,48 @@ export default function ContactSection() {
   );
 
   return (
-    <section id="contact" className="relative py-28 bg-[#0A0A0E] border-t border-white/[0.08]">
+    <section id="contact" className="relative py-28 bg-surface-base border-t border-border-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="font-mono text-xs uppercase tracking-widest text-neon-magenta font-semibold block mb-3">
-            Group Coordination
+        <div ref={headerRef} className={`reveal-blur ${headerVisible ? 'is-visible' : ''} text-center max-w-3xl mx-auto mb-20`}>
+          <span className="eyebrow block mb-3">
+            // 06 Group Coordination
           </span>
-          <h2 className="font-heading font-black text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight mb-6">
+          <h2 className="font-display font-medium text-3xl sm:text-5xl lg:text-6xl text-ink-primary tracking-tight mb-6">
             Connect with Our Agencies
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-ink-secondary text-sm sm:text-base leading-relaxed">
             To discuss your creative solutions, audiovisual productions, large-scale exhibitions, or advertising needs, please contact our specialized desks below.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left: Department Desks */}
-          <div className="lg:col-span-5 space-y-4">
-            <div className="p-8 rounded-3xl bg-[#111117] border border-white/[0.08] space-y-6">
+          <div ref={leftRef} className={`reveal ${leftVisible ? 'is-visible' : ''} lg:col-span-5 space-y-4`}>
+            <div className="card-surface p-8 space-y-6">
               <div>
-                <h3 className="font-heading font-bold text-xl text-white mb-1">
+                <h3 className="font-display font-medium text-xl text-ink-primary mb-1">
                   Accredited Division Desks
                 </h3>
-                <p className="text-slate-400 text-xs font-mono">
+                <p className="text-ink-tertiary text-xs font-mono">
                   Direct contact points across COMCOM Group departments
                 </p>
               </div>
 
               <div className="space-y-3">
                 {departmentContacts.map((dept, i) => (
-                  <div key={i} className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-1">
-                    <div className="font-heading font-bold text-xs uppercase tracking-wider text-white">
+                  <div key={i} className="p-4 rounded-sm border border-border-subtle space-y-1">
+                    <div className="font-semibold text-xs uppercase tracking-wider text-ink-primary">
                       {dept.name}
                     </div>
-                    <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-slate-400">
-                      <a href={`mailto:${dept.email}`} className="text-pink-300 hover:text-white transition-colors">
+                    <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-ink-tertiary">
+                      <a href={`mailto:${dept.email}`} className="text-accent-strong hover:text-ink-primary transition-colors">
                         {dept.email}
                       </a>
-                      <span>•</span>
-                      <a href={`tel:${dept.phone.replace(/\s+/g, '')}`} className="text-slate-300 hover:text-white transition-colors">
+                      <span>·</span>
+                      <a href={`tel:${dept.phone.replace(/\s+/g, '')}`} className="text-ink-secondary hover:text-ink-primary transition-colors">
                         {dept.phone}
                       </a>
                     </div>
@@ -117,37 +121,37 @@ export default function ContactSection() {
                   href={agencyInfo.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-between p-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 hover:border-emerald-400 hover:bg-emerald-900/40 transition-all group"
+                  className="w-full flex items-center justify-between p-4 rounded-sm border border-border-default hover:border-border-strong transition-all group"
                 >
                   <div className="flex items-center gap-3">
-                    <MessageCircle className="w-5 h-5 text-emerald-400" />
+                    <MessageCircle className="w-5 h-5 text-accent-strong" />
                     <div>
-                      <div className="text-[10px] uppercase font-mono tracking-wider text-emerald-400">Direct WhatsApp Line</div>
-                      <div className="text-sm font-bold text-white">+971 55 253 8556</div>
+                      <div className="text-[10px] uppercase font-mono tracking-wider text-ink-tertiary">Direct WhatsApp Line</div>
+                      <div className="text-sm font-semibold text-ink-primary">+971 55 253 8556</div>
                     </div>
                   </div>
-                  <span className="text-xs font-mono text-emerald-400 group-hover:translate-x-1 transition-transform">→</span>
+                  <span className="text-xs font-mono text-accent-strong group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Right: Clean Multi-Division Form */}
-          <div className="lg:col-span-7">
-            <div className="p-8 sm:p-10 rounded-3xl bg-[#111117] border border-white/[0.08] shadow-2xl">
-              
+          {/* Right: Form */}
+          <div ref={rightRef} className={`reveal ${rightVisible ? 'is-visible' : ''} lg:col-span-7`} style={{ transitionDelay: '120ms' }}>
+            <div className="card-surface p-8 sm:p-10 shadow-lg">
+
               {submitted ? (
-                <div className="py-12 text-center space-y-6 animate-in fade-in duration-300">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-white/[0.06] border border-neon-magenta flex items-center justify-center">
-                    <CheckCircle2 className="w-8 h-8 text-neon-magenta" />
+                <div className="py-12 text-center space-y-6">
+                  <div className="w-16 h-16 mx-auto rounded-full border border-accent flex items-center justify-center">
+                    <CheckCircle2 className="w-8 h-8 text-accent-strong" />
                   </div>
 
-                  <h3 className="font-heading font-black text-2xl sm:text-3xl text-white">
+                  <h3 className="font-display font-medium text-2xl sm:text-3xl text-ink-primary">
                     Inquiry Received by {formData.department}
                   </h3>
 
-                  <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
-                    Thank you, <strong className="text-white">{formData.name}</strong>. Your project parameters have been routed to the senior director of <span className="text-white font-semibold">{formData.department}</span>. We will follow up via <span className="text-white font-semibold">{formData.email}</span>.
+                  <p className="text-ink-secondary text-sm max-w-md mx-auto leading-relaxed">
+                    Thank you, <strong className="text-ink-primary">{formData.name}</strong>. Your project parameters have been routed to the senior director of <span className="text-ink-primary font-semibold">{formData.department}</span>. We will follow up via <span className="text-ink-primary font-semibold">{formData.email}</span>.
                   </p>
 
                   <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -155,7 +159,7 @@ export default function ContactSection() {
                       href={`https://wa.me/971552538556?text=${waPreFilledText}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full sm:w-auto px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2"
+                      className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2"
                     >
                       <MessageCircle className="w-4 h-4" />
                       <span>Send Direct via WhatsApp</span>
@@ -163,7 +167,7 @@ export default function ContactSection() {
 
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="w-full sm:w-auto px-6 py-3 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-slate-300 text-xs font-semibold uppercase tracking-wider"
+                      className="btn-secondary w-full sm:w-auto"
                     >
                       Submit Another Inquiry
                     </button>
@@ -171,42 +175,42 @@ export default function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  
-                  <div className="border-b border-white/[0.08] pb-4">
-                    <h3 className="font-heading font-bold text-xl text-white">
+
+                  <div className="border-b border-border-subtle pb-4">
+                    <h3 className="font-display font-medium text-xl text-ink-primary">
                       Direct Department Inquiry Form
                     </h3>
-                    <p className="text-xs text-slate-400 font-mono mt-0.5">
+                    <p className="text-xs text-ink-tertiary font-mono mt-0.5">
                       Confidential brief submission to COMCOM Group headquarters
                     </p>
                   </div>
 
                   {errorMsg && (
-                    <div className="p-3 rounded-xl bg-red-950/60 border border-red-500/40 text-red-200 text-xs font-mono">
+                    <div className="p-3 rounded-sm border border-red-500/40 text-red-300 text-xs font-mono" style={{ background: 'rgba(239,68,68,0.08)' }}>
                       {errorMsg}
                     </div>
                   )}
 
                   {/* Department Selector */}
                   <div className="space-y-1.5">
-                    <label className="block font-mono text-xs uppercase tracking-wider text-slate-300">
+                    <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                       Select Department / Division *
                     </label>
                     <select
                       name="department"
                       value={formData.department}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-xl bg-[#08080A] border border-white/[0.1] focus:border-white text-sm text-white outline-none"
+                      className="field-input w-full"
                     >
                       {departmentContacts.map((dept) => (
-                        <option key={dept.name} value={dept.name} className="bg-[#08080A]">
+                        <option key={dept.name} value={dept.name} className="bg-surface-elevated">
                           {dept.name} ({dept.email})
                         </option>
                       ))}
-                      <option value="Central Influencers Agency (CIA)" className="bg-[#08080A]">
+                      <option value="Central Influencers Agency (CIA)" className="bg-surface-elevated">
                         Central Influencers Agency (CIA) / Academies
                       </option>
-                      <option value="Enterprise Training / Tourism / Trade" className="bg-[#08080A]">
+                      <option value="Enterprise Training / Tourism / Trade" className="bg-surface-elevated">
                         Enterprise Training / Tourism / Trading
                       </option>
                     </select>
@@ -215,7 +219,7 @@ export default function ContactSection() {
                   {/* 2-Column Inputs */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="block font-mono text-xs uppercase tracking-wider text-slate-300">
+                      <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                         Full Name *
                       </label>
                       <input
@@ -225,12 +229,12 @@ export default function ContactSection() {
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="e.g. Sultan Al Mansoor"
-                        className="w-full px-4 py-3 rounded-xl bg-[#08080A] border border-white/[0.1] focus:border-white text-sm text-white placeholder-slate-600 outline-none transition-colors"
+                        className="field-input w-full"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="block font-mono text-xs uppercase tracking-wider text-slate-300">
+                      <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                         Company / Organization
                       </label>
                       <input
@@ -239,12 +243,12 @@ export default function ContactSection() {
                         value={formData.company}
                         onChange={handleInputChange}
                         placeholder="e.g. Prestige Group UAE"
-                        className="w-full px-4 py-3 rounded-xl bg-[#08080A] border border-white/[0.1] focus:border-white text-sm text-white placeholder-slate-600 outline-none transition-colors"
+                        className="field-input w-full"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="block font-mono text-xs uppercase tracking-wider text-slate-300">
+                      <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                         Corporate Email *
                       </label>
                       <input
@@ -254,12 +258,12 @@ export default function ContactSection() {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="sultan@example.com"
-                        className="w-full px-4 py-3 rounded-xl bg-[#08080A] border border-white/[0.1] focus:border-white text-sm text-white placeholder-slate-600 outline-none transition-colors"
+                        className="field-input w-full"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="block font-mono text-xs uppercase tracking-wider text-slate-300">
+                      <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                         Phone / WhatsApp *
                       </label>
                       <input
@@ -269,14 +273,14 @@ export default function ContactSection() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="+971 50 123 4567"
-                        className="w-full px-4 py-3 rounded-xl bg-[#08080A] border border-white/[0.1] focus:border-white text-sm text-white placeholder-slate-600 outline-none transition-colors"
+                        className="field-input w-full"
                       />
                     </div>
                   </div>
 
                   {/* Brief Message */}
                   <div className="space-y-1.5">
-                    <label className="block font-mono text-xs uppercase tracking-wider text-slate-300">
+                    <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                       Project Scope &amp; Collaboration Details
                     </label>
                     <textarea
@@ -285,7 +289,7 @@ export default function ContactSection() {
                       value={formData.brief}
                       onChange={handleInputChange}
                       placeholder="Outline your project scope, target timeline, or collaboration requirements..."
-                      className="w-full px-4 py-3 rounded-xl bg-[#08080A] border border-white/[0.1] focus:border-white text-sm text-white placeholder-slate-600 outline-none resize-none transition-colors"
+                      className="field-input w-full resize-none"
                     />
                   </div>
 
@@ -293,7 +297,7 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 rounded-full bg-white hover:bg-neon-magenta text-black hover:text-white font-heading font-bold text-xs uppercase tracking-widest transition-all duration-300 shadow-xl flex items-center justify-center gap-3 disabled:opacity-50"
+                    className="btn-primary w-full flex items-center justify-center gap-3 uppercase tracking-widest"
                   >
                     {isSubmitting ? (
                       <span>Routing Brief...</span>
@@ -305,9 +309,9 @@ export default function ContactSection() {
                     )}
                   </button>
 
-                  <div className="text-center text-[11px] font-mono text-slate-400">
+                  <div className="text-center text-[11px] font-mono text-ink-tertiary">
                     Need immediate assistance? Connect directly on WhatsApp at{' '}
-                    <a href={agencyInfo.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-emerald-400 font-bold underline">
+                    <a href={agencyInfo.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-accent-strong font-semibold underline">
                       +971 55 253 8556
                     </a>
                   </div>
