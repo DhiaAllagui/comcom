@@ -36,6 +36,15 @@ export const quickStats = [
   { value: "Global", label: "MENA & International Reach", detail: "Accredited Free Zone operations from Dubai, UAE" },
 ];
 
+export const achievementTicker = [
+  "6 Specialized Divisions",
+  "UAE Free Zone Accredited",
+  "3,500+ VIP Event Attendees",
+  "5 Proprietary Labels & Academies",
+  "Dubai World Expo Delivery Partner",
+  "4 Digital Publishing Outlets",
+];
+
 export const divisions = [
   {
     id: "studios",
@@ -52,6 +61,11 @@ export const divisions = [
       "Television Production: TV series, talk shows, and international documentaries",
       "Professional Photography: Advertising, VIP events, and marketing campaigns",
       "Digital & Web Content: Webinars, training videos, and social content pipelines"
+    ],
+    stats: [
+      { value: "150", label: "Productions Delivered" },
+      { value: "8K", label: "Cinema-Grade Capture" },
+      { value: "12", label: "Broadcast Partners" }
     ]
   },
   {
@@ -69,6 +83,11 @@ export const divisions = [
       "Cultural & Artistic Events: Mega festivals celebrating diversity and the arts",
       "Private & VIP Events: High-society galas, private concerts, and bespoke ceremonies",
       "Turnkey Project Management: Rigorous coordination, global logistics, and venue design"
+    ],
+    stats: [
+      { value: "3.5K+", label: "VIP Attendees" },
+      { value: "40+", label: "Global Events Delivered" },
+      { value: "12", label: "Countries Activated" }
     ]
   },
   {
@@ -86,6 +105,11 @@ export const divisions = [
       "Global Brand Management: Visual identity redesign and regional launch management",
       "Digital Marketing & Growth: SEO, SEM, content syndication, and email funnels",
       "Analytics & ROI Optimization: Deep performance auditing and investment return"
+    ],
+    stats: [
+      { value: "8.5M+", label: "Campaign Impressions" },
+      { value: "60+", label: "Brand Partners" },
+      { value: "24", label: "Markets Reached" }
     ]
   },
   {
@@ -101,6 +125,11 @@ export const divisions = [
       "COMCOM Training: Leadership development, project management, and corporate academies",
       "COMCOM Tourism: Tailored business and leisure itineraries highlighting UAE cultural richness",
       "COMCOM Trading: Global import/export solutions, market entry, and trade logistics"
+    ],
+    stats: [
+      { value: "500+", label: "Executives Trained" },
+      { value: "30+", label: "Curated Itineraries" },
+      { value: "15", label: "Trade Corridors" }
     ]
   }
 ];
