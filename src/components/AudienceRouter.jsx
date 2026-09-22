@@ -2,6 +2,7 @@ import React from 'react';
 import { audiencePaths } from '../data/agencyData';
 import { Building2, Tv, Landmark, ArrowRight, ShieldCheck } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
+import bg4 from '../images/bg4.webp';
 
 export default function AudienceRouter({ onSelectInquiry }) {
   const [headerRef, headerVisible] = useReveal();
@@ -24,8 +25,18 @@ export default function AudienceRouter({ onSelectInquiry }) {
   };
 
   return (
-    <section className="relative py-24 bg-void border-t border-border-subtle">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 bg-void border-t border-border-subtle overflow-hidden">
+      {/* ── Background Image (bg4) ── */}
+      <img
+        src={bg4}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-void/75" />
+      <div className="absolute inset-0 bg-gradient-to-b from-void via-transparent to-void" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div ref={headerRef} className={`reveal ${headerVisible ? 'is-visible' : ''} text-center max-w-3xl mx-auto mb-16 space-y-3`}>

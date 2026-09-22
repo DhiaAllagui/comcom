@@ -18,7 +18,7 @@
     /* Text */
     --text-primary: #F5F6F8;
     --text-secondary: #A7ADBA;
-    --text-tertiary: #6B7280;
+    --text-tertiary: #8890A0; /* WCAG AA: >=4.5:1 against --bg-void/--bg-elevated/--bg-elevated-2 (was #6B7280, ~3.8-4.2:1, failing) */
     --text-on-accent: #06070A;
 
     /* Accent — Magenta */

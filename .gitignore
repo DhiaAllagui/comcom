@@ -34,5 +34,6 @@ src/video/*.mov
 !public/comcom-logo.mp4
 !public/comcom-logo-mobile.mp4
 !public/comcom-bg.mp4
+!src/images/bgv.mp4
 comcom/*.xml
 comcom/*.docx

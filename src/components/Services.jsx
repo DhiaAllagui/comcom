@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { triEngines, divisions } from '../data/agencyData';
 import { ArrowUpRight, Film, Radio, Sparkles, CheckCircle2, ChevronRight } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
+import bg6 from '../images/bg6.webp';
 
 function EngineCard({ engine, idx }) {
   const [ref, isVisible] = useReveal(0.2);
@@ -127,8 +128,18 @@ export default function Services() {
     <div className="space-y-0">
       
       {/* ================= SECTION: TRI-ENGINE MODEL ================= */}
-      <section id="tri-engine" className="relative py-28 bg-surface-base border-t border-border-subtle">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <section id="tri-engine" className="relative py-28 bg-surface-base border-t border-border-subtle overflow-hidden">
+        {/* ── Background Image (bg6) ── */}
+        <img
+          src={bg6}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-surface-base/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-void via-transparent to-void" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           
           <div ref={headerRef1} className={`reveal-blur ${headerVisible1 ? 'is-visible' : ''} max-w-3xl space-y-3`}>
             <span className="eyebrow block">

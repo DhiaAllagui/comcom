@@ -229,13 +229,13 @@ export default function BrandMotion() {
                 <div className="hidden sm:flex items-center border border-border-subtle rounded-sm overflow-hidden text-[11px] font-mono">
                   <button
                     onClick={() => setSelectedQuality('1080p')}
-                    className={`px-2.5 py-1 transition-colors ${selectedQuality === '1080p' ? 'bg-accent text-white' : 'text-ink-secondary hover:text-ink-primary'}`}
+                    className={`px-2.5 py-1 transition-colors ${selectedQuality === '1080p' ? 'bg-accent text-[color:var(--text-on-accent)] font-semibold' : 'text-ink-secondary hover:text-ink-primary'}`}
                   >
                     1080p HD
                   </button>
                   <button
                     onClick={() => setSelectedQuality('720p')}
-                    className={`px-2.5 py-1 transition-colors ${selectedQuality === '720p' ? 'bg-accent text-white' : 'text-ink-secondary hover:text-ink-primary'}`}
+                    className={`px-2.5 py-1 transition-colors ${selectedQuality === '720p' ? 'bg-accent text-[color:var(--text-on-accent)] font-semibold' : 'text-ink-secondary hover:text-ink-primary'}`}
                   >
                     720p Fast
                   </button>

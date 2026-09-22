@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { quickStats, clientLogos, achievementTicker } from '../data/agencyData';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
@@ -8,7 +8,7 @@ import flagUSA from '../images/united-states.png';
 import flagUAE from '../images/united-arab-emirates.png';
 import flagTunisia from '../images/tunisia.png';
 import flagKSA from '../images/ksa.png';
-import bg1 from '../images/bg1.webp';
+import bgv from '../images/bgv.mp4';
 
 function StatItem({ stat }) {
   const [ref, isVisible] = useReveal(0.3);
@@ -31,21 +31,46 @@ function StatItem({ stat }) {
 
 export default function Hero() {
   const { t } = useTranslation();
+  const videoRef = useRef(null);
+  const [reduceMotion, setReduceMotion] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReduceMotion(mq.matches);
+    const handler = (e) => setReduceMotion(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (reduceMotion) {
+      video.pause();
+    } else {
+      video.play().catch(() => {});
+    }
+  }, [reduceMotion]);
+
   return (
     <section id="holding" className="relative min-h-[100vh] flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-void">
 
-      {/* ── Background Image (bg1) ── */}
+      {/* ── Background Video (bgv) ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-void" style={{ zIndex: -1 }} />
 
-        <img
-          src={bg1}
-          alt=""
+        <video
+          ref={videoRef}
+          src={bgv}
+          autoPlay={!reduceMotion}
+          loop
+          muted
+          playsInline
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* Dark overlay for text legibility over the image */}
+        {/* Dark overlay for text legibility over the video */}
         <div className="absolute inset-0 bg-void/55" />
         <div className="absolute inset-0 bg-gradient-to-b from-void/70 via-transparent to-void/90" />
 

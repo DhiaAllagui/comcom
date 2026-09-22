@@ -163,10 +163,10 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-ink-tertiary">
               <li><a href="#podcast" className="hover:text-accent-strong transition-colors font-medium text-ink-primary">★ Podcast: Drawers (أدراج)</a></li>
               <li><a href="#podcast" className="hover:text-accent-strong transition-colors">★ Podcast: Énergie +</a></li>
-              <li><a href="#labels" className="hover:text-accent-strong transition-colors">CIA (Central Influencers Agency)</a></li>
-              <li><a href="#labels" className="hover:text-ink-primary transition-colors">Influencers International Academy</a></li>
-              <li><a href="#labels" className="hover:text-ink-primary transition-colors">Start Up Academy</a></li>
-              <li><a href="#labels" className="hover:text-ink-primary transition-colors">IMS (Medical Services)</a></li>
+              <li><a href="#labels-publishing" className="hover:text-accent-strong transition-colors">CIA (Central Influencers Agency)</a></li>
+              <li><a href="#labels-publishing" className="hover:text-ink-primary transition-colors">Influencers International Academy</a></li>
+              <li><a href="#labels-publishing" className="hover:text-ink-primary transition-colors">Start Up Academy</a></li>
+              <li><a href="#labels-publishing" className="hover:text-ink-primary transition-colors">IMS (Medical Services)</a></li>
               <li><a href="#tunisia-lab" className="hover:text-accent-strong transition-colors">The Tunisia Production Lab</a></li>
             </ul>
           </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { tunisiaLabEntities } from '../data/agencyData';
 import { useReveal } from '../hooks/useReveal';
 import { Cpu, Film, GraduationCap, Box, MapPin, CheckCircle } from 'lucide-react';
+import bg5 from '../images/bg5.webp';
 
 export default function TunisiaLab() {
   const [headerRef, headerVisible] = useReveal();
@@ -16,8 +17,18 @@ export default function TunisiaLab() {
   };
 
   return (
-    <section id="tunisia-lab" className="relative py-28 bg-void border-t border-border-subtle">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section id="tunisia-lab" className="relative py-28 bg-void border-t border-border-subtle overflow-hidden">
+      {/* ── Background Image (bg5) ── */}
+      <img
+        src={bg5}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-void/75" />
+      <div className="absolute inset-0 bg-gradient-to-b from-void via-transparent to-void" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Header */}
         <div ref={headerRef} className={`reveal-blur ${headerVisible ? 'is-visible' : ''} max-w-3xl space-y-3`}>

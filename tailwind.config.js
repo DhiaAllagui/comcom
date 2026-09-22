@@ -23,7 +23,7 @@ export default {
         ink: {
           primary: '#F5F6F8',
           secondary: '#A7ADBA',
-          tertiary: '#6B7280',
+          tertiary: '#8890A0', // WCAG AA fix: was #6B7280 (~3.8-4.2:1 on dark surfaces, failing 4.5:1)
         },
         accent: {
           DEFAULT: '#E31A94',
