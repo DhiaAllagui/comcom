@@ -3,6 +3,7 @@ import { agencyInfo } from '../data/agencyData';
 import { MessageCircle, Send, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useReveal } from '../hooks/useReveal';
+import { Wave } from './Wave';
 import bg3 from '../images/bg3.webp';
 
 const departmentContacts = [
@@ -327,7 +328,10 @@ export default function ContactSection() {
                     className="btn-primary w-full flex items-center justify-center gap-3 uppercase tracking-widest"
                   >
                     {isSubmitting ? (
-                      <span>Routing Brief...</span>
+                      <>
+                        <Wave className="h-4 text-[color:var(--text-on-accent)]" />
+                        <span>Routing Brief...</span>
+                      </>
                     ) : (
                       <>
                         <span>Submit Project Brief</span>
