@@ -201,7 +201,7 @@ export default function Footer() {
             © {new Date().getFullYear()} COMCOM GROUP LLC (Delaware #10321177, EIN 98-1880888). All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <span className="text-ink-secondary">comcomgroupinternational.com</span>
+            <span className="text-ink-secondary">comcomgroupcompany.com</span>
             <span>·</span>
             <a href="#about" className="hover:text-ink-primary transition-colors">Statutory Governance</a>
             <span>·</span>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://comcomgroupinternational.com/sitemap.xml
+Sitemap: https://comcomgroupcompany.com/sitemap.xml
