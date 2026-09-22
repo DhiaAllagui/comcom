@@ -35,6 +35,7 @@ export default {
         display: ['"Fraunces"', 'Iowan Old Style', 'Georgia', 'serif'],
         body: ['"Inter"', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
         mono: ['"JetBrains Mono"', '"SF Mono"', 'Consolas', 'monospace'],
+        arabic: ['"Tajawal"', '"Segoe UI"', 'Tahoma', 'sans-serif'],
       },
       boxShadow: {
         sm: '0 2px 8px -2px rgba(0,0,0,0.4)',

@@ -9,6 +9,7 @@ import Portfolio from './components/Portfolio';
 import About from './components/About';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import { agencyInfo } from './data/agencyData';
 import { MessageCircle } from 'lucide-react';
 
@@ -47,6 +48,9 @@ export default function App() {
 
       {/* 9. Global Footprint 4-Hub Pillars & Unified Footer */}
       <Footer />
+
+      {/* Scroll to Top */}
+      <ScrollToTop />
 
       {/* Direct WhatsApp Action Button */}
       <aside aria-label="Direct contact" className="fixed bottom-6 right-6 z-40">

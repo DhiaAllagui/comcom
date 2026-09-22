@@ -2,6 +2,7 @@ import React from 'react';
 import { useReveal } from '../hooks/useReveal';
 import { agencyInfo } from '../data/agencyData';
 import { ShieldCheck, Building2, Globe2, FileText, ArrowUpRight } from 'lucide-react';
+import bg2 from '../images/bg2.webp';
 
 const pillars = [
   { 
@@ -26,8 +27,18 @@ export default function About() {
   const [rightRef, rightVisible] = useReveal();
 
   return (
-    <section id="about" className="relative py-28 bg-void border-t border-border-subtle">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="relative py-28 bg-void border-t border-border-subtle overflow-hidden">
+      {/* ── Background Image (bg2) ── */}
+      <img
+        src={bg2}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-void/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-void via-transparent to-void" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 

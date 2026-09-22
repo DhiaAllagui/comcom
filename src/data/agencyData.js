@@ -28,13 +28,14 @@ export const agencyInfo = {
   }
 };
 
+// `labelKey` resolves against navbar.links.* in src/i18n/locales/{en,fr,ar}.json
 export const navLinks = [
-  { label: "The Holding", href: "#holding" },
-  { label: "Tri-Engine", href: "#tri-engine" },
-  { label: "8 Divisions", href: "#divisions" },
-  { label: "Labels & Media", href: "#labels-publishing" },
-  { label: "Tunisia Lab", href: "#tunisia-lab" },
-  { label: "Flagship 2026–27", href: "#flagship" },
+  { labelKey: "theHolding", href: "#holding" },
+  { labelKey: "triEngine", href: "#tri-engine" },
+  { labelKey: "divisions", href: "#divisions" },
+  { labelKey: "labelsMedia", href: "#labels-publishing" },
+  { labelKey: "tunisiaLab", href: "#tunisia-lab" },
+  { labelKey: "flagship", href: "#flagship" },
 ];
 
 export const quickStats = [
@@ -348,6 +349,7 @@ export const podcastData = {
   secondaryDesc: "High-voltage executive podcast exploring creative leadership, entrepreneurship, and peak impact.",
   links: {
     spotify: "https://open.spotify.com/user/31jlrtvt6ffshoavvf4yh5vtjgqm",
+    youtube: "https://www.youtube.com/@drawersofficiel",
     instagram: "https://instagram.com/drawersofficiel",
     tiktok: "https://tiktok.com/@drawersofficiel",
     facebook: "https://facebook.com/drawersofficiel"

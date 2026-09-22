@@ -58,6 +58,23 @@
     color: var(--text-primary);
   }
 
+  /* Arabic locale: swap the whole document to Tajawal, including headings.
+     Toggled by src/i18n/config.js via document.documentElement.classList. */
+  html.font-arabic body {
+    font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+  }
+  html.font-arabic h1,
+  html.font-arabic h2,
+  html.font-arabic h3,
+  html.font-arabic h4 {
+    font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+  }
+
+  /* RTL: mirror directional icons (arrows, chevrons) that imply LTR motion */
+  [dir="rtl"] .rtl-flip {
+    transform: scaleX(-1);
+  }
+
   /* Minimal custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;

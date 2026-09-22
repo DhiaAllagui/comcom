@@ -1,0 +1,50 @@
+{
+  "navbar": {
+    "brandName": "COMCOM GROUP",
+    "brandBadge": "International",
+    "brandSubtitle": "Holding du Delaware · Opérations Mondiales",
+    "links": {
+      "theHolding": "La Holding",
+      "triEngine": "Tri-Moteur",
+      "divisions": "8 Divisions",
+      "labelsMedia": "Labels & Médias",
+      "tunisiaLab": "Lab Tunisie",
+      "flagship": "Phare 2026–27"
+    },
+    "whatsapp": "WhatsApp",
+    "whatsappFull": "Bureau de Production WhatsApp",
+    "whatsappAria": "WhatsApp Direct",
+    "contact": "Contacter le Groupe",
+    "navigation": "Navigation",
+    "openMenu": "Ouvrir le Menu",
+    "closeMenu": "Fermer le Menu",
+    "legalLine": "COMCOM GROUP LLC · Delaware n°10321177"
+  },
+  "hero": {
+    "quickJump": "Modèle Tri-Moteur",
+    "title": {
+      "prefix": "Architectes d'",
+      "line2": "Créateurs de Contenu.",
+      "line3": "Accélérateurs d'Impact.",
+      "rotating": [
+        "Expériences.",
+        "Écosystèmes.",
+        "Entreprises.",
+        "Récits.",
+        "Influence.",
+        "Élan.",
+        "Héritages."
+      ]
+    },
+    "subheadline": "Production médiatique transcontinentale, événements live en arène, et croissance commerciale à travers les États-Unis, les Émirats Arabes Unis, la Tunisie et l'Arabie Saoudite.",
+    "jurisdictions": {
+      "usa": "Holding du Delaware (Comcom Group LLC)",
+      "uae": "Hub Commercial EAU (Licence n°5643)",
+      "tunisia": "Lab & Studios Tunisie (Winkom SARL)",
+      "ksa": "Bureau Vision 2030 KSA"
+    },
+    "ctaPrimary": "Découvrir les Opérations Tri-Moteur",
+    "ctaSecondary": "Gouvernance d'Entreprise",
+    "partnerTrackRecord": "Bilan Partenaire Éprouvé :"
+  }
+}

@@ -3,6 +3,7 @@ import { agencyInfo } from '../data/agencyData';
 import { MessageCircle, Send, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useReveal } from '../hooks/useReveal';
+import bg3 from '../images/bg3.webp';
 
 const departmentContacts = [
   { name: "Group Headquarters", email: "contact@comcomgroup.ae", phone: "+971 4 567 8901" },
@@ -66,8 +67,18 @@ export default function ContactSection() {
   );
 
   return (
-    <section id="contact" className="relative py-28 bg-surface-base border-t border-border-subtle">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative py-28 bg-surface-base border-t border-border-subtle overflow-hidden">
+      {/* ── Background Image (bg3) ── */}
+      <img
+        src={bg3}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-surface-base/75" />
+      <div className="absolute inset-0 bg-gradient-to-b from-void via-transparent to-void" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div ref={headerRef} className={`reveal-blur ${headerVisible ? 'is-visible' : ''} text-center max-w-3xl mx-auto mb-20`}>

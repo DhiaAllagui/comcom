@@ -1,0 +1,50 @@
+{
+  "navbar": {
+    "brandName": "COMCOM GROUP",
+    "brandBadge": "International",
+    "brandSubtitle": "Delaware Holding · Global Operations",
+    "links": {
+      "theHolding": "The Holding",
+      "triEngine": "Tri-Engine",
+      "divisions": "8 Divisions",
+      "labelsMedia": "Labels & Media",
+      "tunisiaLab": "Tunisia Lab",
+      "flagship": "Flagship 2026–27"
+    },
+    "whatsapp": "WhatsApp",
+    "whatsappFull": "WhatsApp Production Desk",
+    "whatsappAria": "Direct WhatsApp",
+    "contact": "Contact Group",
+    "navigation": "Navigation",
+    "openMenu": "Open Menu",
+    "closeMenu": "Close Menu",
+    "legalLine": "COMCOM GROUP LLC · Delaware #10321177"
+  },
+  "hero": {
+    "quickJump": "Tri-Engine Model",
+    "title": {
+      "prefix": "Architects of",
+      "line2": "Content Creators.",
+      "line3": "Impact Accelerators.",
+      "rotating": [
+        "Experiences.",
+        "Ecosystems.",
+        "Enterprises.",
+        "Narratives.",
+        "Influence.",
+        "Momentum.",
+        "Legacies."
+      ]
+    },
+    "subheadline": "Transcontinental media production, arena live events, and commercial growth across the USA, UAE, Tunisia, and Saudi Arabia.",
+    "jurisdictions": {
+      "usa": "Delaware Holding (Comcom Group LLC)",
+      "uae": "UAE Commercial Hub (License #5643)",
+      "tunisia": "Tunisia Lab & Studios (Winkom SARL)",
+      "ksa": "KSA Vision 2030 Desk"
+    },
+    "ctaPrimary": "Explore Tri-Engine Operations",
+    "ctaSecondary": "Corporate Governance",
+    "partnerTrackRecord": "Proven Partner Track Record:"
+  }
+}

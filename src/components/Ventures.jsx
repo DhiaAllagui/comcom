@@ -29,6 +29,12 @@ const FacebookIcon = ({ className = "w-4 h-4" }) => (
   </svg>
 );
 
+const YouTubeIcon = ({ className = "w-4 h-4" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M23.498 6.186a2.994 2.994 0 0 0-2.107-2.117C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.391.524A2.994 2.994 0 0 0 .502 6.186C0 8.08 0 12 0 12s0 3.92.502 5.814a2.994 2.994 0 0 0 2.107 2.117c1.886.524 9.391.524 9.391.524s7.505 0 9.391-.524a2.994 2.994 0 0 0 2.107-2.117C24 15.92 24 12 24 12s0-3.92-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+  </svg>
+);
+
 
 function LabelCard({ label, idx }) {
   const [ref, isVisible] = useReveal();
@@ -240,6 +246,19 @@ export default function Ventures() {
                     <span className="font-semibold truncate">Listen on Spotify</span>
                   </div>
                   <ExternalLink className="w-3.5 h-3.5 text-emerald-400/80 group-hover/link:text-white flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" />
+                </a>
+
+                <a
+                  href={podcastData.links.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2.5 rounded-sm bg-void hover:bg-red-600 hover:text-white border border-border-subtle text-xs font-mono text-ink-primary transition-all flex items-center justify-between gap-3 group/link shadow-sm"
+                >
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <YouTubeIcon className="w-4 h-4 text-red-500 group-hover/link:text-white flex-shrink-0 transition-colors" />
+                    <span className="font-semibold truncate">YouTube @drawersofficiel</span>
+                  </div>
+                  <ExternalLink className="w-3.5 h-3.5 text-red-500/80 group-hover/link:text-white flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" />
                 </a>
 
                 <a
