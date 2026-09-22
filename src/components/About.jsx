@@ -33,6 +33,8 @@ export default function About() {
         src={bg2}
         alt=""
         aria-hidden="true"
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-void/70" />
@@ -104,8 +106,10 @@ export default function About() {
               {/* Official Brand Logo Lockup */}
               <div className="w-full max-w-[280px] rounded-sm bg-void/90 border border-border-subtle shadow-inner flex items-center justify-center p-4 mb-6 group-hover:border-accent/40 transition-all">
                 <img
-                  src="/comcom-brand-lockup-dark.png"
+                  src="/comcom-brand-lockup-dark.webp"
                   alt="COMCOM Group International Official Emblem"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
                 />
               </div>

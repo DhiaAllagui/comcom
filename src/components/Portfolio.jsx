@@ -58,8 +58,9 @@ function ProjectCard({ project, idx, onSelect }) {
                   activeImg === img ? 'border-accent ring-1 ring-accent' : 'border-white/30 opacity-70 hover:opacity-100'
                 }`}
                 title={`Preview image ${i + 1}`}
+                aria-label={`Preview image ${i + 1} of ${project.gallery.length}`}
               >
-                <img src={img} alt="" className="w-full h-full object-cover" />
+                <img src={img} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </button>
             ))}
             <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-sm bg-void/80 text-ink-primary border border-border-subtle ml-1">

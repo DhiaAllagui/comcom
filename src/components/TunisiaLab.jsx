@@ -23,6 +23,8 @@ export default function TunisiaLab() {
         src={bg5}
         alt=""
         aria-hidden="true"
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-void/75" />

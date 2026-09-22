@@ -31,9 +31,11 @@ dist-ssr
 public/*.mov
 src/video/*.mov
 *.mp4
-!public/comcom-logo.mp4
-!public/comcom-logo-mobile.mp4
-!public/comcom-bg.mp4
 !src/images/bgv.mp4
 comcom/*.xml
 comcom/*.docx
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example

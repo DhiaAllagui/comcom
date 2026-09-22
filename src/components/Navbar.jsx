@@ -31,6 +31,16 @@ export default function Navbar() {
     };
   }, [mobileMenuOpen]);
 
+  // Close mobile menu on Escape
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') setMobileMenuOpen(false);
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [mobileMenuOpen]);
+
   return (
     <header
       className={`fixed top-0 start-0 end-0 z-50 transition-all duration-300 ease-out ${
@@ -44,7 +54,7 @@ export default function Navbar() {
 
           {/* ── Start: Brand Identity ── */}
           <a
-            href="#"
+            href="#holding"
             className="flex items-center gap-3 group shrink-0"
             aria-label="COMCOM Group International Homepage"
           >
@@ -52,6 +62,8 @@ export default function Navbar() {
             <img
               src={comcomLogo}
               alt="COMCOM Group Emblem"
+              loading="eager"
+              fetchPriority="high"
               className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
 

@@ -177,6 +177,8 @@ export default function Ventures() {
                   <img
                     src={podcastData.coverImage || "/adraj.jpg"}
                     alt={`${podcastData.flagshipTitle} Podcast with ${podcastData.host}`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-void/90 via-void/10 to-transparent pointer-events-none" />

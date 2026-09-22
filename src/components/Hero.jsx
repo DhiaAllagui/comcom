@@ -4,10 +4,10 @@ import { quickStats, clientLogos, achievementTicker } from '../data/agencyData';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { useReveal, useCountUp } from '../hooks/useReveal';
 import KineticHeadline from './KineticHeadline';
-import flagUSA from '../images/united-states.png';
-import flagUAE from '../images/united-arab-emirates.png';
-import flagTunisia from '../images/tunisia.png';
-import flagKSA from '../images/ksa.png';
+import flagUSA from '../images/united-states.webp';
+import flagUAE from '../images/united-arab-emirates.webp';
+import flagTunisia from '../images/tunisia.webp';
+import flagKSA from '../images/ksa.webp';
 import bgv from '../images/bgv.mp4';
 
 function StatItem({ stat }) {
@@ -66,6 +66,7 @@ export default function Hero() {
           loop
           muted
           playsInline
+          preload="auto"
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -107,7 +108,7 @@ export default function Hero() {
             { flag: flagKSA, label: t('hero.jurisdictions.ksa') }
           ].map((d, i) => (
             <span key={i} className="flex items-center gap-2 font-mono text-xs px-3 py-1 rounded-sm border border-border-subtle bg-surface-base/80 backdrop-blur-sm text-ink-secondary">
-              <img src={d.flag} alt="" className="w-4 h-4 rounded-full flex-shrink-0" />
+              <img src={d.flag} alt="" width="16" height="16" loading="eager" className="w-4 h-4 rounded-full flex-shrink-0" />
               {d.label}
             </span>
           ))}

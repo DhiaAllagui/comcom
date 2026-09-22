@@ -134,6 +134,8 @@ export default function Services() {
           src={bg6}
           alt=""
           aria-hidden="true"
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-surface-base/80" />

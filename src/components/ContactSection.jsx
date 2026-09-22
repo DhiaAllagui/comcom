@@ -41,6 +41,10 @@ export default function ContactSection() {
       setErrorMsg('Please complete all required fields: Name, Email, and Phone.');
       return;
     }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+      setErrorMsg('Please enter a valid email address.');
+      return;
+    }
 
     setIsSubmitting(true);
     setTimeout(() => {
@@ -73,6 +77,8 @@ export default function ContactSection() {
         src={bg3}
         alt=""
         aria-hidden="true"
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-surface-base/75" />
@@ -152,7 +158,7 @@ export default function ContactSection() {
             <div className="card-surface p-8 sm:p-10 shadow-lg">
 
               {submitted ? (
-                <div className="py-12 text-center space-y-6">
+                <div role="status" className="py-12 text-center space-y-6">
                   <div className="w-16 h-16 mx-auto rounded-full border border-accent flex items-center justify-center">
                     <CheckCircle2 className="w-8 h-8 text-accent-strong" />
                   </div>
@@ -197,17 +203,18 @@ export default function ContactSection() {
                   </div>
 
                   {errorMsg && (
-                    <div className="p-3 rounded-sm border border-red-500/40 text-red-300 text-xs font-mono" style={{ background: 'rgba(239,68,68,0.08)' }}>
+                    <div role="alert" className="p-3 rounded-sm border border-red-500/40 text-red-300 text-xs font-mono" style={{ background: 'rgba(239,68,68,0.08)' }}>
                       {errorMsg}
                     </div>
                   )}
 
                   {/* Department Selector */}
                   <div className="space-y-1.5">
-                    <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
+                    <label htmlFor="contact-department" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                       Select Department / Division *
                     </label>
                     <select
+                      id="contact-department"
                       name="department"
                       value={formData.department}
                       onChange={handleInputChange}
@@ -230,13 +237,15 @@ export default function ContactSection() {
                   {/* 2-Column Inputs */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
+                      <label htmlFor="contact-name" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                         Full Name *
                       </label>
                       <input
+                        id="contact-name"
                         type="text"
                         name="name"
                         required
+                        autoComplete="name"
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="e.g. Sultan Al Mansoor"
@@ -245,12 +254,14 @@ export default function ContactSection() {
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
+                      <label htmlFor="contact-company" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                         Company / Organization
                       </label>
                       <input
+                        id="contact-company"
                         type="text"
                         name="company"
+                        autoComplete="organization"
                         value={formData.company}
                         onChange={handleInputChange}
                         placeholder="e.g. Prestige Group UAE"
@@ -259,13 +270,15 @@ export default function ContactSection() {
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
+                      <label htmlFor="contact-email" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                         Corporate Email *
                       </label>
                       <input
+                        id="contact-email"
                         type="email"
                         name="email"
                         required
+                        autoComplete="email"
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="sultan@example.com"
@@ -274,13 +287,15 @@ export default function ContactSection() {
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
+                      <label htmlFor="contact-phone" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                         Phone / WhatsApp *
                       </label>
                       <input
+                        id="contact-phone"
                         type="tel"
                         name="phone"
                         required
+                        autoComplete="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder="+971 50 123 4567"
@@ -291,10 +306,11 @@ export default function ContactSection() {
 
                   {/* Brief Message */}
                   <div className="space-y-1.5">
-                    <label className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
+                    <label htmlFor="contact-brief" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
                       Project Scope &amp; Collaboration Details
                     </label>
                     <textarea
+                      id="contact-brief"
                       name="brief"
                       rows="4"
                       value={formData.brief}

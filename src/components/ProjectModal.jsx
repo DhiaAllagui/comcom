@@ -66,6 +66,8 @@ export default function ProjectModal({ project, onClose }) {
               <img
                 src={images[activeImageIdx]}
                 alt={project.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
 
@@ -100,11 +102,13 @@ export default function ProjectModal({ project, onClose }) {
                   <button
                     key={i}
                     onClick={() => setActiveImageIdx(i)}
+                    aria-label={`View image ${i + 1} of ${images.length}`}
+                    aria-current={activeImageIdx === i ? 'true' : undefined}
                     className={`relative w-20 h-14 rounded-sm overflow-hidden border flex-shrink-0 transition-all ${
                       activeImageIdx === i ? 'border-accent' : 'border-border-subtle opacity-50 hover:opacity-100'
                     }`}
                   >
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                    <img src={img} alt="" loading="lazy" decoding="async" className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>

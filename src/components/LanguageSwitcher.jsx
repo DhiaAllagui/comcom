@@ -21,8 +21,15 @@ export default function LanguageSwitcher({ className = '' }) {
         setOpen(false);
       }
     };
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+    };
   }, []);
 
   const changeLocale = (locale) => {

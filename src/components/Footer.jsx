@@ -74,8 +74,12 @@ export default function Footer() {
             <div className="flex items-center gap-3.5">
               <div className="flex items-center justify-center h-11 w-11 rounded-sm bg-void/90 border border-border-subtle p-1 hover:border-accent/40 transition-colors">
                 <img
-                  src="/comcom-emblem-square.png"
+                  src="/comcom-emblem-square.webp"
                   alt="COMCOM Group Emblem"
+                  loading="lazy"
+                  decoding="async"
+                  width="44"
+                  height="44"
                   className="h-full w-full object-contain"
                 />
               </div>
