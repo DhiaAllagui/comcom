@@ -128,23 +128,11 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* ── Mobile Trigger ── */}
-          <div className="flex lg:hidden items-center gap-2">
-            <LanguageSwitcher />
-
-            <a
-              href={agencyInfo.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-xl border border-white/10 bg-white/[0.03] text-emerald-400"
-              aria-label={t('navbar.whatsappAria')}
-            >
-              <MessageCircle className="w-4 h-4" />
-            </a>
-
+          {/* ── Mobile Trigger (Clean single burger button) ── */}
+          <div className="flex lg:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl border border-white/10 bg-white/[0.03] text-zinc-300 hover:text-white hover:bg-white/[0.06] transition-all"
+              className="p-2.5 rounded-xl border border-white/10 bg-white/[0.03] text-zinc-300 hover:text-white hover:bg-white/[0.06] transition-all"
               aria-label={mobileMenuOpen ? t('navbar.closeMenu') : t('navbar.openMenu')}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -156,13 +144,21 @@ export default function Navbar() {
 
       {/* ── Mobile Slide-Over Sheet / Dropdown ── */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[65px] sm:top-[73px] bg-void/95 backdrop-blur-2xl z-40 border-t border-white/[0.08] flex flex-col justify-between p-6 sm:p-8 animate-fadeIn">
+        <div className="lg:hidden fixed inset-0 top-[65px] sm:top-[73px] bg-void/95 backdrop-blur-2xl z-40 border-t border-white/[0.08] flex flex-col justify-between p-6 sm:p-8 animate-fadeIn overflow-y-auto">
+
+          {/* Top Bar of Mobile Drawer: Section Tag + Language Switcher */}
+          <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
+            <span className="text-[11px] uppercase tracking-wider text-zinc-400 font-mono font-medium">
+              {t('navbar.navigation')}
+            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-zinc-400 font-mono">Language:</span>
+              <LanguageSwitcher />
+            </div>
+          </div>
 
           {/* Navigation Links */}
           <div className="flex flex-col gap-1 py-4">
-            <span className="text-[11px] uppercase tracking-wider text-zinc-400 font-mono font-medium px-3 mb-2">
-              {t('navbar.navigation')}
-            </span>
             {navLinks.map((link) => (
               <a
                 key={link.labelKey}
