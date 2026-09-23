@@ -4,10 +4,6 @@ import { quickStats, clientLogos, achievementTicker } from '../data/agencyData';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { useReveal, useCountUp } from '../hooks/useReveal';
 import KineticHeadline from './KineticHeadline';
-import flagUSA from '../images/united-states.webp';
-import flagUAE from '../images/united-arab-emirates.webp';
-import flagTunisia from '../images/tunisia.webp';
-import flagKSA from '../images/ksa.webp';
 import bgv from '../images/bgv.mp4';
 
 function StatItem({ stat, statKey }) {
@@ -108,23 +104,8 @@ export default function Hero() {
           {t('hero.subheadline')}
         </p>
 
-        {/* Global Jurisdictions Pill Bar */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 max-w-4xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '420ms' }}>
-          {[
-            { flag: flagUSA, label: t('hero.jurisdictions.usa') },
-            { flag: flagUAE, label: t('hero.jurisdictions.uae') },
-            { flag: flagTunisia, label: t('hero.jurisdictions.tunisia') },
-            { flag: flagKSA, label: t('hero.jurisdictions.ksa') }
-          ].map((d, i) => (
-            <span key={i} className="flex items-center gap-2 font-mono text-xs px-3 py-1 rounded-sm border border-border-subtle bg-surface-base/80 backdrop-blur-sm text-ink-secondary">
-              <img src={d.flag} alt="" width="16" height="16" loading="eager" className="w-4 h-4 rounded-full flex-shrink-0" />
-              {d.label}
-            </span>
-          ))}
-        </div>
-
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-16 animate-fade-up" style={{ animationDelay: '480ms' }}>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-16 animate-fade-up" style={{ animationDelay: '400ms' }}>
           <a
             href="#tri-engine"
             className="btn-primary w-full sm:w-auto flex items-center justify-center gap-3 uppercase tracking-widest font-mono text-xs !py-3.5 !px-7"
