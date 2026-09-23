@@ -61,7 +61,7 @@ export default function ContactSection() {
           colors: ['#E31A94', '#E843A7', '#F5F6F8']
         });
       } catch (err) {}
-    }, 700);
+    }, 2300);
   };
 
   const waPreFilledText = encodeURIComponent(
