@@ -10,18 +10,17 @@ const InstagramIcon = () => (
   </svg>
 );
 
-const LinkedinIcon = () => (
-  <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-    <rect width="4" height="12" x="2" y="9"/>
-    <circle cx="4" cy="4" r="2"/>
-  </svg>
-);
 
 const YoutubeIcon = () => (
   <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
     <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/>
     <polygon points="10 15 15 12 10 9 10 15" fill="currentColor"/>
+  </svg>
+);
+
+const FacebookIcon = () => (
+  <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
   </svg>
 );
 
@@ -122,13 +121,13 @@ export default function Footer() {
                 <InstagramIcon />
               </a>
               <a
-                href={agencyInfo.socials.linkedin}
+                href={agencyInfo.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 rounded-sm border border-border-subtle hover:border-border-default text-ink-tertiary hover:text-ink-primary flex items-center justify-center transition-colors"
-                aria-label="LinkedIn"
+                aria-label="Facebook"
               >
-                <LinkedinIcon />
+                <FacebookIcon />
               </a>
               <a
                 href={agencyInfo.socials.youtube}

@@ -20,10 +20,9 @@ export const agencyInfo = {
   emailInvest: "invest@comcomgroupcompany.com",
   whatsappUrl: "https://wa.me/971552538556?text=Hello%20COMCOM%20Group%20International%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.",
   socials: {
-    instagram: "https://instagram.com",
-    linkedin: "https://linkedin.com",
-    youtube: "https://youtube.com",
-    facebook: "https://facebook.com",
+    instagram: "https://www.instagram.com/comcom.group/",
+    facebook: "https://www.facebook.com/comcomgroup/?locale=fr_FR",
+    youtube: "https://www.youtube.com/@drawersofficiel",
     whatsapp: "https://wa.me/971552538556"
   }
 };
