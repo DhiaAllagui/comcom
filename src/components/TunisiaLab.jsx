@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { tunisiaLabEntities } from '../data/agencyData';
 import { useReveal } from '../hooks/useReveal';
-import { Cpu, Film, GraduationCap, Box, MapPin, CheckCircle } from 'lucide-react';
+import { Cpu, Film, GraduationCap, Box, MapPin } from 'lucide-react';
 import bg5 from '../images/bg5.webp';
 
 export default function TunisiaLab() {
+  const { t } = useTranslation();
   const [headerRef, headerVisible] = useReveal();
 
   const getEntityIcon = (idx) => {
@@ -35,13 +37,13 @@ export default function TunisiaLab() {
         {/* Header */}
         <div ref={headerRef} className={`reveal-blur ${headerVisible ? 'is-visible' : ''} max-w-3xl space-y-3`}>
           <span className="eyebrow block">
-            // 05 REGIONAL PRODUCTION HUB
+            {t('tunisiaLab.eyebrow')}
           </span>
           <h2 className="font-display font-medium text-3xl sm:text-5xl lg:text-6xl text-ink-primary tracking-tight">
-            The Tunisia Lab &amp; Engineering Hub
+            {t('tunisiaLab.title')}
           </h2>
           <p className="text-ink-secondary text-base sm:text-lg leading-relaxed font-normal">
-            Our primary operational field engine delivering cinema-grade production, multilingual crews, and high-margin cost arbitrage for GCC and Western partners.
+            {t('tunisiaLab.desc')}
           </p>
         </div>
 
@@ -88,17 +90,17 @@ export default function TunisiaLab() {
         <div className="p-8 rounded-sm bg-surface-elevated border border-border-subtle flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-left">
             <div className="font-display font-medium text-lg text-ink-primary">
-              The Transcontinental Cost-to-Quality Advantage
+              {t('tunisiaLab.whyTitle')}
             </div>
             <p className="text-xs text-ink-secondary max-w-2xl">
-              Synchronized studios across Dubai, Delaware, and Tunis deliver broadcast-grade media with up to 60% operational efficiency.
+              {t('tunisiaLab.desc')}
             </p>
           </div>
           <a
             href="#contact"
             className="btn-primary whitespace-nowrap text-xs font-mono uppercase tracking-widest !py-3 !px-6"
           >
-            Deploy The Lab
+            {t('hero.ctaPrimary')}
           </a>
         </div>
 

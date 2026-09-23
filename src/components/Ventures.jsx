@@ -1,6 +1,7 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { proprietaryLabels, digitalMagazines, podcastData } from '../data/agencyData';
-import { ArrowUpRight, BookOpen, Mic, ExternalLink, Sparkles, Radio } from 'lucide-react';
+import { ArrowUpRight, BookOpen, Mic, ExternalLink } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
 
 const SpotifyIcon = ({ className = "w-4 h-4" }) => (
@@ -37,6 +38,7 @@ const YouTubeIcon = ({ className = "w-4 h-4" }) => (
 
 
 function LabelCard({ label, idx }) {
+  const { t } = useTranslation();
   const [ref, isVisible] = useReveal();
   return (
     <div
@@ -68,10 +70,10 @@ function LabelCard({ label, idx }) {
       </div>
 
       <div className="pt-4 border-t border-border-subtle flex items-center justify-between">
-        <span className="text-[11px] font-mono text-ink-tertiary">Proprietary IP</span>
+        <span className="text-[11px] font-mono text-ink-tertiary">{t('ventures.proprietaryIp')}</span>
         <a href="#contact" className="text-xs font-semibold uppercase tracking-widest text-ink-primary hover:text-accent-strong flex items-center gap-1 transition-colors">
-          <span>Inquire</span>
-          <ArrowUpRight className="w-3.5 h-3.5" />
+          <span>{t('ventures.inquire')}</span>
+          <ArrowUpRight className="w-3.5 h-3.5 rtl-flip" />
         </a>
       </div>
     </div>
@@ -79,6 +81,7 @@ function LabelCard({ label, idx }) {
 }
 
 function MagazineCard({ mag, idx }) {
+  const { t } = useTranslation();
   const [ref, isVisible] = useReveal();
   return (
     <div
@@ -107,8 +110,8 @@ function MagazineCard({ mag, idx }) {
       <div className="pt-3 border-t border-border-subtle flex items-center justify-between text-xs font-mono text-ink-tertiary">
         <span>Digital Issue</span>
         <a href="#contact" className="hover:text-ink-primary transition-colors flex items-center gap-1">
-          <span>Explore</span>
-          <ArrowUpRight className="w-3.5 h-3.5" />
+          <span>{t('ventures.inquire')}</span>
+          <ArrowUpRight className="w-3.5 h-3.5 rtl-flip" />
         </a>
       </div>
     </div>
@@ -116,6 +119,7 @@ function MagazineCard({ mag, idx }) {
 }
 
 export default function Ventures() {
+  const { t } = useTranslation();
   const [headerRef1, headerVisible1] = useReveal();
   const [headerRef2, headerVisible2] = useReveal();
 
@@ -127,13 +131,13 @@ export default function Ventures() {
         <div>
           <div ref={headerRef1} className={`reveal-blur ${headerVisible1 ? 'is-visible' : ''} max-w-3xl mb-16 space-y-3`}>
             <span className="eyebrow block">
-              // 03 PROPRIETARY BRAND IP
+              {t('ventures.eyebrow')}
             </span>
             <h2 className="font-display font-medium text-3xl sm:text-5xl text-ink-primary tracking-tight">
-              Proprietary Labels &amp; International Academies
+              {t('ventures.title')}
             </h2>
             <p className="text-ink-secondary text-sm sm:text-base leading-relaxed">
-              Autonomous operating brands scaling influencer ecosystems, healthcare logistics, and venture acceleration across the MENA region and Europe.
+              {t('ventures.desc')}
             </p>
           </div>
 
@@ -151,10 +155,10 @@ export default function Ventures() {
               // 04 DIGITAL MEDIA &amp; SYNDICATION
             </span>
             <h2 className="font-display font-medium text-3xl sm:text-5xl text-ink-primary tracking-tight">
-              Digital Publishing &amp; Original Podcast Network
+              {t('ventures.magazinesTitle')}
             </h2>
             <p className="text-ink-secondary text-sm sm:text-base leading-relaxed">
-              COMCOM Group publishes digital media magazines and original narrative podcasts delivering high-value insights, cultural narratives, and sector-specific innovations.
+              {t('ventures.desc')}
             </p>
           </div>
 

@@ -45,6 +45,155 @@
     },
     "ctaPrimary": "Explore Tri-Engine Operations",
     "ctaSecondary": "Corporate Governance",
-    "partnerTrackRecord": "Proven Partner Track Record:"
+    "partnerTrackRecord": "Proven Partner Track Record:",
+    "stats": {
+      "attendees": { "label": "Attendees & Delegates", "detail": "Mobilized across sovereign summits, expos & arena tours" },
+      "audience": { "label": "Digital Audience Reach", "detail": "Multi-platform impressions across syndication channels" },
+      "presence": { "label": "Global Presence", "detail": "USA (Delaware), UAE, Tunisia (Lab), KSA (Riyadh)" },
+      "inHouse": { "label": "In-House Execution", "detail": "From strategic concept to arena logistics & TV broadcast" }
+    },
+    "ticker": [
+      "Delaware Holding Corp #10321177",
+      "IRS EIN 98-1880888 LTR 147C",
+      "UAE License No. 5643",
+      "Tunis Lab RNE #1275760R",
+      "8 Integrated Operating Divisions",
+      "+500,000 Attendees Mobilized",
+      "+10M Digital Audience Impressions",
+      "Arab African Investment Conference (AAIC) Riyadh",
+      "Original Podcast: Drawers (أدراج) & Énergie +"
+    ]
+  },
+  "audience": {
+    "eyebrow": "// AUDIENCE SEGMENTATION ROUTER",
+    "title": "Partner With COMCOM Group",
+    "desc": "Select your institutional profile to deploy dedicated operational capacity, technical production assets, or access certified investor governance.",
+    "paths": {
+      "brands": {
+        "title": "For Brands & Governments",
+        "badge": "Sovereign & Corporate",
+        "desc": "Sovereign summits, world expo pavilions, and multi-territory digital amplification.",
+        "cta": "Inquire for Summits & Media"
+      },
+      "promoters": {
+        "title": "For Promoters & Broadcasters",
+        "badge": "Technical Production",
+        "desc": "Broadcast OB vans, 180m²+ curved LED volumes, stadium acoustics, and turnkey logistics.",
+        "cta": "Deploy Production Fleet"
+      },
+      "investors": {
+        "title": "For Institutional Partners",
+        "badge": "Governance & Capital",
+        "desc": "Delaware holding governance, multi-market compliance, and audited cultural assets.",
+        "cta": "Connect With Holding"
+      }
+    }
+  },
+  "services": {
+    "engineEyebrow": "// 02 THE TRI-ENGINE ARCHITECTURE",
+    "engineTitle": "The Sovereign Tri-Engine Model",
+    "engineDesc": "Three deeply integrated operational flywheels powering cinematic production, mega-scale live events, and commercial audience growth.",
+    "capabilities": "Capabilities:",
+    "infrastructure": "Tri-Engine Infrastructure",
+    "deployEngine": "Deploy Engine",
+    "divisionsEyebrow": "// 03 CONGLOMERATE STRUCTURE",
+    "divisionsTitle": "8 Specialized Operating Divisions",
+    "divisionsDesc": "Autonomous specialized entities operating under unified Delaware holding governance, executing across creative, technical, live, and commercial disciplines.",
+    "exploreDivision": "Explore Division",
+    "allDivisions": "All Divisions"
+  },
+  "ventures": {
+    "eyebrow": "// 04 PROPRIETARY VENTURES & MEDIA",
+    "title": "Flagship Ventures & Cultural Media",
+    "desc": "Original media IP, high-retention digital magazines, talent management, and award-winning cultural productions.",
+    "podcastBadge": "Original Flagship Video Podcast",
+    "podcastQuote": "Inside every one of us are things we've kept close — things we couldn't let go of, and words we never found the courage to speak. We left them tucked away in drawers.",
+    "podcastHost": "Hosted by Ghada Chouiref",
+    "listenWatch": "Listen & Watch on Official Platforms:",
+    "spotify": "Spotify Podcast",
+    "youtube": "YouTube Channel",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "facebook": "Facebook",
+    "magazinesTitle": "Digital Publishing Verticals",
+    "labelsTitle": "Proprietary Creative Labels",
+    "inquire": "Inquire",
+    "proprietaryIp": "Proprietary IP"
+  },
+  "tunisiaLab": {
+    "eyebrow": "// 05 REGIONAL PRODUCTION HUB",
+    "title": "The Tunisia Lab & Engineering Hub",
+    "desc": "Our primary operational field engine delivering cinema-grade production, multilingual crews, and high-margin cost arbitrage for GCC and Western partners.",
+    "whyTitle": "Why the Tunisia Production Corridor?",
+    "location": "Tunis, Tunisia · Nearshore Production Hub"
+  },
+  "portfolio": {
+    "eyebrow": "// 06 PROVEN TRACK RECORD",
+    "title": "Sovereign Summits, Arena Tours & Megastructures",
+    "desc": "Executing high-stakes global experiences with uncompromised precision and audited impact across sovereign, cultural, and commercial domains.",
+    "filters": {
+      "all": "All",
+      "events": "Events & Expo",
+      "studios": "Studios",
+      "advertising": "Advertising"
+    },
+    "verifiedExecution": "Verified Execution",
+    "viewCase": "View Case",
+    "imagesCount": "{{count}} Images",
+    "modalClose": "Close Case Study",
+    "clientTrackRecord": "Proven Client & Strategic Partner Track Record:"
+  },
+  "about": {
+    "eyebrow": "// 07 Corporate Governance & Global Holding",
+    "title": "An Institutional Conglomerate Powering Global Culture & Commerce.",
+    "leadBold": "COMCOM GROUP INTERNATIONAL (Comcom Group LLC)",
+    "leadRest": "is a Delaware holding conglomerate uniting transcontinental media production, arena live experiences, and commercial venture growth across the USA, UAE, Tunisia, and Saudi Arabia.",
+    "pillars": {
+      "p1": { "title": "Institutional Holding", "desc": "Delaware jurisdiction with institutional IP protection and audited corporate governance." },
+      "p2": { "title": "Integrated Tri-Engine", "desc": "Unifying production, live events, and commercial scale under single holding control." },
+      "p3": { "title": "In-House Execution", "desc": "Direct execution via proprietary production suites, soundstages, and event rigs." }
+    },
+    "governancePillarsTitle": "Four Pillars of Corporate Governance",
+    "jurisdictionsArchitecture": "Multinational Jurisdictions Architecture"
+  },
+  "contact": {
+    "eyebrow": "// 08 Group Coordination",
+    "title": "Connect with Our Agencies",
+    "desc": "To discuss your creative solutions, audiovisual productions, large-scale exhibitions, or advertising needs, please contact our specialized desks below.",
+    "desksTitle": "Accredited Division Desks",
+    "desksSubtitle": "Direct contact points across COMCOM Group departments",
+    "whatsappDirect": "Direct WhatsApp Line",
+    "formTitle": "Direct Department Inquiry Form",
+    "formSubtitle": "Confidential brief submission to COMCOM Group headquarters",
+    "requiredNotice": "Please complete all required fields: Name, Email, and Phone.",
+    "invalidEmail": "Please enter a valid email address.",
+    "nameLabel": "Your Full Name *",
+    "namePlaceholder": "e.g. Sarah Jenkins",
+    "companyLabel": "Organization / Company",
+    "companyPlaceholder": "e.g. Ministry of Culture / Sovereign Fund / Brand",
+    "emailLabel": "Corporate Email *",
+    "emailPlaceholder": "s.jenkins@organization.com",
+    "phoneLabel": "Phone / WhatsApp (with country code) *",
+    "phonePlaceholder": "+971 50 123 4567",
+    "deptLabel": "Select Department / Division *",
+    "briefLabel": "Project Scope / Confidential Brief",
+    "briefPlaceholder": "Outline your timeline, estimated scale, technical requirements, or partnership scope...",
+    "submitBtn": "Dispatch Inquiry to Division",
+    "submittingBtn": "Transmitting Parameters...",
+    "successTitle": "Inquiry Received by {{department}}",
+    "successMessage": "Thank you, <1>{{name}}</1>. Your project parameters have been routed to the senior director of <3>{{department}}</3>. We will follow up via <5>{{email}}</5>.",
+    "sendDirectWhatsApp": "Send Direct via WhatsApp",
+    "submitAnother": "Submit Another Inquiry"
+  },
+  "footer": {
+    "eyebrow": "// Global Footprint Architecture",
+    "title": "Four Strategic Jurisdictions. One Unified Operation.",
+    "mission": "Conceiving, producing, amplifying, and scaling transformative media, world-class experiential summits, and commercial ventures across North America, the GCC, and North Africa.",
+    "divisionsTitle": "Operating Divisions",
+    "navigationTitle": "Navigation",
+    "holdingInfoTitle": "Delaware Holding",
+    "copyright": "© {{year}} COMCOM GROUP LLC. All rights reserved.",
+    "registrationNotice": "Comcom Group LLC is a Delaware limited liability holding company (File #10321177). Operating through accredited subsidiaries and branch offices in Wilmington, Dubai, Tunis, and Riyadh.",
+    "backToTop": "Back to Top"
   }
 }

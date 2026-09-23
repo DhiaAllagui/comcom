@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { audiencePaths } from '../data/agencyData';
-import { Building2, Tv, Landmark, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Building2, Tv, Landmark, ArrowRight } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
 import bg4 from '../images/bg4.webp';
 
 export default function AudienceRouter({ onSelectInquiry }) {
+  const { t } = useTranslation();
   const [headerRef, headerVisible] = useReveal();
 
   const getIcon = (action) => {
@@ -15,6 +17,14 @@ export default function AudienceRouter({ onSelectInquiry }) {
         return <Tv className="w-6 h-6 text-cyan-400" />;
       default:
         return <Landmark className="w-6 h-6 text-amber-400" />;
+    }
+  };
+
+  const getPathKey = (action) => {
+    switch (action) {
+      case 'sponsorship': return 'brands';
+      case 'studios': return 'promoters';
+      default: return 'investors';
     }
   };
 
@@ -43,51 +53,54 @@ export default function AudienceRouter({ onSelectInquiry }) {
         {/* Header */}
         <div ref={headerRef} className={`reveal ${headerVisible ? 'is-visible' : ''} text-center max-w-3xl mx-auto mb-16 space-y-3`}>
           <span className="eyebrow block">
-            // AUDIENCE SEGMENTATION ROUTER
+            {t('audience.eyebrow')}
           </span>
           <h2 className="font-display font-medium text-3xl sm:text-5xl text-ink-primary tracking-tight">
-            Partner With COMCOM Group
+            {t('audience.title')}
           </h2>
           <p className="text-ink-secondary text-sm sm:text-base leading-relaxed">
-            Select your institutional profile to deploy dedicated operational capacity, technical production assets, or access certified investor governance.
+            {t('audience.desc')}
           </p>
         </div>
 
         {/* 3 Pathway Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {audiencePaths.map((path, idx) => (
-            <div
-              key={path.category}
-              className="card-surface p-8 flex flex-col justify-between space-y-6 border border-border-default hover:border-accent/40 transition-all group"
-            >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-sm bg-surface-elevated border border-border-subtle flex items-center justify-center group-hover:scale-105 transition-transform">
-                    {getIcon(path.action)}
+          {audiencePaths.map((path) => {
+            const pathKey = getPathKey(path.action);
+            return (
+              <div
+                key={path.category}
+                className="card-surface p-8 flex flex-col justify-between space-y-6 border border-border-default hover:border-accent/40 transition-all group"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="w-12 h-12 rounded-sm bg-surface-elevated border border-border-subtle flex items-center justify-center group-hover:scale-105 transition-transform">
+                      {getIcon(path.action)}
+                    </div>
+                    <span className="badge-mono text-[10px]">
+                      {t(`audience.paths.${pathKey}.badge`, path.badge)}
+                    </span>
                   </div>
-                  <span className="badge-mono text-[10px]">
-                    {path.badge}
-                  </span>
+
+                  <h3 className="font-display font-medium text-xl text-ink-primary">
+                    {t(`audience.paths.${pathKey}.title`, path.title)}
+                  </h3>
+
+                  <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed font-normal">
+                    {t(`audience.paths.${pathKey}.desc`, path.desc)}
+                  </p>
                 </div>
 
-                <h3 className="font-display font-medium text-xl text-ink-primary">
-                  {path.title}
-                </h3>
-
-                <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed font-normal">
-                  {path.desc}
-                </p>
+                <button
+                  onClick={() => handleAction(path)}
+                  className="w-full py-3 px-4 rounded-sm bg-surface-elevated hover:bg-accent hover:text-white border border-border-subtle hover:border-accent text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-between group/btn text-ink-primary"
+                >
+                  <span>{t(`audience.paths.${pathKey}.cta`, path.cta)}</span>
+                  <ArrowRight className="w-4 h-4 text-accent-strong group-hover/btn:text-white group-hover/btn:translate-x-1 transition-all rtl-flip" />
+                </button>
               </div>
-
-              <button
-                onClick={() => handleAction(path)}
-                className="w-full py-3 px-4 rounded-sm bg-surface-elevated hover:bg-accent hover:text-white border border-border-subtle hover:border-accent text-xs font-mono font-semibold uppercase tracking-wider transition-all flex items-center justify-between group/btn text-ink-primary"
-              >
-                <span>{path.cta}</span>
-                <ArrowRight className="w-4 h-4 text-accent-strong group-hover/btn:text-white group-hover/btn:translate-x-1 transition-all" />
-              </button>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

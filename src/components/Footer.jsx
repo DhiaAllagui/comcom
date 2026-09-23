@@ -1,6 +1,7 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { agencyInfo, footerHubs } from '../data/agencyData';
-import { MessageCircle, ArrowUpRight } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 const InstagramIcon = () => (
   <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -9,7 +10,6 @@ const InstagramIcon = () => (
     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
   </svg>
 );
-
 
 const YoutubeIcon = () => (
   <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -25,6 +25,8 @@ const FacebookIcon = () => (
 );
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="relative bg-void border-t border-border-subtle pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,10 +36,10 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
             <div>
               <span className="eyebrow block mb-1">
-                // Global Footprint Architecture
+                {t('footer.eyebrow')}
               </span>
               <h3 className="font-display font-medium text-2xl text-ink-primary">
-                Four Strategic Jurisdictions. One Unified Operation.
+                {t('footer.title')}
               </h3>
             </div>
           </div>
@@ -92,13 +94,13 @@ export default function Footer() {
                   </span>
                 </div>
                 <span className="text-[10px] tracking-wider uppercase font-mono text-ink-tertiary">
-                  Delaware Holding · Global Media Conglomerate
+                  {t('navbar.brandSubtitle')}
                 </span>
               </div>
             </div>
 
             <p className="text-ink-tertiary text-xs sm:text-sm leading-relaxed max-w-sm">
-              Conceiving, producing, amplifying, and scaling transformative media, world-class experiential summits, and commercial ventures across North America, the GCC, and North Africa.
+              {t('footer.mission')}
             </p>
 
             <div className="flex items-center gap-3">
@@ -144,7 +146,7 @@ export default function Footer() {
           {/* Operating Divisions */}
           <div className="space-y-3">
             <h4 className="font-display font-medium text-xs uppercase tracking-widest text-ink-primary mb-4">
-              Operational Divisions
+              {t('footer.divisionsTitle')}
             </h4>
             <ul className="space-y-2 text-xs text-ink-tertiary">
               <li><a href="#divisions" className="hover:text-ink-primary transition-colors">1. Advertising &amp; Brand Motion</a></li>
@@ -161,7 +163,7 @@ export default function Footer() {
           {/* Proprietary Labels & Podcasts */}
           <div className="space-y-3">
             <h4 className="font-display font-medium text-xs uppercase tracking-widest text-ink-primary mb-4">
-              Ventures &amp; Media
+              {t('navbar.links.labelsMedia')}
             </h4>
             <ul className="space-y-2 text-xs text-ink-tertiary">
               <li><a href="#podcast" className="hover:text-accent-strong transition-colors font-medium text-ink-primary">★ Podcast: Drawers (أدراج)</a></li>
@@ -178,7 +180,7 @@ export default function Footer() {
           <div className="space-y-4 font-mono text-xs text-ink-tertiary">
             <div>
               <h4 className="font-display font-medium text-xs uppercase tracking-widest text-ink-primary mb-3">
-                Digital Publishing
+                {t('ventures.magazinesTitle')}
               </h4>
               <ul className="space-y-1.5 text-xs text-ink-tertiary">
                 <li><a href="#media" className="hover:text-accent-strong transition-colors">Influencers Mag</a></li>
@@ -189,7 +191,7 @@ export default function Footer() {
             </div>
 
             <div className="pt-2 border-t border-border-subtle space-y-1">
-              <div className="text-ink-primary font-semibold">Institutional Inquiries</div>
+              <div className="text-ink-primary font-semibold">{t('contact.title')}</div>
               <div>holding@comcomgroupcompany.com</div>
               <div>UAE Desk: +971 55 253 8556</div>
               <div>Tunisia Desk: +216 29 271 278</div>
@@ -201,14 +203,14 @@ export default function Footer() {
         {/* ── Bottom Bar ── */}
         <div className="pt-8 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-ink-tertiary">
           <div>
-            © {new Date().getFullYear()} COMCOM GROUP LLC (Delaware #10321177, EIN 98-1880888). All rights reserved.
+            {t('footer.copyright', { year: new Date().getFullYear() })}
           </div>
           <div className="flex items-center gap-6">
             <span className="text-ink-secondary">comcomgroupcompany.com</span>
             <span>·</span>
-            <a href="#about" className="hover:text-ink-primary transition-colors">Statutory Governance</a>
+            <a href="#about" className="hover:text-ink-primary transition-colors">{t('hero.ctaSecondary')}</a>
             <span>·</span>
-            <a href="#contact" className="hover:text-ink-primary transition-colors">Contact</a>
+            <a href="#contact" className="hover:text-ink-primary transition-colors">{t('navbar.contact')}</a>
           </div>
         </div>
 

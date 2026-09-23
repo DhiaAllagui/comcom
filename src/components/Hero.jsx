@@ -10,27 +10,33 @@ import flagTunisia from '../images/tunisia.webp';
 import flagKSA from '../images/ksa.webp';
 import bgv from '../images/bgv.mp4';
 
-function StatItem({ stat }) {
+function StatItem({ stat, statKey }) {
+  const { t } = useTranslation();
   const [ref, isVisible] = useReveal(0.3);
   const count = useCountUp(stat.value, isVisible);
 
+  const label = statKey ? t(`hero.stats.${statKey}.label`, stat.label) : stat.label;
+  const detail = statKey ? t(`hero.stats.${statKey}.detail`, stat.detail) : stat.detail;
+
   return (
-    <div ref={ref} className="text-left space-y-1">
+    <div ref={ref} className="text-left space-y-1 rtl:text-right">
       <div className="font-display font-normal text-3xl sm:text-4xl text-accent-strong tracking-tight">
         {count}
       </div>
       <div className="text-xs font-semibold uppercase tracking-wider text-ink-primary">
-        {stat.label}
+        {label}
       </div>
       <div className="text-[11px] font-mono text-ink-tertiary">
-        {stat.detail}
+        {detail}
       </div>
     </div>
   );
 }
 
+const STAT_KEYS = ['attendees', 'audience', 'presence', 'inHouse'];
+
 export default function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const videoRef = useRef(null);
   const [reduceMotion, setReduceMotion] = useState(false);
 
@@ -51,6 +57,9 @@ export default function Hero() {
       video.play().catch(() => {});
     }
   }, [reduceMotion]);
+
+  const rawTicker = t('hero.ticker', { returnObjects: true });
+  const tickerItems = Array.isArray(rawTicker) ? rawTicker : achievementTicker;
 
   return (
     <section id="holding" className="relative min-h-[100vh] flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-void">
@@ -135,17 +144,17 @@ export default function Hero() {
 
         {/* Audited Impact Metrics (4 KPI Counters) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto pt-8 border-t border-border-subtle">
-          {quickStats.map((stat) => (
-            <StatItem key={stat.label} stat={stat} />
+          {quickStats.map((stat, idx) => (
+            <StatItem key={stat.label} stat={stat} statKey={STAT_KEYS[idx]} />
           ))}
         </div>
 
       </div>
 
-      {/* Achievement marquee ticker — signature moment #2, seamless CSS loop */}
+      {/* Achievement marquee ticker */}
       <div className="relative w-full border-t border-b border-border-subtle bg-surface-base py-4 mt-16 z-10 overflow-hidden">
         <div className="marquee-track">
-          {[...achievementTicker, ...achievementTicker].map((item, i) => (
+          {[...tickerItems, ...tickerItems].map((item, i) => (
             <span
               key={i}
               className="flex items-center gap-8 sm:gap-12 font-mono text-[11px] sm:text-xs uppercase tracking-widest text-ink-secondary whitespace-nowrap pr-8 sm:pr-12"

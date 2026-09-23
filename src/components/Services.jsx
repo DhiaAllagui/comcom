@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { triEngines, divisions } from '../data/agencyData';
-import { ArrowUpRight, Film, Radio, Sparkles, CheckCircle2, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, ChevronRight } from 'lucide-react';
 import { useReveal } from '../hooks/useReveal';
 import bg6 from '../images/bg6.webp';
 
 function EngineCard({ engine, idx }) {
+  const { t } = useTranslation();
   const [ref, isVisible] = useReveal(0.2);
 
   return (
@@ -39,7 +41,7 @@ function EngineCard({ engine, idx }) {
         {/* Core Capabilities */}
         <div className="space-y-2 pt-2 border-t border-border-subtle">
           <div className="font-mono text-[11px] uppercase tracking-wider text-ink-primary font-semibold">
-            Capabilities:
+            {t('services.capabilities')}
           </div>
           <ul className="space-y-2">
             {engine.coreOps.map((op, i) => (
@@ -53,13 +55,13 @@ function EngineCard({ engine, idx }) {
       </div>
 
       <div className="pt-4 border-t border-border-subtle flex items-center justify-between">
-        <span className="font-mono text-[10px] text-ink-tertiary">Tri-Engine Infrastructure</span>
+        <span className="font-mono text-[10px] text-ink-tertiary">{t('services.infrastructure')}</span>
         <a
           href="#contact"
           className="text-xs font-mono font-semibold uppercase tracking-wider text-accent-strong hover:text-ink-primary flex items-center gap-1 transition-colors"
         >
-          <span>Deploy Engine</span>
-          <ChevronRight className="w-3.5 h-3.5" />
+          <span>{t('services.deployEngine')}</span>
+          <ChevronRight className="w-3.5 h-3.5 rtl-flip" />
         </a>
       </div>
     </div>
@@ -67,6 +69,7 @@ function EngineCard({ engine, idx }) {
 }
 
 function DivisionGridCard({ division, idx }) {
+  const { t } = useTranslation();
   const [ref, isVisible] = useReveal(0.15);
 
   return (
@@ -112,8 +115,8 @@ function DivisionGridCard({ division, idx }) {
           href="#contact"
           className="text-ink-primary group-hover:text-accent-strong flex items-center gap-1 transition-colors uppercase tracking-wider text-[11px] font-semibold"
         >
-          <span>Inquire</span>
-          <ArrowUpRight className="w-3.5 h-3.5" />
+          <span>{t('ventures.inquire')}</span>
+          <ArrowUpRight className="w-3.5 h-3.5 rtl-flip" />
         </a>
       </div>
     </div>
@@ -121,6 +124,7 @@ function DivisionGridCard({ division, idx }) {
 }
 
 export default function Services() {
+  const { t } = useTranslation();
   const [headerRef1, headerVisible1] = useReveal();
   const [headerRef2, headerVisible2] = useReveal();
 
@@ -145,13 +149,13 @@ export default function Services() {
           
           <div ref={headerRef1} className={`reveal-blur ${headerVisible1 ? 'is-visible' : ''} max-w-3xl space-y-3`}>
             <span className="eyebrow block">
-              // OPERATIONAL ARCHITECTURE
+              {t('services.engineEyebrow')}
             </span>
             <h2 className="font-display font-medium text-3xl sm:text-5xl lg:text-6xl text-ink-primary tracking-tight">
-              The Tri-Engine Model
+              {t('services.engineTitle')}
             </h2>
             <p className="text-ink-secondary text-base sm:text-lg leading-relaxed font-normal">
-              Converging film production, arena-scale live entertainment, and digital growth infrastructure under unified holding governance.
+              {t('services.engineDesc')}
             </p>
           </div>
 
@@ -170,13 +174,13 @@ export default function Services() {
           
           <div ref={headerRef2} className={`reveal-blur ${headerVisible2 ? 'is-visible' : ''} text-center max-w-3xl mx-auto space-y-3`}>
             <span className="eyebrow block">
-              // FULL SPECTRUM COMMERCIAL EXECUTION
+              {t('services.divisionsEyebrow')}
             </span>
             <h2 className="font-display font-medium text-3xl sm:text-5xl text-ink-primary tracking-tight">
-              The 8 Integrated Divisions
+              {t('services.divisionsTitle')}
             </h2>
             <p className="text-ink-secondary text-sm sm:text-base leading-relaxed">
-              End-to-end execution across global advertising, stadium entertainment, exhibitions, and digital commerce.
+              {t('services.divisionsDesc')}
             </p>
           </div>
 

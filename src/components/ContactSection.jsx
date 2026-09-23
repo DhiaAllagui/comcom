@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 import { agencyInfo } from '../data/agencyData';
 import { MessageCircle, Send, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
@@ -7,13 +8,14 @@ import { Wave } from './Wave';
 import bg3 from '../images/bg3.webp';
 
 const departmentContacts = [
-  { name: "Group Headquarters", email: "contact@comcomgroup.ae", phone: "+971 4 567 8901" },
-  { name: "COMCOM Studios (Audiovisual)", email: "contact@comcomstudios.ae", phone: "+971 4 567 8910" },
-  { name: "COMCOM Events & Expo", email: "contact@comcomexpo.ae", phone: "+971 4 123 4567" },
-  { name: "COMCOM Advertising & Media", email: "contact@comcomadvertising.ae", phone: "+971 4 789 1234" },
+  { name: "Group Headquarters", email: "contact@comcomgroupcompany.com", phone: "+971 4 567 8901" },
+  { name: "COMCOM Studios (Audiovisual)", email: "contact@comcomgroupcompany.com", phone: "+971 4 567 8910" },
+  { name: "COMCOM Events & Expo", email: "contact@comcomgroupcompany.com", phone: "+971 4 123 4567" },
+  { name: "COMCOM Advertising & Media", email: "contact@comcomgroupcompany.com", phone: "+971 4 789 1234" },
 ];
 
 export default function ContactSection() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -39,11 +41,11 @@ export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
-      setErrorMsg('Please complete all required fields: Name, Email, and Phone.');
+      setErrorMsg(t('contact.requiredNotice'));
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
-      setErrorMsg('Please enter a valid email address.');
+      setErrorMsg(t('contact.invalidEmail'));
       return;
     }
 
@@ -90,13 +92,13 @@ export default function ContactSection() {
         {/* Header */}
         <div ref={headerRef} className={`reveal-blur ${headerVisible ? 'is-visible' : ''} text-center max-w-3xl mx-auto mb-20`}>
           <span className="eyebrow block mb-3">
-            // 06 Group Coordination
+            {t('contact.eyebrow')}
           </span>
           <h2 className="font-display font-medium text-3xl sm:text-5xl lg:text-6xl text-ink-primary tracking-tight mb-6">
-            Connect with Our Agencies
+            {t('contact.title')}
           </h2>
           <p className="text-ink-secondary text-sm sm:text-base leading-relaxed">
-            To discuss your creative solutions, audiovisual productions, large-scale exhibitions, or advertising needs, please contact our specialized desks below.
+            {t('contact.desc')}
           </p>
         </div>
 
@@ -107,10 +109,10 @@ export default function ContactSection() {
             <div className="card-surface p-8 space-y-6">
               <div>
                 <h3 className="font-display font-medium text-xl text-ink-primary mb-1">
-                  Accredited Division Desks
+                  {t('contact.desksTitle')}
                 </h3>
                 <p className="text-ink-tertiary text-xs font-mono">
-                  Direct contact points across COMCOM Group departments
+                  {t('contact.desksSubtitle')}
                 </p>
               </div>
 
@@ -144,11 +146,11 @@ export default function ContactSection() {
                   <div className="flex items-center gap-3">
                     <MessageCircle className="w-5 h-5 text-accent-strong" />
                     <div>
-                      <div className="text-[10px] uppercase font-mono tracking-wider text-ink-tertiary">Direct WhatsApp Line</div>
+                      <div className="text-[10px] uppercase font-mono tracking-wider text-ink-tertiary">{t('contact.whatsappDirect')}</div>
                       <div className="text-sm font-semibold text-ink-primary">+971 55 253 8556</div>
                     </div>
                   </div>
-                  <span className="text-xs font-mono text-accent-strong group-hover:translate-x-1 transition-transform">→</span>
+                  <span className="text-xs font-mono text-accent-strong group-hover:translate-x-1 transition-transform rtl-flip">→</span>
                 </a>
               </div>
             </div>
@@ -165,11 +167,19 @@ export default function ContactSection() {
                   </div>
 
                   <h3 className="font-display font-medium text-2xl sm:text-3xl text-ink-primary">
-                    Inquiry Received by {formData.department}
+                    {t('contact.successTitle', { department: formData.department })}
                   </h3>
 
                   <p className="text-ink-secondary text-sm max-w-md mx-auto leading-relaxed">
-                    Thank you, <strong className="text-ink-primary">{formData.name}</strong>. Your project parameters have been routed to the senior director of <span className="text-ink-primary font-semibold">{formData.department}</span>. We will follow up via <span className="text-ink-primary font-semibold">{formData.email}</span>.
+                    <Trans
+                      i18nKey="contact.successMessage"
+                      values={{ name: formData.name, department: formData.department, email: formData.email }}
+                      components={{
+                        1: <strong className="text-ink-primary" />,
+                        3: <span className="text-ink-primary font-semibold" />,
+                        5: <span className="text-ink-primary font-semibold" />
+                      }}
+                    />
                   </p>
 
                   <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -180,14 +190,14 @@ export default function ContactSection() {
                       className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2"
                     >
                       <MessageCircle className="w-4 h-4" />
-                      <span>Send Direct via WhatsApp</span>
+                      <span>{t('contact.sendDirectWhatsApp')}</span>
                     </a>
 
                     <button
                       onClick={() => setSubmitted(false)}
                       className="btn-secondary w-full sm:w-auto"
                     >
-                      Submit Another Inquiry
+                      {t('contact.submitAnother')}
                     </button>
                   </div>
                 </div>
@@ -196,10 +206,10 @@ export default function ContactSection() {
 
                   <div className="border-b border-border-subtle pb-4">
                     <h3 className="font-display font-medium text-xl text-ink-primary">
-                      Direct Department Inquiry Form
+                      {t('contact.formTitle')}
                     </h3>
                     <p className="text-xs text-ink-tertiary font-mono mt-0.5">
-                      Confidential brief submission to COMCOM Group headquarters
+                      {t('contact.formSubtitle')}
                     </p>
                   </div>
 
@@ -212,7 +222,7 @@ export default function ContactSection() {
                   {/* Department Selector */}
                   <div className="space-y-1.5">
                     <label htmlFor="contact-department" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
-                      Select Department / Division *
+                      {t('contact.deptLabel')}
                     </label>
                     <select
                       id="contact-department"
@@ -239,7 +249,7 @@ export default function ContactSection() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label htmlFor="contact-name" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
-                        Full Name *
+                        {t('contact.nameLabel')}
                       </label>
                       <input
                         id="contact-name"
@@ -249,14 +259,14 @@ export default function ContactSection() {
                         autoComplete="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        placeholder="e.g. Sultan Al Mansoor"
+                        placeholder={t('contact.namePlaceholder')}
                         className="field-input w-full"
                       />
                     </div>
 
                     <div className="space-y-1.5">
                       <label htmlFor="contact-company" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
-                        Company / Organization
+                        {t('contact.companyLabel')}
                       </label>
                       <input
                         id="contact-company"
@@ -265,14 +275,14 @@ export default function ContactSection() {
                         autoComplete="organization"
                         value={formData.company}
                         onChange={handleInputChange}
-                        placeholder="e.g. Prestige Group UAE"
+                        placeholder={t('contact.companyPlaceholder')}
                         className="field-input w-full"
                       />
                     </div>
 
                     <div className="space-y-1.5">
                       <label htmlFor="contact-email" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
-                        Corporate Email *
+                        {t('contact.emailLabel')}
                       </label>
                       <input
                         id="contact-email"
@@ -282,14 +292,14 @@ export default function ContactSection() {
                         autoComplete="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="sultan@example.com"
+                        placeholder={t('contact.emailPlaceholder')}
                         className="field-input w-full"
                       />
                     </div>
 
                     <div className="space-y-1.5">
                       <label htmlFor="contact-phone" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
-                        Phone / WhatsApp *
+                        {t('contact.phoneLabel')}
                       </label>
                       <input
                         id="contact-phone"
@@ -299,7 +309,7 @@ export default function ContactSection() {
                         autoComplete="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+971 50 123 4567"
+                        placeholder={t('contact.phonePlaceholder')}
                         className="field-input w-full"
                       />
                     </div>
@@ -308,7 +318,7 @@ export default function ContactSection() {
                   {/* Brief Message */}
                   <div className="space-y-1.5">
                     <label htmlFor="contact-brief" className="block font-mono text-xs uppercase tracking-wider text-ink-secondary">
-                      Project Scope &amp; Collaboration Details
+                      {t('contact.briefLabel')}
                     </label>
                     <textarea
                       id="contact-brief"
@@ -316,7 +326,7 @@ export default function ContactSection() {
                       rows="4"
                       value={formData.brief}
                       onChange={handleInputChange}
-                      placeholder="Outline your project scope, target timeline, or collaboration requirements..."
+                      placeholder={t('contact.briefPlaceholder')}
                       className="field-input w-full resize-none"
                     />
                   </div>
@@ -325,17 +335,17 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-primary w-full flex items-center justify-center gap-3 uppercase tracking-widest"
+                    className="btn-primary w-full flex items-center justify-center gap-3 uppercase tracking-widest font-mono text-xs !py-3.5"
                   >
                     {isSubmitting ? (
                       <>
                         <Wave className="h-4 text-[color:var(--text-on-accent)]" />
-                        <span>Routing Brief...</span>
+                        <span>{t('contact.submittingBtn')}</span>
                       </>
                     ) : (
                       <>
-                        <span>Submit Project Brief</span>
-                        <Send className="w-4 h-4" />
+                        <span>{t('contact.submitBtn')}</span>
+                        <Send className="w-4 h-4 rtl-flip" />
                       </>
                     )}
                   </button>

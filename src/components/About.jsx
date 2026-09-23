@@ -1,30 +1,31 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { useReveal } from '../hooks/useReveal';
-import { agencyInfo } from '../data/agencyData';
-import { ShieldCheck, Building2, Globe2, FileText, ArrowUpRight } from 'lucide-react';
+import { ShieldCheck, FileText, ArrowUpRight } from 'lucide-react';
 import bg2 from '../images/bg2.webp';
 
-const pillars = [
-  { 
-    num: '01', 
-    title: 'Institutional Holding', 
-    desc: 'Delaware jurisdiction with institutional IP protection and audited corporate governance.' 
-  },
-  { 
-    num: '02', 
-    title: 'Integrated Tri-Engine', 
-    desc: 'Unifying production, live events, and commercial scale under single holding control.' 
-  },
-  { 
-    num: '03', 
-    title: 'In-House Execution', 
-    desc: 'Direct execution via proprietary production suites, soundstages, and event rigs.' 
-  },
-];
-
 export default function About() {
+  const { t } = useTranslation();
   const [leftRef, leftVisible] = useReveal();
   const [rightRef, rightVisible] = useReveal();
+
+  const pillars = [
+    { 
+      num: '01', 
+      title: t('about.pillars.p1.title'), 
+      desc: t('about.pillars.p1.desc') 
+    },
+    { 
+      num: '02', 
+      title: t('about.pillars.p2.title'), 
+      desc: t('about.pillars.p2.desc') 
+    },
+    { 
+      num: '03', 
+      title: t('about.pillars.p3.title'), 
+      desc: t('about.pillars.p3.desc') 
+    },
+  ];
 
   return (
     <section id="about" className="relative py-28 bg-void border-t border-border-subtle overflow-hidden">
@@ -48,7 +49,7 @@ export default function About() {
           <div ref={leftRef} className={`reveal ${leftVisible ? 'is-visible' : ''} lg:col-span-7 space-y-6`}>
             <div className="flex items-center gap-2">
               <span className="eyebrow">
-                // 05 Corporate Governance & Global Holding
+                {t('about.eyebrow')}
               </span>
               <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm bg-accent/15 text-accent-strong border border-accent/30 font-bold uppercase">
                 Delaware #10321177
@@ -56,11 +57,11 @@ export default function About() {
             </div>
 
             <h2 className="font-display font-medium text-3xl sm:text-5xl text-ink-primary tracking-tight leading-tight">
-              An Institutional Conglomerate Powering Global Culture &amp; Commerce.
+              {t('about.title')}
             </h2>
 
             <p className="text-ink-secondary text-base sm:text-lg leading-relaxed">
-              <strong className="text-ink-primary">COMCOM GROUP INTERNATIONAL (Comcom Group LLC)</strong> is a Delaware holding conglomerate uniting transcontinental media production, arena live experiences, and commercial venture growth across the USA, UAE, Tunisia, and Saudi Arabia.
+              <strong className="text-ink-primary">{t('about.leadBold')}</strong> {t('about.leadRest')}
             </p>
 
             {/* Strategic Pillars */}
@@ -85,8 +86,8 @@ export default function About() {
                 className="btn-primary flex items-center gap-2 text-xs font-mono tracking-wider uppercase !py-2.5 !px-5"
               >
                 <ShieldCheck className="w-4 h-4" />
-                <span>Contact Corporate Holding</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
+                <span>{t('hero.ctaSecondary')}</span>
+                <ArrowUpRight className="w-3.5 h-3.5 rtl-flip" />
               </a>
 
               <span className="text-xs font-mono text-ink-tertiary flex items-center gap-1.5">
@@ -100,7 +101,7 @@ export default function About() {
           <div ref={rightRef} className={`reveal ${rightVisible ? 'is-visible' : ''} lg:col-span-5 space-y-6`} style={{ transitionDelay: '120ms' }}>
             <div className="card-surface p-8 shadow-2xl flex flex-col items-center text-center relative overflow-hidden border border-border-default hover:border-accent/40 transition-colors group">
 
-              {/* Ambient magenta/gold glow */}
+              {/* Ambient magenta glow */}
               <div className="absolute -top-16 -right-16 w-40 h-40 bg-accent/20 rounded-full blur-3xl pointer-events-none group-hover:bg-accent/35 transition-all" />
 
               {/* Official Brand Logo Lockup */}
@@ -124,7 +125,7 @@ export default function About() {
               </div>
 
               {/* Verified Legal Registry Box */}
-              <div className="w-full bg-void/80 border border-border-subtle rounded-sm p-4 text-left font-mono text-xs space-y-2 mb-6">
+              <div className="w-full bg-void/80 border border-border-subtle rounded-sm p-4 text-left font-mono text-xs space-y-2 mb-6 rtl:text-right">
                 <div className="flex items-center justify-between border-b border-border-subtle pb-1.5">
                   <span className="text-ink-tertiary">Jurisdiction</span>
                   <span className="text-ink-primary font-semibold">Delaware, USA</span>
@@ -154,8 +155,8 @@ export default function About() {
                   href="#contact"
                   className="text-accent-strong hover:text-ink-primary flex items-center gap-1.5 transition-colors font-medium"
                 >
-                  <span>Contact Legal Desk</span>
-                  <span>↗</span>
+                  <span>{t('navbar.contact')}</span>
+                  <span className="rtl-flip">↗</span>
                 </a>
               </div>
             </div>

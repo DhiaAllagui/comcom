@@ -45,6 +45,155 @@
     },
     "ctaPrimary": "Découvrir les Opérations Tri-Moteur",
     "ctaSecondary": "Gouvernance d'Entreprise",
-    "partnerTrackRecord": "Bilan Partenaire Éprouvé :"
+    "partnerTrackRecord": "Bilan Partenaire Éprouvé :",
+    "stats": {
+      "attendees": { "label": "Participants & Délégués", "detail": "Mobilisés lors de sommets souverains, expos et tournées d'arènes" },
+      "audience": { "label": "Audience Numérique", "detail": "Impressions multiplateformes sur nos canaux de diffusion" },
+      "presence": { "label": "Présence Mondiale", "detail": "USA (Delaware), ÉAU, Tunisie (Lab), Arabie Saoudite (Riyad)" },
+      "inHouse": { "label": "Exécution Intégrée", "detail": "Du concept stratégique à la logistique d'arène et télédiffusion" }
+    },
+    "ticker": [
+      "Holding du Delaware n°10321177",
+      "IRS EIN 98-1880888 LTR 147C",
+      "Licence ÉAU n°5643",
+      "Lab Tunisie RNE n°1275760R",
+      "8 Divisions Opérationnelles Intégrées",
+      "+500 000 Participants Mobilisés",
+      "+10M d'Impressions d'Audience Numérique",
+      "Conférence d'Investissement Arabo-Africaine (AAIC) Riyad",
+      "Podcasts Originaux : Drawers (أدراج) & Énergie +"
+    ]
+  },
+  "audience": {
+    "eyebrow": "// ROUTEUR DE SEGMENTATION D'AUDIENCE",
+    "title": "Devenez Partenaire du Groupe COMCOM",
+    "desc": "Sélectionnez votre profil institutionnel pour déployer une capacité opérationnelle dédiée, des actifs de production technique ou accéder à notre gouvernance investisseur certifiée.",
+    "paths": {
+      "brands": {
+        "title": "Pour Marques & Gouvernements",
+        "badge": "Souverain & Entreprise",
+        "desc": "Sommets souverains, pavillons d'expositions universelles et amplification numérique multi-territoires.",
+        "cta": "Demande pour Sommets & Médias"
+      },
+      "promoters": {
+        "title": "Pour Promoteurs & Diffuseurs",
+        "badge": "Production Technique",
+        "desc": "Cars régie de diffusion, volumes LED incurvés de 180m²+, acoustique de stade et logistique clé en main.",
+        "cta": "Déployer la Flotte de Production"
+      },
+      "investors": {
+        "title": "Pour Partenaires Institutionnels",
+        "badge": "Gouvernance & Capital",
+        "desc": "Gouvernance de holding Delaware, conformité multi-marchés et actifs culturels audités.",
+        "cta": "Échanger avec la Holding"
+      }
+    }
+  },
+  "services": {
+    "engineEyebrow": "// 02 ARCHITECTURE TRI-MOTEUR",
+    "engineTitle": "Le Modèle Tri-Moteur Souverain",
+    "engineDesc": "Trois moteurs opérationnels profondément intégrés propulsant la production cinématographique, les événements live à grande échelle et la croissance de l'audience commerciale.",
+    "capabilities": "Capacités :",
+    "infrastructure": "Infrastructure Tri-Moteur",
+    "deployEngine": "Déployer le Moteur",
+    "divisionsEyebrow": "// 03 STRUCTURE DU CONGLOMÉRAT",
+    "divisionsTitle": "8 Divisions Opérationnelles Spécialisées",
+    "divisionsDesc": "Des entités spécialisées autonomes opérant sous une gouvernance unifiée de holding au Delaware, excellant dans les disciplines créatives, techniques, événementielles et commerciales.",
+    "exploreDivision": "Explorer la Division",
+    "allDivisions": "Toutes les Divisions"
+  },
+  "ventures": {
+    "eyebrow": "// 04 FILIALES PROPRIÉTAIRES & MÉDIAS",
+    "title": "Projets Phares & Médias Culturels",
+    "desc": "Propriété intellectuelle originale, magazines numériques à fort engagement, gestion de talents et productions culturelles primées.",
+    "podcastBadge": "Podcast Vidéo Phare Original",
+    "podcastQuote": "En chacun de nous se cachent des choses que nous avons gardées au fond de nous — des choses que nous ne pouvions pas lâcher, et des mots que nous n'avons jamais eu le courage de prononcer. Nous les avons laissés rangés dans des tiroirs.",
+    "podcastHost": "Animé par Ghada Chouiref",
+    "listenWatch": "Écoutez et Regardez sur les Plateformes Officielles :",
+    "spotify": "Podcast Spotify",
+    "youtube": "Chaîne YouTube",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "facebook": "Facebook",
+    "magazinesTitle": "Pôles d'Édition Numérique",
+    "labelsTitle": "Labels Créatifs Propriétaires",
+    "inquire": "Demande",
+    "proprietaryIp": "PI Propriétaire"
+  },
+  "tunisiaLab": {
+    "eyebrow": "// 05 HUB RÉGIONAL DE PRODUCTION",
+    "title": "Le Lab Tunisie & Centre d'Ingénierie",
+    "desc": "Notre moteur opérationnel terrain fournissant une production de niveau cinéma, des équipes polyglottes et un arbitrage de coûts optimal pour nos partenaires du Golfe et d'Occident.",
+    "whyTitle": "Pourquoi le Corridor de Production Tunisien ?",
+    "location": "Tunis, Tunisie · Hub de Production Nearshore"
+  },
+  "portfolio": {
+    "eyebrow": "// 06 EXPÉRIENCE & RÉALISATIONS ÉPROUVÉES",
+    "title": "Sommets Souverains, Tournées d'Arènes & Mégastructures",
+    "desc": "Exécution d'expériences mondiales d'envergure avec une précision sans compromis et un impact mesuré dans les domaines souverains, culturels et commerciaux.",
+    "filters": {
+      "all": "Tous",
+      "events": "Événements & Expo",
+      "studios": "Studios",
+      "advertising": "Publicité"
+    },
+    "verifiedExecution": "Exécution Vérifiée",
+    "viewCase": "Consulter l'Étude",
+    "imagesCount": "{{count}} Images",
+    "modalClose": "Fermer l'Étude de Cas",
+    "clientTrackRecord": "Partenaires Stratégiques et Clients Institutionnels :"
+  },
+  "about": {
+    "eyebrow": "// 07 Gouvernance d'Entreprise & Holding Mondiale",
+    "title": "Un Conglomérat Institutionnel au Service de la Culture & du Commerce Mondial.",
+    "leadBold": "COMCOM GROUP INTERNATIONAL (Comcom Group LLC)",
+    "leadRest": "est un conglomérat de holding du Delaware réunissant production médiatique transcontinentale, expériences live d'arène et développement commercial aux États-Unis, aux Émirats Arabes Unis, en Tunisie et en Arabie Saoudite.",
+    "pillars": {
+      "p1": { "title": "Holding Institutionnelle", "desc": "Juridiction du Delaware avec protection éprouvée de la PI et gouvernance d'entreprise auditée." },
+      "p2": { "title": "Tri-Moteur Intégré", "desc": "Unification de la production, de l'événementiel live et de l'échelle commerciale sous contrôle unique." },
+      "p3": { "title": "Exécution Intégrée", "desc": "Exécution directe via nos propres studios de production, plateaux de tournage et équipements événementiels." }
+    },
+    "governancePillarsTitle": "Quatre Piliers de Gouvernance d'Entreprise",
+    "jurisdictionsArchitecture": "Architecture des Juridictions Multinationales"
+  },
+  "contact": {
+    "eyebrow": "// 08 Coordination du Groupe",
+    "title": "Contacter Nos Agences",
+    "desc": "Pour discuter de vos solutions créatives, productions audiovisuelles, expositions majeures ou besoins publicitaires, contactez nos bureaux spécialisés ci-dessous.",
+    "desksTitle": "Bureaux Spécialisés Accrédités",
+    "desksSubtitle": "Points de contact directs à travers les départements du Groupe COMCOM",
+    "whatsappDirect": "Ligne Directe WhatsApp",
+    "formTitle": "Formulaire de Demande Directe",
+    "formSubtitle": "Transmission confidentielle de cahier des charges au siège du Groupe COMCOM",
+    "requiredNotice": "Veuillez remplir tous les champs obligatoires : Nom, E-mail et Téléphone.",
+    "invalidEmail": "Veuillez entrer une adresse e-mail valide.",
+    "nameLabel": "Nom Complet *",
+    "namePlaceholder": "ex. Sarah Jenkins",
+    "companyLabel": "Organisation / Entreprise",
+    "companyPlaceholder": "ex. Ministère de la Culture / Fonds Souverain / Marque",
+    "emailLabel": "E-mail Professionnel *",
+    "emailPlaceholder": "s.jenkins@organisation.com",
+    "phoneLabel": "Téléphone / WhatsApp (avec indicatif) *",
+    "phonePlaceholder": "+33 6 12 34 56 78",
+    "deptLabel": "Sélectionner le Département / Division *",
+    "briefLabel": "Cahier des Charges / Brief Confidentiel",
+    "briefPlaceholder": "Précisez vos délais, l'envergure estimée, les exigences techniques ou le cadre du partenariat...",
+    "submitBtn": "Envoyer la Demande au Département",
+    "submittingBtn": "Transmission en cours...",
+    "successTitle": "Demande Reçue par {{department}}",
+    "successMessage": "Merci, <1>{{name}}</1>. Vos paramètres de projet ont été transmis au directeur de <3>{{department}}</3>. Nous vous recontacterons via <5>{{email}}</5>.",
+    "sendDirectWhatsApp": "Envoyer Directement via WhatsApp",
+    "submitAnother": "Envoyer une Autre Demande"
+  },
+  "footer": {
+    "eyebrow": "// Architecture d'Implantation Mondiale",
+    "title": "Quatre Juridictions Stratégiques. Une Opération Unifiée.",
+    "mission": "Concevoir, produire, amplifier et développer des médias transformateurs, des sommets expérientiels de renommée mondiale et des projets commerciaux en Amérique du Nord, dans le Golfe et en Afrique du Nord.",
+    "divisionsTitle": "Divisions Opérationnelles",
+    "navigationTitle": "Navigation",
+    "holdingInfoTitle": "Holding du Delaware",
+    "copyright": "© {{year}} COMCOM GROUP LLC. Tous droits réservés.",
+    "registrationNotice": "Comcom Group LLC est une société holding à responsabilité limitée du Delaware (Dossier n°10321177). Opérant par le biais de filiales accréditées et succursales à Wilmington, Dubaï, Tunis et Riyad.",
+    "backToTop": "Haut de page"
   }
 }
