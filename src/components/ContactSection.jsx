@@ -4,7 +4,7 @@ import { agencyInfo } from '../data/agencyData';
 import { MessageCircle, Send, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useReveal } from '../hooks/useReveal';
-import { Wave } from './Wave';
+import { HourglassSpinner } from './HourglassSpinner';
 import bg3 from '../images/bg3.webp';
 
 const departmentContacts = [
@@ -339,7 +339,7 @@ export default function ContactSection() {
                   >
                     {isSubmitting ? (
                       <>
-                        <Wave className="h-4 text-[color:var(--text-on-accent)]" />
+                        <HourglassSpinner size={18} color="currentColor" glow={false} />
                         <span>{t('contact.submittingBtn')}</span>
                       </>
                     ) : (
