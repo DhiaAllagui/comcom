@@ -40,6 +40,12 @@ const YouTubeIcon = ({ className = "w-4 h-4" }) => (
 function LabelCard({ label, idx }) {
   const { t } = useTranslation();
   const [ref, isVisible] = useReveal();
+
+  const labelName = t(`data.ventures.labels.${label.abbr}.name`, label.name);
+  const labelBadge = t(`data.ventures.labels.${label.abbr}.badge`, label.badge);
+  const labelFocus = t(`data.ventures.labels.${label.abbr}.focus`, label.focus);
+  const labelDesc = t(`data.ventures.labels.${label.abbr}.description`, label.description);
+
   return (
     <div
       ref={ref}
@@ -52,20 +58,20 @@ function LabelCard({ label, idx }) {
             {label.abbr}
           </span>
           <span className="badge-mono">
-            {label.badge}
+            {labelBadge}
           </span>
         </div>
 
         <h3 className="font-display font-medium text-lg text-ink-primary mb-1">
-          {label.name}
+          {labelName}
         </h3>
 
         <div className="text-xs font-mono text-accent-strong mb-4">
-          {label.focus}
+          {labelFocus}
         </div>
 
         <p className="text-ink-secondary text-xs sm:text-sm leading-relaxed">
-          {label.description}
+          {labelDesc}
         </p>
       </div>
 
@@ -83,6 +89,10 @@ function LabelCard({ label, idx }) {
 function MagazineCard({ mag, idx }) {
   const { t } = useTranslation();
   const [ref, isVisible] = useReveal();
+
+  const magCat = t(`data.ventures.magazines.${idx}.category`, mag.category);
+  const magDesc = t(`data.ventures.magazines.${idx}.description`, mag.description);
+
   return (
     <div
       ref={ref}
@@ -99,16 +109,16 @@ function MagazineCard({ mag, idx }) {
         </h3>
 
         <div className="text-[11px] font-mono text-accent-strong mb-3">
-          {mag.category}
+          {magCat}
         </div>
 
         <p className="text-ink-tertiary text-xs leading-relaxed">
-          {mag.description}
+          {magDesc}
         </p>
       </div>
 
       <div className="pt-3 border-t border-border-subtle flex items-center justify-between text-xs font-mono text-ink-tertiary">
-        <span>Digital Issue</span>
+        <span>{t('ventures.digitalIssue')}</span>
         <a href="#contact" className="hover:text-ink-primary transition-colors flex items-center gap-1">
           <span>{t('ventures.inquire')}</span>
           <ArrowUpRight className="w-3.5 h-3.5 rtl-flip" />
@@ -152,7 +162,7 @@ export default function Ventures() {
         <div id="media">
           <div ref={headerRef2} className={`reveal-blur ${headerVisible2 ? 'is-visible' : ''} max-w-3xl mb-16 space-y-3`}>
             <span className="eyebrow block">
-              // 04 DIGITAL MEDIA &amp; SYNDICATION
+              {t('ventures.mediaEyebrow')}
             </span>
             <h2 className="font-display font-medium text-3xl sm:text-5xl text-ink-primary tracking-tight">
               {t('ventures.magazinesTitle')}
@@ -189,7 +199,7 @@ export default function Ventures() {
                   
                   <div className="absolute top-3 left-3">
                     <span className="badge-mono text-[9px] bg-void/80 backdrop-blur-md text-accent-strong border border-accent/30">
-                      OFFICIAL SHOW ARTWORK
+                      {t('ventures.officialArtwork')}
                     </span>
                   </div>
 
@@ -200,7 +210,7 @@ export default function Ventures() {
                       </div>
                       <span className="font-semibold text-[11px] truncate">{podcastData.flagshipTitle}</span>
                     </div>
-                    <span className="text-[10px] text-ink-tertiary font-mono">Season 01</span>
+                    <span className="text-[10px] text-ink-tertiary font-mono">{t('ventures.season01')}</span>
                   </div>
                 </div>
               </div>
@@ -212,7 +222,7 @@ export default function Ventures() {
                     <Mic className="w-4 h-4" />
                   </div>
                   <span className="badge-mono text-[10px] text-accent-strong">
-                    ORIGINAL NARRATIVE PODCAST NETWORK
+                    {t('ventures.podcastNetworkBadge')}
                   </span>
                   <span className="text-xs font-mono text-ink-tertiary hidden sm:inline">
                     · {podcastData.producer}
@@ -224,7 +234,7 @@ export default function Ventures() {
                     "{podcastData.flagshipTitle}" <span className="text-ink-secondary font-normal text-lg sm:text-xl block sm:inline">by {podcastData.host}</span>
                   </h3>
                   <div className="text-xs font-mono text-accent-strong mt-1">
-                    Featured Master Series · Also producing "{podcastData.secondaryPodcast}"
+                    {t('ventures.featuredSeries', { secondary: podcastData.secondaryPodcast })}
                   </div>
                 </div>
 
@@ -249,7 +259,7 @@ export default function Ventures() {
                 >
                   <div className="flex items-center gap-2.5 min-w-0">
                     <SpotifyIcon className="w-4 h-4 text-emerald-400 group-hover/link:text-white flex-shrink-0 transition-colors" />
-                    <span className="font-semibold truncate">Listen on Spotify</span>
+                    <span className="font-semibold truncate">{t('ventures.listenSpotify')}</span>
                   </div>
                   <ExternalLink className="w-3.5 h-3.5 text-emerald-400/80 group-hover/link:text-white flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" />
                 </a>
@@ -262,7 +272,7 @@ export default function Ventures() {
                 >
                   <div className="flex items-center gap-2.5 min-w-0">
                     <YouTubeIcon className="w-4 h-4 text-red-500 group-hover/link:text-white flex-shrink-0 transition-colors" />
-                    <span className="font-semibold truncate">YouTube @drawersofficiel</span>
+                    <span className="font-semibold truncate">{t('ventures.watchYoutube')}</span>
                   </div>
                   <ExternalLink className="w-3.5 h-3.5 text-red-500/80 group-hover/link:text-white flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" />
                 </a>
@@ -275,7 +285,7 @@ export default function Ventures() {
                 >
                   <div className="flex items-center gap-2.5 min-w-0">
                     <InstagramIcon className="w-4 h-4 text-pink-400 group-hover/link:text-white flex-shrink-0 transition-colors" />
-                    <span className="font-semibold truncate">Instagram @drawersofficiel</span>
+                    <span className="font-semibold truncate">{t('ventures.followInstagram')}</span>
                   </div>
                   <ExternalLink className="w-3.5 h-3.5 text-pink-400/80 group-hover/link:text-white flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" />
                 </a>
@@ -288,7 +298,7 @@ export default function Ventures() {
                 >
                   <div className="flex items-center gap-2.5 min-w-0">
                     <TikTokIcon className="w-4 h-4 text-cyan-400 group-hover/link:text-white flex-shrink-0 transition-colors" />
-                    <span className="font-semibold truncate">TikTok @drawersofficiel</span>
+                    <span className="font-semibold truncate">{t('ventures.watchTiktok')}</span>
                   </div>
                   <ExternalLink className="w-3.5 h-3.5 text-cyan-400/80 group-hover/link:text-white flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" />
                 </a>
@@ -301,7 +311,7 @@ export default function Ventures() {
                 >
                   <div className="flex items-center gap-2.5 min-w-0">
                     <FacebookIcon className="w-4 h-4 text-blue-400 group-hover/link:text-white flex-shrink-0 transition-colors" />
-                    <span className="font-semibold truncate">Facebook /drawersofficiel</span>
+                    <span className="font-semibold truncate">{t('ventures.communityFacebook')}</span>
                   </div>
                   <ExternalLink className="w-3.5 h-3.5 text-blue-400/80 group-hover/link:text-white flex-shrink-0 transition-transform group-hover/link:translate-x-0.5" />
                 </a>

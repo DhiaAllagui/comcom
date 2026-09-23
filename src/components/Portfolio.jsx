@@ -11,6 +11,11 @@ function ProjectCard({ project, idx, onSelect }) {
   const [activeImg, setActiveImg] = useState(project.thumbnail);
   const spanClass = idx === 0 ? 'lg:col-span-2' : '';
 
+  const projectTitle = t(`data.portfolio.${project.id}.title`, project.title);
+  const projectDivision = t(`data.portfolio.${project.id}.division`, project.division);
+  const projectLocation = t(`data.portfolio.${project.id}.location`, project.location);
+  const projectSummary = t(`data.portfolio.${project.id}.summary`, project.summary);
+
   return (
     <div
       ref={ref}
@@ -27,7 +32,7 @@ function ProjectCard({ project, idx, onSelect }) {
       <div className={`relative w-full overflow-hidden bg-black ${idx === 0 ? 'h-72 sm:h-96' : 'h-64 sm:h-72'}`}>
         <img
           src={activeImg || project.thumbnail}
-          alt={project.title}
+          alt={projectTitle}
           loading="lazy"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
@@ -35,10 +40,10 @@ function ProjectCard({ project, idx, onSelect }) {
 
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
           <span className="badge-mono">
-            {project.division}
+            {projectDivision}
           </span>
           <span className="font-mono text-[10px] px-2 py-0.5 rounded-sm bg-void/90 text-ink-secondary border border-border-subtle">
-            {project.location}
+            {projectLocation}
           </span>
         </div>
 
@@ -73,18 +78,18 @@ function ProjectCard({ project, idx, onSelect }) {
       <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
         <div>
           <h3 className="font-display font-medium text-xl text-ink-primary mb-2 group-hover:text-accent-strong transition-colors">
-            {project.title}
+            {projectTitle}
           </h3>
 
           <p className="text-ink-secondary text-xs sm:text-sm line-clamp-3 leading-relaxed mb-4">
-            {project.summary}
+            {projectSummary}
           </p>
 
           <div className="space-y-1.5 pt-2 border-t border-border-subtle">
             {project.highlights.slice(0, 2).map((item, i) => (
               <div key={i} className="flex items-start gap-2 text-xs text-ink-secondary">
                 <span className="text-accent-strong mt-0.5">—</span>
-                <span className="line-clamp-1">{item}</span>
+                <span className="line-clamp-1">{t(`data.portfolio.${project.id}.highlights.${i}`, item)}</span>
               </div>
             ))}
           </div>

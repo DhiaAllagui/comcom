@@ -47,10 +47,22 @@
     "ctaSecondary": "Gouvernance d'Entreprise",
     "partnerTrackRecord": "Bilan Partenaire Éprouvé :",
     "stats": {
-      "attendees": { "label": "Participants & Délégués", "detail": "Mobilisés lors de sommets souverains, expos et tournées d'arènes" },
-      "audience": { "label": "Audience Numérique", "detail": "Impressions multiplateformes sur nos canaux de diffusion" },
-      "presence": { "label": "Présence Mondiale", "detail": "USA (Delaware), ÉAU, Tunisie (Lab), Arabie Saoudite (Riyad)" },
-      "inHouse": { "label": "Exécution Intégrée", "detail": "Du concept stratégique à la logistique d'arène et télédiffusion" }
+      "attendees": {
+        "label": "Participants & Délégués",
+        "detail": "Mobilisés lors de sommets souverains, expos et tournées d'arènes"
+      },
+      "audience": {
+        "label": "Audience Numérique",
+        "detail": "Impressions multiplateformes sur nos canaux de diffusion"
+      },
+      "presence": {
+        "label": "Présence Mondiale",
+        "detail": "USA (Delaware), ÉAU, Tunisie (Lab), Arabie Saoudite (Riyad)"
+      },
+      "inHouse": {
+        "label": "Exécution Intégrée",
+        "detail": "Du concept stratégique à la logistique d'arène et télédiffusion"
+      }
     },
     "ticker": [
       "Holding du Delaware n°10321177",
@@ -100,7 +112,9 @@
     "divisionsTitle": "8 Divisions Opérationnelles Spécialisées",
     "divisionsDesc": "Des entités spécialisées autonomes opérant sous une gouvernance unifiée de holding au Delaware, excellant dans les disciplines créatives, techniques, événementielles et commerciales.",
     "exploreDivision": "Explorer la Division",
-    "allDivisions": "Toutes les Divisions"
+    "allDivisions": "Toutes les Divisions",
+    "engineNumber": "Moteur {{num}}",
+    "corePillarsLabel": "8 Piliers Majeurs"
   },
   "ventures": {
     "eyebrow": "// 04 FILIALES PROPRIÉTAIRES & MÉDIAS",
@@ -118,7 +132,18 @@
     "magazinesTitle": "Pôles d'Édition Numérique",
     "labelsTitle": "Labels Créatifs Propriétaires",
     "inquire": "Demande",
-    "proprietaryIp": "PI Propriétaire"
+    "proprietaryIp": "PI Propriétaire",
+    "digitalIssue": "Édition Numérique",
+    "mediaEyebrow": "// 04 MÉDIAS NUMÉRIQUES & DIFFUSION",
+    "officialArtwork": "VISUEL OFFICIEL DU SHOW",
+    "season01": "Saison 01",
+    "podcastNetworkBadge": "RÉSEAU DE PODCASTS NARRATIFS ORIGINAUX",
+    "featuredSeries": "Série Maîtresse · Production également de « {{secondary}} »",
+    "listenSpotify": "Écouter sur Spotify",
+    "watchYoutube": "YouTube @drawersofficiel",
+    "followInstagram": "Instagram @drawersofficiel",
+    "watchTiktok": "TikTok @drawersofficiel",
+    "communityFacebook": "Facebook /drawersofficiel"
   },
   "tunisiaLab": {
     "eyebrow": "// 05 HUB RÉGIONAL DE PRODUCTION",
@@ -149,12 +174,30 @@
     "leadBold": "COMCOM GROUP INTERNATIONAL (Comcom Group LLC)",
     "leadRest": "est un conglomérat de holding du Delaware réunissant production médiatique transcontinentale, expériences live d'arène et développement commercial aux États-Unis, aux Émirats Arabes Unis, en Tunisie et en Arabie Saoudite.",
     "pillars": {
-      "p1": { "title": "Holding Institutionnelle", "desc": "Juridiction du Delaware avec protection éprouvée de la PI et gouvernance d'entreprise auditée." },
-      "p2": { "title": "Tri-Moteur Intégré", "desc": "Unification de la production, de l'événementiel live et de l'échelle commerciale sous contrôle unique." },
-      "p3": { "title": "Exécution Intégrée", "desc": "Exécution directe via nos propres studios de production, plateaux de tournage et équipements événementiels." }
+      "p1": {
+        "title": "Holding Institutionnelle",
+        "desc": "Juridiction du Delaware avec protection éprouvée de la PI et gouvernance d'entreprise auditée."
+      },
+      "p2": {
+        "title": "Tri-Moteur Intégré",
+        "desc": "Unification de la production, de l'événementiel live et de l'échelle commerciale sous contrôle unique."
+      },
+      "p3": {
+        "title": "Exécution Intégrée",
+        "desc": "Exécution directe via nos propres studios de production, plateaux de tournage et équipements événementiels."
+      }
     },
     "governancePillarsTitle": "Quatre Piliers de Gouvernance d'Entreprise",
-    "jurisdictionsArchitecture": "Architecture des Juridictions Multinationales"
+    "jurisdictionsArchitecture": "Architecture des Juridictions Multinationales",
+    "auditedStanding": "Audité & En Règle",
+    "delawareHolding": "Société Holding du Delaware",
+    "jurisdiction": "Juridiction",
+    "delawareUSA": "Delaware, États-Unis",
+    "fileNumber": "Numéro de Dossier",
+    "taxId": "Identifiant Fiscal IRS (EIN)",
+    "uaeHub": "Hub Émirats Arabes Unis",
+    "tunisiaHub": "Hub Opérationnel Tunisie",
+    "statutoryDocs": "Documentation Statutaire"
   },
   "contact": {
     "eyebrow": "// 08 Coordination du Groupe",
@@ -183,7 +226,13 @@
     "successTitle": "Demande Reçue par {{department}}",
     "successMessage": "Merci, <1>{{name}}</1>. Vos paramètres de projet ont été transmis au directeur de <3>{{department}}</3>. Nous vous recontacterons via <5>{{email}}</5>.",
     "sendDirectWhatsApp": "Envoyer Directement via WhatsApp",
-    "submitAnother": "Envoyer une Autre Demande"
+    "submitAnother": "Envoyer une Autre Demande",
+    "depts": {
+      "hq": "Siège Général du Groupe",
+      "studios": "COMCOM Studios (Audiovisuel & Cinéma)",
+      "events": "COMCOM Événements & Expositions",
+      "advertising": "COMCOM Publicité & Médias"
+    }
   },
   "footer": {
     "eyebrow": "// Architecture d'Implantation Mondiale",
@@ -194,6 +243,391 @@
     "holdingInfoTitle": "Holding du Delaware",
     "copyright": "© {{year}} COMCOM GROUP LLC. Tous droits réservés.",
     "registrationNotice": "Comcom Group LLC est une société holding à responsabilité limitée du Delaware (Dossier n°10321177). Opérant par le biais de filiales accréditées et succursales à Wilmington, Dubaï, Tunis et Riyad.",
-    "backToTop": "Haut de page"
+    "backToTop": "Haut de page",
+    "divisions": {
+      "d1": "1. Publicité & Motion de Marque",
+      "d2": "2. Événements & Mégastructures d'Expo",
+      "d3": "3. Divertissement & Tournées d'Arène",
+      "d4": "4. Conseil & Affaires Publiques",
+      "d5": "5. Apprentissage & Académies Exécutives",
+      "d6": "6. Tourisme & Propriété de Destination",
+      "d7": "7. Négoce & Logistique d'Équipement",
+      "d8": "8. Communication Stratégique & RP"
+    }
+  },
+  "projectModal": {
+    "client": "Client :",
+    "close": "Fermer la fenêtre",
+    "prev": "Image précédente",
+    "next": "Image suivante",
+    "scopeDelivery": "Périmètre de livraison de l'agence",
+    "deliverables": "Livrables clés & exécution",
+    "deskNote": "Coordination directe disponible via le bureau exécutif de Dubaï.",
+    "visitSite": "Visiter le site officiel",
+    "initiateBrief": "Initier le brief"
+  },
+  "data": {
+    "triEngines": {
+      "01": {
+        "title": "LE MOTEUR DE PRODUCTION",
+        "subtitle": "Audiovisuel, Cinéma & Télédiffusion",
+        "badge": "Studio Créatif",
+        "description": "Captation qualité cinéma, séries télévisées et documentaires, audio narratif et podcasts originaux.",
+        "coreOps": [
+          "Captation multi-caméras cinéma 4K/8K et régies mobiles",
+          "Séries télévisées et documentaires d'envergure internationale",
+          "Spots publicitaires percutants et effets visuels 3D photoréalistes (VFX)",
+          "Podcasts narratifs originaux (Drawers, Énergie +)"
+        ]
+      },
+      "02": {
+        "title": "LE MOTEUR ÉVÉNEMENTIEL",
+        "subtitle": "Expériences Live, Sommets & Expos Mondiales",
+        "badge": "Échelle Arène",
+        "description": "Mégastructures clés en main, sommets bilatéraux et tournées de concerts en stade.",
+        "coreOps": [
+          "Sommets économiques, forums bilatéraux et pavillons d'Exposition Universelle",
+          "Tournées de concerts en stade et festivals de plus de 100 000 participants",
+          "Volumes LED 4K incurvés de plus de 180 m² et éclairages laser de pointe",
+          "Billetterie et paiement 100% sans contact RFID et télémétrie de foule"
+        ]
+      },
+      "03": {
+        "title": "LE MOTEUR DE CROISSANCE",
+        "subtitle": "Influence, Édition & Académies de Talents",
+        "badge": "Médias & Talents",
+        "description": "Roster de talents créateurs, édition de magazines numériques et académies certifiées.",
+        "coreOps": [
+          "CIA : Roster de talents régionaux et partenariats de marques de premier plan",
+          "+10 millions d'impressions médias sur nos réseaux de diffusion numérique",
+          "4 magazines numériques spécialisés (Start Up, Influencers, Santé, Destinations)",
+          "Académies de formation certifiées à Tunis et à Dubaï"
+        ]
+      }
+    },
+    "divisions": {
+      "advertising": {
+        "code": "01 / PUBLICITÉ",
+        "title": "COMCOM Publicité",
+        "tagline": "Diffusion 360° Omnicanale & Numérique",
+        "description": "Planification média complète, spots télévisés, affichage urbain et syndication numérique programmatique.",
+        "services": [
+          "Achat d'espaces média et stratégie omnicanale",
+          "Spots publicitaires TV et campagnes d'affichage grand format",
+          "SEO programmatique et tunnels de croissance sur les réseaux sociaux"
+        ]
+      },
+      "event-expo": {
+        "code": "02 / ÉVÉNEMENT & EXPO",
+        "title": "COMCOM Événement & Expo",
+        "tagline": "Sommets Clés en Main & Pavillons Mondiaux",
+        "description": "Conception et réalisation de pavillons d'exposition universelle, sommets ministériels et conventions bilatérales.",
+        "services": [
+          "Architecture de pavillons et construction de stands d'exposition",
+          "Conventions bilatérales et centres de presse officiels",
+          "Partenaire de livraison certifié pour l'Exposition Universelle de Dubaï"
+        ]
+      },
+      "entertainment": {
+        "code": "03 / DIVERTISSEMENT",
+        "title": "COMCOM Divertissement",
+        "tagline": "Concerts en Arène & Méga-Festivals Culturels",
+        "description": "Ingénierie de tournées d'arènes, concerts de rap en stade et grands festivals live.",
+        "services": [
+          "Gestion de concerts en stade et booking d'artistes internationaux",
+          "Volumes d'écrans LED incurvés 4K de plus de 180 m² et éclairage scénique",
+          "Accueil VIP tapis rouge et diffusion en direct multiplateforme"
+        ]
+      },
+      "consulting": {
+        "code": "04 / CONSEIL",
+        "title": "COMCOM Conseil",
+        "tagline": "Stratégie, Structuration & Levée de Capitaux",
+        "description": "Gouvernance d'entreprise, structuration de holdings transfrontalières et conseil en investissement.",
+        "services": [
+          "Structuration de holdings multi-juridictionnelles",
+          "Conseil en levée de fonds stratégique et fusions-acquisitions",
+          "Affaires publiques et appels d'offres souverains"
+        ]
+      },
+      "learning": {
+        "code": "05 / FORMATION",
+        "title": "COMCOM Formation",
+        "tagline": "Académies de Leadership & Production",
+        "description": "Campus certifiés dans les métiers de l'audiovisuel, compétences créateurs et leadership exécutif.",
+        "services": [
+          "Diplômes professionnels certifiés de la Pro Skills Academy",
+          "Formations pour cadres et leadership d'entreprise",
+          "Journalisme audiovisuel et maîtrise de la création de contenu"
+        ]
+      },
+      "tourism": {
+        "code": "06 / TOURISME",
+        "title": "COMCOM Tourisme",
+        "tagline": "Délégations Souveraines & Voyages d'Exception",
+        "description": "Protocole diplomatique, itinéraires souverains et expériences culturelles VIP sur mesure.",
+        "services": [
+          "Protocole ministériel, transport de luxe et sécurité rapprochée",
+          "Circuits culturels sur mesure dans le Golfe et en Afrique du Nord",
+          "Billetterie VIP pour sommets, concerts et expositions"
+        ]
+      },
+      "trading": {
+        "code": "07 / NÉGOCE",
+        "title": "COMCOM Négoce",
+        "tagline": "Logistique d'Équipement & Commerce Mondial",
+        "description": "Approvisionnement en matériel scénique et audiovisuel de pointe avec dédouanement fluide.",
+        "services": [
+          "Achat et fourniture d'équipements de scène, son et vidéo professionnels",
+          "Dédouanement et fret international sous carnet ATA",
+          "Logistique de produits dérivés pour tournées de concerts"
+        ]
+      },
+      "communication": {
+        "code": "08 / COMMUNICATION",
+        "title": "COMCOM Communication",
+        "tagline": "Récit de Marque & Relations Publiques",
+        "description": "Positionnement stratégique, liaison presse gouvernementale et défense de réputation.",
+        "services": [
+          "Identité de marque et chartes graphiques d'entreprise",
+          "RP gouvernementales et organisation de conférences de presse",
+          "Media training pour dirigeants et rédaction de discours officiels"
+        ]
+      }
+    },
+    "portfolio": {
+      "aaic-riyadh": {
+        "title": "Conférence d'Investissement Arabo-Africaine — Riyad",
+        "division": "COMCOM Événement & Expo · Conseil",
+        "location": "Riyad, Arabie Saoudite (2026–2027)",
+        "summary": "Sommet souverain reliant les capitaux du Golfe aux leaders industriels africains et fonds souverains.",
+        "highlights": [
+          "Corridors d'investissement Arabie Saoudite, EAU et Afrique",
+          "Plus de 50 délégations ministérielles et souveraines",
+          "Scénographie de diffusion clés en main et protocole officiel"
+        ],
+        "category": "Sommets Souverains",
+        "client": "Conseil d'Investissement Arabo-Africain",
+        "scope": "Livraison clés en main, protocole diplomatique, diffusion internationale et scénographie",
+        "deliverables": [
+          "Scène principale avec écrans 4K et traduction simultanée",
+          "Salons bilatéraux privés pour ministres et chefs de délégation",
+          "Centre de presse et régie de transmission satellite",
+          "Couverture médiatique dans plus de 30 pays"
+        ]
+      },
+      "street-food-fest": {
+        "title": "Street & Fast Food Fest (Village Mondial) — Tunis",
+        "division": "COMCOM Événements & Divertissement",
+        "location": "Tunis, Tunisie (Événement Annuel Phare)",
+        "summary": "Le plus grand rassemblement culinaire et culturel d'Afrique du Nord avec pavillons du monde et live shows.",
+        "highlights": [
+          "+100 000 festivaliers au rendez-vous",
+          "+50 pavillons gastronomiques internationaux et masterclasses",
+          "Le Food Lab et le Passeport Gastronomique International",
+          "Billetterie et paiement 100% sans contact RFID"
+        ],
+        "category": "Méga-Festivals & Expériences Populaires",
+        "client": "COMCOM Événements",
+        "scope": "Production intégrale, aménagement des pavillons, système de paiement sans contact et marketing",
+        "deliverables": [
+          "Village international aménagé avec 50 stands thématiques",
+          "Grande scène musicale avec éclairage et son haute fidélité",
+          "Système de paiement dématérialisé RFID fluide et sécurisé",
+          "Campagne d'influence générant plus de 5M d'impressions"
+        ]
+      },
+      "tunisia-rap-tour": {
+        "title": "Tournée Internationale de Rap Tunisie — Arènes & Stades",
+        "division": "COMCOM Divertissement & Agence CIA",
+        "location": "Tunis & Arènes Régionales",
+        "summary": "Tournée d'arènes mettant en lumière l'avant-garde urbaine arabe sur des scènes LED 4K de plus de 180 m².",
+        "highlights": [
+          "+3 500 spectateurs par date en stade",
+          "Direction artistique des têtes d'affiche et carré VIP",
+          "Diffusion en direct synchronisée sur plusieurs plateformes"
+        ],
+        "category": "Tournées de Concerts en Stade",
+        "client": "COMCOM Divertissement",
+        "scope": "Production scénique, son et lumière, accueil VIP et promotion",
+        "deliverables": [
+          "Scène monumentale aux normes techniques internationales",
+          "Murs d'écrans LED 4K et réalisation vidéo en direct",
+          "Dispositif de sécurité complet et gestion des flux",
+          "Couverture médiatique exclusive et captation concert"
+        ]
+      },
+      "dubai-world-expo": {
+        "title": "Exposition Universelle de Dubaï — Pavillons & Sommets",
+        "division": "COMCOM Événement & Expo",
+        "location": "Expo City Dubaï, Émirats Arabes Unis",
+        "summary": "Gestion de pavillons nationaux, programmation culturelle multinationale et conférences ministérielles.",
+        "highlights": [
+          "Exploitation de pavillons internationaux et protocole VIP",
+          "Scènes culturelles en direct et spectacles multinationaux",
+          "Conventions économiques bilatérales de haut niveau"
+        ],
+        "category": "Expositions Universelles & Pavillons Nationaux",
+        "client": "Délégations & Ministères Partenaires",
+        "scope": "Gestion d'exploitation, scénographie, protocole et animation culturelle",
+        "deliverables": [
+          "Accueil quotidien de dizaines de milliers de visiteurs",
+          "Célébration des journées nationales officielles",
+          "Forums économiques et mise en relation d'affaires"
+        ]
+      },
+      "cultural-narratives": {
+        "title": "Récits Culturels — Série Documentaire Internationale",
+        "division": "COMCOM Studios",
+        "location": "MENA & Télédiffusion Mondiale",
+        "summary": "Série documentaire 4K primée explorant le patrimoine, diffusée sur de grands réseaux de télévision internationaux.",
+        "highlights": [
+          "Diffusion télévisée sur des chaînes internationales",
+          "Prises de vue aériennes en 4K et design sonore immersif",
+          "Sous-titrage bilingue et bande originale orchestrale"
+        ],
+        "category": "Production Documentaire & Cinéma",
+        "client": "Réseaux TV & Plateformes de Streaming",
+        "scope": "Scénarisation, tournage, montage, mixage et composition musicale",
+        "deliverables": [
+          "Épisodes documentaires tournés dans des sites historiques d'exception",
+          "Interviews d'historiens et figures culturelles renommées",
+          "Livraison masters de diffusion et matériel promotionnel"
+        ]
+      },
+      "new-horizons": {
+        "title": "« Nouveaux Horizons » — Campagne Tech Multicanale",
+        "division": "COMCOM Publicité & Médias",
+        "location": "Émirats Arabes Unis & Marchés Régionaux",
+        "summary": "Campagne omnicanale primée intégrant filtres de réalité augmentée et collaborations avec des créateurs majeurs.",
+        "highlights": [
+          "Filtres de réalité augmentée (AR) interactifs à forte viralité",
+          "+10 millions d'impressions générées par les créateurs",
+          "Campagne TVC 360°, affichage urbain et entonnoirs numériques"
+        ],
+        "category": "Campagnes Publicitaires 360°",
+        "client": "Grands Groupes de Télécoms & Tech",
+        "scope": "Concept créatif, production publicitaire et activation d'influenceurs",
+        "deliverables": [
+          "Spot télévisé et cinéma au rendu cinématographique",
+          "Affichage extérieur sur les axes majeurs à Dubaï et Abu Dhabi",
+          "Filtres AR sociaux atteignant des taux d'engagement records"
+        ]
+      }
+    },
+    "tunisiaLab": {
+      "entities": [
+        {
+          "name": "Winkom SARL",
+          "est": "Fondé en 2012",
+          "cert": "RNE n°1275760R",
+          "badge": "Opérations Terrain",
+          "desc": "Plus de 14 ans de gestion d'opérations en stade, logistique de terrain et événements d'envergure en Afrique du Nord.",
+          "location": "Centre César, Montplaisir, Tunis"
+        },
+        {
+          "name": "COM COM Production",
+          "est": "Entité Certifiée",
+          "cert": "Cert. RNE 2025124614718",
+          "badge": "Studio Cinéma & VFX",
+          "desc": "Production de spots publicitaires cinéma, séries documentaires, émissions télévisées et effets visuels 3D.",
+          "location": "Plateaux Magic Box, Tunis"
+        },
+        {
+          "name": "Pro Skills Academy",
+          "est": "Campus de Formation",
+          "cert": "Cert. RNE 2025124606763",
+          "badge": "Académie Professionnelle",
+          "desc": "Campus professionnel certifiant ingénieurs du son, réalisateurs et techniciens de plateau.",
+          "location": "Campus Montplaisir, Tunis"
+        },
+        {
+          "name": "Magic Box Studios",
+          "est": "Infrastructures de Pointe",
+          "cert": "Suites Acoustiques",
+          "badge": "Complexe de Studios",
+          "desc": "Plateaux de tournage insonorisés, cycloramas fond vert géants et régies de post-production avancées.",
+          "location": "Quartier des Médias, Tunis"
+        }
+      ]
+    },
+    "ventures": {
+      "labels": {
+        "CIA": {
+          "name": "Central Influencers Agency (CIA)",
+          "focus": "Management de Créateurs & Partenariats de Marques",
+          "badge": "Roster de Talents",
+          "description": "Connecter les marques mondiales aux créateurs de contenu et célébrités les plus influents du Moyen-Orient et d'Europe."
+        },
+        "IIA": {
+          "name": "Influencers International Academy (IIA)",
+          "focus": "Formation & Professionnalisation des Créateurs",
+          "badge": "Académie Créateurs",
+          "description": "Certification des influenceurs en techniques de production, croissance algorithmique et monétisation."
+        },
+        "SUA": {
+          "name": "Start Up Academy (SUA)",
+          "focus": "Incubation d'Entreprises & Levée de Fonds",
+          "badge": "Incubateur de Startups",
+          "description": "Accompagnement des fondateurs régionaux : mentorat pratique, structuration juridique et accès aux investisseurs."
+        },
+        "IMS": {
+          "name": "International Medical Services (IMS)",
+          "focus": "Conciergerie Médicale & Santé Transfrontalière",
+          "badge": "Logistique Médicale",
+          "description": "Coordination de voyages médicaux VIP, prise en charge internationale et logistique de congrès médicaux."
+        },
+        "ITS": {
+          "name": "International Tourism Services (ITS)",
+          "focus": "Voyages d'Exception & Délégations Souveraines",
+          "badge": "Tourisme Mondial",
+          "description": "Voyages de luxe sur mesure, accueil de délégations diplomatiques et excursions VIP pour sommets."
+        }
+      },
+      "magazines": [
+        {
+          "category": "Économie des Créateurs & Culture Numérique",
+          "description": "Campagnes de créateurs virales, évolutions des plateformes et culture de marque."
+        },
+        {
+          "category": "Capital-Risque, Tech & Startups",
+          "description": "Startups à forte croissance, levées de fonds et nouvelles technologies."
+        },
+        {
+          "category": "Technologies Médicales & Santé",
+          "description": "Innovations médicales, avancées cliniques et congrès de bien-être mondiaux."
+        },
+        {
+          "category": "Voyages de Luxe & Patrimoine Mondial",
+          "description": "Sites du patrimoine mondial, hôtellerie d'exception et évasions extraordinaires."
+        }
+      ]
+    },
+    "footerHubs": [
+      {
+        "title": "Siège Holding · Amérique du Nord",
+        "entity": "Comcom Group LLC",
+        "address": "8 The Green, Ste A, Dover, Delaware 19901, USA",
+        "registration": "Dossier Delaware n°10321177 · IRS EIN 98-1880888"
+      },
+      {
+        "title": "Hub Commercial Régional · Golfe (GCC)",
+        "entity": "ComCom FZC LLC",
+        "address": "AMC Boulevard-B, Ajman Media City / Dubaï, EAU",
+        "registration": "Licence Commerciale n°5643"
+      },
+      {
+        "title": "Lab de Production & Ingénierie · Afrique du Nord",
+        "entity": "Winkom SARL / COM COM Production",
+        "address": "Centre César, Rue Jean-Jacques Rousseau, Montplaisir, Tunis",
+        "registration": "RNE n°1275760R · Plus de 14 ans d'opérations"
+      },
+      {
+        "title": "Bureau d'Expansion · Vision 2030 Arabie Saoudite",
+        "entity": "Bureau Régional COMCOM Arabie Saoudite",
+        "address": "King Fahd Road, Riyad, Royaume d'Arabie Saoudite",
+        "registration": "Sommet Phare : AAIC Riyad"
+      }
+    ]
   }
 }

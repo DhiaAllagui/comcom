@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { X, MapPin, Calendar, ArrowRight, ChevronLeft, ChevronRight, MessageCircle, ExternalLink } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
+  const { t } = useTranslation();
   const [activeImageIdx, setActiveImageIdx] = useState(0);
 
   useEffect(() => {
@@ -20,6 +22,14 @@ export default function ProjectModal({ project, onClose }) {
   }, [onClose, activeImageIdx]);
 
   if (!project) return null;
+
+  const projectTitle = t(`data.portfolio.${project.id}.title`, project.title);
+  const projectDivision = t(`data.portfolio.${project.id}.division`, project.division);
+  const projectLocation = t(`data.portfolio.${project.id}.location`, project.location);
+  const projectSummary = t(`data.portfolio.${project.id}.summary`, project.summary);
+  const projectCategory = t(`data.portfolio.${project.id}.category`, project.category || projectDivision);
+  const projectClient = t(`data.portfolio.${project.id}.client`, project.client || 'COMCOM Group');
+  const projectScope = t(`data.portfolio.${project.id}.scope`, project.scope);
 
   const images = project.gallery && project.gallery.length > 0 ? project.gallery : [project.thumbnail];
 
@@ -41,17 +51,17 @@ export default function ProjectModal({ project, onClose }) {
         <div className="flex items-center justify-between px-6 py-4 border-b border-border-subtle bg-void">
           <div className="flex items-center gap-3">
             <span className="badge-mono">
-              {project.category}
+              {projectCategory}
             </span>
             <span className="text-xs text-ink-tertiary font-mono hidden sm:inline">
-              Client: <strong className="text-ink-primary">{project.client}</strong>
+              {t('projectModal.client')} <strong className="text-ink-primary">{projectClient}</strong>
             </span>
           </div>
 
           <button
             onClick={onClose}
             className="min-w-11 min-h-11 flex items-center justify-center rounded-sm border border-border-subtle hover:border-border-default text-ink-secondary hover:text-ink-primary transition-colors"
-            aria-label="Close modal"
+            aria-label={t('projectModal.close')}
           >
             <X className="w-5 h-5" />
           </button>
@@ -120,30 +130,30 @@ export default function ProjectModal({ project, onClose }) {
             <div className="flex items-center gap-4 text-xs font-mono text-ink-tertiary mb-2">
               <span className="flex items-center gap-1">
                 <MapPin className="w-3.5 h-3.5 text-accent-strong" />
-                {project.location}
+                {projectLocation}
               </span>
               <span>·</span>
               <span className="flex items-center gap-1">
                 <Calendar className="w-3.5 h-3.5" />
-                {project.year}
+                {project.year || '2026–2027'}
               </span>
             </div>
 
             <h2 className="font-display font-medium text-2xl sm:text-3xl text-ink-primary mb-4">
-              {project.title}
+              {projectTitle}
             </h2>
 
             <p className="text-ink-secondary text-sm sm:text-base leading-relaxed mb-6">
-              {project.summary}
+              {projectSummary}
             </p>
 
-            {project.scope && (
+            {projectScope && (
               <div className="p-4 rounded-sm border border-border-subtle mb-6">
                 <div className="text-[11px] font-mono uppercase tracking-wider text-ink-tertiary mb-1">
-                  Scope of Agency Delivery
+                  {t('projectModal.scopeDelivery')}
                 </div>
                 <div className="text-sm font-semibold text-ink-primary">
-                  {project.scope}
+                  {projectScope}
                 </div>
               </div>
             )}
@@ -166,26 +176,28 @@ export default function ProjectModal({ project, onClose }) {
           )}
 
           {/* Deliverables */}
-          <div>
-            <h3 className="font-display font-medium text-sm uppercase tracking-wider text-ink-primary mb-3">
-              Key Deliverables &amp; Execution
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              {project.deliverables.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-2.5 p-3 rounded-sm border border-border-subtle text-xs sm:text-sm text-ink-secondary">
-                  <span className="text-accent-strong mt-0.5">—</span>
-                  <span>{item}</span>
-                </div>
-              ))}
+          {project.deliverables && (
+            <div>
+              <h3 className="font-display font-medium text-sm uppercase tracking-wider text-ink-primary mb-3">
+                {t('projectModal.deliverables')}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {project.deliverables.map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-2.5 p-3 rounded-sm border border-border-subtle text-xs sm:text-sm text-ink-secondary">
+                    <span className="text-accent-strong mt-0.5">—</span>
+                    <span>{t(`data.portfolio.${project.id}.deliverables.${idx}`, item)}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
         </div>
 
         {/* Footer Actions */}
         <div className="px-6 py-4 border-t border-border-subtle bg-void flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-xs text-ink-tertiary font-mono">
-            Direct coordination available via Dubai Executive Desk.
+            {t('projectModal.deskNote')}
           </div>
 
           <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
@@ -196,19 +208,19 @@ export default function ProjectModal({ project, onClose }) {
                 rel="noopener noreferrer"
                 className="btn-secondary flex-1 sm:flex-none flex items-center justify-center gap-2 !py-2.5 border-accent/40 text-accent-strong hover:bg-accent hover:text-white"
               >
-                <span>Visit Official Website</span>
+                <span>{t('projectModal.visitSite')}</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             )}
 
             <a
-              href={`https://wa.me/971552538556?text=Hello%20COMCOM%20Group%2C%20I%20am%20interested%20in%20a%20production%20similar%20to%20your%20case%20study%3A%20${encodeURIComponent(project.title)}`}
+              href={`https://wa.me/971552538556?text=Hello%20COMCOM%20Group%2C%20I%20am%20interested%20in%20a%20production%20similar%20to%20your%20case%20study%3A%20${encodeURIComponent(projectTitle)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary flex-1 sm:flex-none flex items-center justify-center gap-2 !py-2.5"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>WhatsApp Production Desk</span>
+              <span>{t('navbar.whatsappFull')}</span>
             </a>
 
             <a
@@ -216,8 +228,8 @@ export default function ProjectModal({ project, onClose }) {
               onClick={onClose}
               className="btn-primary flex-1 sm:flex-none flex items-center justify-center gap-2 !py-2.5"
             >
-              <span>Initiate Brief</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <span>{t('projectModal.initiateBrief')}</span>
+              <ArrowRight className="w-3.5 h-3.5 rtl-flip" />
             </a>
           </div>
         </div>

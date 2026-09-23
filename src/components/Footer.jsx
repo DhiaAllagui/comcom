@@ -51,16 +51,16 @@ export default function Footer() {
                 className="card-surface p-5 border border-border-subtle hover:border-accent/30 transition-all rounded-sm space-y-2"
               >
                 <div className="text-xs font-mono text-accent-strong font-bold uppercase tracking-wider">
-                  {hub.title}
+                  {t(`data.footerHubs.${idx}.title`, hub.title)}
                 </div>
                 <div className="font-display font-medium text-base text-ink-primary">
-                  {hub.entity}
+                  {t(`data.footerHubs.${idx}.entity`, hub.entity)}
                 </div>
                 <div className="font-mono text-[11px] text-ink-tertiary">
-                  {hub.address}
+                  {t(`data.footerHubs.${idx}.address`, hub.address)}
                 </div>
                 <div className="pt-2 border-t border-border-subtle font-mono text-[10px] text-accent-strong">
-                  {hub.registration}
+                  {t(`data.footerHubs.${idx}.registration`, hub.registration)}
                 </div>
               </div>
             ))}
@@ -149,14 +149,14 @@ export default function Footer() {
               {t('footer.divisionsTitle')}
             </h4>
             <ul className="space-y-2 text-xs text-ink-tertiary">
-              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">1. Advertising &amp; Brand Motion</a></li>
-              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">2. Event &amp; Expo Megastructures</a></li>
-              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">3. Entertainment &amp; Concert Tours</a></li>
-              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">4. Consulting &amp; Public Affairs</a></li>
-              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">5. Executive Learning &amp; Academies</a></li>
-              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">6. Tourism &amp; Destination IP</a></li>
-              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">7. Trading &amp; Merchandising</a></li>
-              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">8. Strategic Communications &amp; PR</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">{t('footer.divisions.d1')}</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">{t('footer.divisions.d2')}</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">{t('footer.divisions.d3')}</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">{t('footer.divisions.d4')}</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">{t('footer.divisions.d5')}</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">{t('footer.divisions.d6')}</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">{t('footer.divisions.d7')}</a></li>
+              <li><a href="#divisions" className="hover:text-ink-primary transition-colors">{t('footer.divisions.d8')}</a></li>
             </ul>
           </div>
 
@@ -172,7 +172,7 @@ export default function Footer() {
               <li><a href="#labels-publishing" className="hover:text-ink-primary transition-colors">Influencers International Academy</a></li>
               <li><a href="#labels-publishing" className="hover:text-ink-primary transition-colors">Start Up Academy</a></li>
               <li><a href="#labels-publishing" className="hover:text-ink-primary transition-colors">IMS (Medical Services)</a></li>
-              <li><a href="#tunisia-lab" className="hover:text-accent-strong transition-colors">The Tunisia Production Lab</a></li>
+              <li><a href="#tunisia-lab" className="hover:text-accent-strong transition-colors">{t('navbar.links.tunisiaLab')}</a></li>
             </ul>
           </div>
 

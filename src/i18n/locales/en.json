@@ -47,10 +47,22 @@
     "ctaSecondary": "Corporate Governance",
     "partnerTrackRecord": "Proven Partner Track Record:",
     "stats": {
-      "attendees": { "label": "Attendees & Delegates", "detail": "Mobilized across sovereign summits, expos & arena tours" },
-      "audience": { "label": "Digital Audience Reach", "detail": "Multi-platform impressions across syndication channels" },
-      "presence": { "label": "Global Presence", "detail": "USA (Delaware), UAE, Tunisia (Lab), KSA (Riyadh)" },
-      "inHouse": { "label": "In-House Execution", "detail": "From strategic concept to arena logistics & TV broadcast" }
+      "attendees": {
+        "label": "Attendees & Delegates",
+        "detail": "Mobilized across sovereign summits, expos & arena tours"
+      },
+      "audience": {
+        "label": "Digital Audience Reach",
+        "detail": "Multi-platform impressions across syndication channels"
+      },
+      "presence": {
+        "label": "Global Presence",
+        "detail": "USA (Delaware), UAE, Tunisia (Lab), KSA (Riyadh)"
+      },
+      "inHouse": {
+        "label": "In-House Execution",
+        "detail": "From strategic concept to arena logistics & TV broadcast"
+      }
     },
     "ticker": [
       "Delaware Holding Corp #10321177",
@@ -100,7 +112,9 @@
     "divisionsTitle": "8 Specialized Operating Divisions",
     "divisionsDesc": "Autonomous specialized entities operating under unified Delaware holding governance, executing across creative, technical, live, and commercial disciplines.",
     "exploreDivision": "Explore Division",
-    "allDivisions": "All Divisions"
+    "allDivisions": "All Divisions",
+    "engineNumber": "Engine {{num}}",
+    "corePillarsLabel": "8 Core Pillars"
   },
   "ventures": {
     "eyebrow": "// 04 PROPRIETARY VENTURES & MEDIA",
@@ -118,7 +132,18 @@
     "magazinesTitle": "Digital Publishing Verticals",
     "labelsTitle": "Proprietary Creative Labels",
     "inquire": "Inquire",
-    "proprietaryIp": "Proprietary IP"
+    "proprietaryIp": "Proprietary IP",
+    "digitalIssue": "Digital Issue",
+    "mediaEyebrow": "// 04 DIGITAL MEDIA & SYNDICATION",
+    "officialArtwork": "OFFICIAL SHOW ARTWORK",
+    "season01": "Season 01",
+    "podcastNetworkBadge": "ORIGINAL NARRATIVE PODCAST NETWORK",
+    "featuredSeries": "Featured Master Series · Also producing \"{{secondary}}\"",
+    "listenSpotify": "Listen on Spotify",
+    "watchYoutube": "YouTube @drawersofficiel",
+    "followInstagram": "Instagram @drawersofficiel",
+    "watchTiktok": "TikTok @drawersofficiel",
+    "communityFacebook": "Facebook /drawersofficiel"
   },
   "tunisiaLab": {
     "eyebrow": "// 05 REGIONAL PRODUCTION HUB",
@@ -149,12 +174,30 @@
     "leadBold": "COMCOM GROUP INTERNATIONAL (Comcom Group LLC)",
     "leadRest": "is a Delaware holding conglomerate uniting transcontinental media production, arena live experiences, and commercial venture growth across the USA, UAE, Tunisia, and Saudi Arabia.",
     "pillars": {
-      "p1": { "title": "Institutional Holding", "desc": "Delaware jurisdiction with institutional IP protection and audited corporate governance." },
-      "p2": { "title": "Integrated Tri-Engine", "desc": "Unifying production, live events, and commercial scale under single holding control." },
-      "p3": { "title": "In-House Execution", "desc": "Direct execution via proprietary production suites, soundstages, and event rigs." }
+      "p1": {
+        "title": "Institutional Holding",
+        "desc": "Delaware jurisdiction with institutional IP protection and audited corporate governance."
+      },
+      "p2": {
+        "title": "Integrated Tri-Engine",
+        "desc": "Unifying production, live events, and commercial scale under single holding control."
+      },
+      "p3": {
+        "title": "In-House Execution",
+        "desc": "Direct execution via proprietary production suites, soundstages, and event rigs."
+      }
     },
     "governancePillarsTitle": "Four Pillars of Corporate Governance",
-    "jurisdictionsArchitecture": "Multinational Jurisdictions Architecture"
+    "jurisdictionsArchitecture": "Multinational Jurisdictions Architecture",
+    "auditedStanding": "Audited & Good Standing",
+    "delawareHolding": "Delaware Holding Company",
+    "jurisdiction": "Jurisdiction",
+    "delawareUSA": "Delaware, USA",
+    "fileNumber": "File Number",
+    "taxId": "IRS Tax EIN",
+    "uaeHub": "UAE Hub",
+    "tunisiaHub": "Tunisia Hub",
+    "statutoryDocs": "Statutory Documentation"
   },
   "contact": {
     "eyebrow": "// 08 Group Coordination",
@@ -183,7 +226,13 @@
     "successTitle": "Inquiry Received by {{department}}",
     "successMessage": "Thank you, <1>{{name}}</1>. Your project parameters have been routed to the senior director of <3>{{department}}</3>. We will follow up via <5>{{email}}</5>.",
     "sendDirectWhatsApp": "Send Direct via WhatsApp",
-    "submitAnother": "Submit Another Inquiry"
+    "submitAnother": "Submit Another Inquiry",
+    "depts": {
+      "hq": "Group Headquarters",
+      "studios": "COMCOM Studios (Audiovisual)",
+      "events": "COMCOM Events & Expo",
+      "advertising": "COMCOM Advertising & Media"
+    }
   },
   "footer": {
     "eyebrow": "// Global Footprint Architecture",
@@ -194,6 +243,27 @@
     "holdingInfoTitle": "Delaware Holding",
     "copyright": "© {{year}} COMCOM GROUP LLC. All rights reserved.",
     "registrationNotice": "Comcom Group LLC is a Delaware limited liability holding company (File #10321177). Operating through accredited subsidiaries and branch offices in Wilmington, Dubai, Tunis, and Riyadh.",
-    "backToTop": "Back to Top"
+    "backToTop": "Back to Top",
+    "divisions": {
+      "d1": "1. Advertising & Brand Motion",
+      "d2": "2. Event & Expo Megastructures",
+      "d3": "3. Entertainment & Concert Tours",
+      "d4": "4. Consulting & Public Affairs",
+      "d5": "5. Executive Learning & Academies",
+      "d6": "6. Tourism & Destination IP",
+      "d7": "7. Trading & Merchandising",
+      "d8": "8. Strategic Communications & PR"
+    }
+  },
+  "projectModal": {
+    "client": "Client:",
+    "close": "Close modal",
+    "prev": "Previous image",
+    "next": "Next image",
+    "scopeDelivery": "Scope of Agency Delivery",
+    "deliverables": "Key Deliverables & Execution",
+    "deskNote": "Direct coordination available via Dubai Executive Desk.",
+    "visitSite": "Visit Official Website",
+    "initiateBrief": "Initiate Brief"
   }
 }

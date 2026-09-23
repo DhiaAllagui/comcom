@@ -92,7 +92,7 @@ export default function About() {
 
               <span className="text-xs font-mono text-ink-tertiary flex items-center gap-1.5">
                 <FileText className="w-3.5 h-3.5 text-accent-strong" />
-                Audited &amp; Good Standing
+                {t('about.auditedStanding')}
               </span>
             </div>
           </div>
@@ -120,37 +120,37 @@ export default function About() {
               </div>
 
               <div className="eyebrow mb-4 flex items-center gap-2">
-                <span>Delaware Holding Company</span>
+                <span>{t('about.delawareHolding')}</span>
                 <span className="text-accent-strong font-bold">· تقدم</span>
               </div>
 
               {/* Verified Legal Registry Box */}
               <div className="w-full bg-void/80 border border-border-subtle rounded-sm p-4 text-left font-mono text-xs space-y-2 mb-6 rtl:text-right">
                 <div className="flex items-center justify-between border-b border-border-subtle pb-1.5">
-                  <span className="text-ink-tertiary">Jurisdiction</span>
-                  <span className="text-ink-primary font-semibold">Delaware, USA</span>
+                  <span className="text-ink-tertiary">{t('about.jurisdiction')}</span>
+                  <span className="text-ink-primary font-semibold">{t('about.delawareUSA')}</span>
                 </div>
                 <div className="flex items-center justify-between border-b border-border-subtle pb-1.5">
-                  <span className="text-ink-tertiary">File Number</span>
+                  <span className="text-ink-tertiary">{t('about.fileNumber')}</span>
                   <span className="text-accent-strong font-bold">#10321177</span>
                 </div>
                 <div className="flex items-center justify-between border-b border-border-subtle pb-1.5">
-                  <span className="text-ink-tertiary">IRS Tax EIN</span>
+                  <span className="text-ink-tertiary">{t('about.taxId')}</span>
                   <span className="text-ink-primary">98-1880888</span>
                 </div>
                 <div className="flex items-center justify-between border-b border-border-subtle pb-1.5">
-                  <span className="text-ink-tertiary">UAE Hub</span>
+                  <span className="text-ink-tertiary">{t('about.uaeHub')}</span>
                   <span className="text-ink-primary">Ajman Free Zone #5643</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-ink-tertiary">Tunisia Hub</span>
+                  <span className="text-ink-tertiary">{t('about.tunisiaHub')}</span>
                   <span className="text-ink-primary">Winkom SARL #1275760R</span>
                 </div>
               </div>
 
               {/* Action */}
               <div className="w-full pt-4 border-t border-border-subtle flex items-center justify-between text-xs font-mono">
-                <span className="text-ink-tertiary">Statutory Documentation</span>
+                <span className="text-ink-tertiary">{t('about.statutoryDocs')}</span>
                 <a
                   href="#contact"
                   className="text-accent-strong hover:text-ink-primary flex items-center gap-1.5 transition-colors font-medium"

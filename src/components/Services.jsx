@@ -9,6 +9,11 @@ function EngineCard({ engine, idx }) {
   const { t } = useTranslation();
   const [ref, isVisible] = useReveal(0.2);
 
+  const engineTitle = t(`data.triEngines.${engine.num}.title`, engine.engine);
+  const engineSubtitle = t(`data.triEngines.${engine.num}.subtitle`, engine.subtitle);
+  const engineBadge = t(`data.triEngines.${engine.num}.badge`, engine.badge);
+  const engineDesc = t(`data.triEngines.${engine.num}.description`, engine.description);
+
   return (
     <div
       ref={ref}
@@ -18,24 +23,24 @@ function EngineCard({ engine, idx }) {
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <span className="font-mono text-xs font-bold text-accent-strong uppercase tracking-wider">
-            ENGINE {engine.num}
+            {t('services.engineNumber', { num: engine.num })}
           </span>
           <span className="badge-mono text-[10px]">
-            {engine.badge}
+            {engineBadge}
           </span>
         </div>
 
         <div>
           <h3 className="font-display font-medium text-2xl text-ink-primary">
-            {engine.engine}
+            {engineTitle}
           </h3>
           <div className="font-mono text-xs text-ink-tertiary mt-1">
-            {engine.subtitle}
+            {engineSubtitle}
           </div>
         </div>
 
         <p className="text-xs sm:text-sm text-ink-secondary leading-relaxed">
-          {engine.description}
+          {engineDesc}
         </p>
 
         {/* Core Capabilities */}
@@ -47,7 +52,7 @@ function EngineCard({ engine, idx }) {
             {engine.coreOps.map((op, i) => (
               <li key={i} className="flex items-start gap-2 text-xs text-ink-secondary">
                 <span className="text-accent-strong mt-0.5">•</span>
-                <span>{op}</span>
+                <span>{t(`data.triEngines.${engine.num}.coreOps.${i}`, op)}</span>
               </li>
             ))}
           </ul>
@@ -72,6 +77,11 @@ function DivisionGridCard({ division, idx }) {
   const { t } = useTranslation();
   const [ref, isVisible] = useReveal(0.15);
 
+  const divisionCode = t(`data.divisions.${division.id}.code`, division.code);
+  const divisionTitle = t(`data.divisions.${division.id}.title`, division.title);
+  const divisionTagline = t(`data.divisions.${division.id}.tagline`, division.tagline);
+  const divisionDesc = t(`data.divisions.${division.id}.description`, division.description);
+
   return (
     <div
       ref={ref}
@@ -81,21 +91,21 @@ function DivisionGridCard({ division, idx }) {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <span className="font-mono text-[11px] text-accent-strong font-bold">
-            {division.code}
+            {divisionCode}
           </span>
           <span className="w-2 h-2 rounded-full bg-accent/40 group-hover:bg-accent transition-colors" />
         </div>
 
         <h4 className="font-display font-medium text-lg text-ink-primary group-hover:text-accent-strong transition-colors">
-          {division.title}
+          {divisionTitle}
         </h4>
 
         <p className="font-mono text-[11px] text-ink-tertiary font-medium">
-          "{division.tagline}"
+          "{divisionTagline}"
         </p>
 
         <p className="text-xs text-ink-secondary leading-relaxed">
-          {division.description}
+          {divisionDesc}
         </p>
 
         {/* Services List */}
@@ -103,14 +113,14 @@ function DivisionGridCard({ division, idx }) {
           {division.services.slice(0, 3).map((srv, sIdx) => (
             <div key={sIdx} className="flex items-start gap-1.5 text-[11px] text-ink-tertiary">
               <span className="text-accent-strong mt-0.5">—</span>
-              <span className="line-clamp-1">{srv}</span>
+              <span className="line-clamp-1">{t(`data.divisions.${division.id}.services.${sIdx}`, srv)}</span>
             </div>
           ))}
         </div>
       </div>
 
       <div className="pt-3 border-t border-border-subtle flex items-center justify-between text-xs font-mono">
-        <span className="text-ink-tertiary text-[11px]">8 Core Pillars</span>
+        <span className="text-ink-tertiary text-[11px]">{t('services.corePillarsLabel')}</span>
         <a
           href="#contact"
           className="text-ink-primary group-hover:text-accent-strong flex items-center gap-1 transition-colors uppercase tracking-wider text-[11px] font-semibold"

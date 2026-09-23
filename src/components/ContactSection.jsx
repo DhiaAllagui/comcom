@@ -8,10 +8,10 @@ import { HourglassSpinner } from './HourglassSpinner';
 import bg3 from '../images/bg3.webp';
 
 const departmentContacts = [
-  { name: "Group Headquarters", email: "contact@comcomgroupcompany.com", phone: "+971 4 567 8901" },
-  { name: "COMCOM Studios (Audiovisual)", email: "contact@comcomgroupcompany.com", phone: "+971 4 567 8910" },
-  { name: "COMCOM Events & Expo", email: "contact@comcomgroupcompany.com", phone: "+971 4 123 4567" },
-  { name: "COMCOM Advertising & Media", email: "contact@comcomgroupcompany.com", phone: "+971 4 789 1234" },
+  { key: "hq", name: "Group Headquarters", email: "contact@comcomgroupcompany.com", phone: "+971 4 567 8901" },
+  { key: "studios", name: "COMCOM Studios (Audiovisual)", email: "contact@comcomgroupcompany.com", phone: "+971 4 567 8910" },
+  { key: "events", name: "COMCOM Events & Expo", email: "contact@comcomgroupcompany.com", phone: "+971 4 123 4567" },
+  { key: "advertising", name: "COMCOM Advertising & Media", email: "contact@comcomgroupcompany.com", phone: "+971 4 789 1234" },
 ];
 
 export default function ContactSection() {
@@ -21,7 +21,7 @@ export default function ContactSection() {
     company: '',
     email: '',
     phone: '',
-    department: departmentContacts[0].name,
+    department: 'Group Headquarters',
     brief: '',
   });
 
@@ -120,7 +120,7 @@ export default function ContactSection() {
                 {departmentContacts.map((dept, i) => (
                   <div key={i} className="p-4 rounded-sm border border-border-subtle space-y-1">
                     <div className="font-semibold text-xs uppercase tracking-wider text-ink-primary">
-                      {dept.name}
+                      {t(`contact.depts.${dept.key}`, dept.name)}
                     </div>
                     <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-ink-tertiary">
                       <a href={`mailto:${dept.email}`} className="text-accent-strong hover:text-ink-primary transition-colors">
@@ -233,14 +233,14 @@ export default function ContactSection() {
                     >
                       {departmentContacts.map((dept) => (
                         <option key={dept.name} value={dept.name} className="bg-surface-elevated">
-                          {dept.name} ({dept.email})
+                          {t(`contact.depts.${dept.key}`, dept.name)} ({dept.email})
                         </option>
                       ))}
                       <option value="Central Influencers Agency (CIA)" className="bg-surface-elevated">
-                        Central Influencers Agency (CIA) / Academies
+                        {t('data.ventures.labels.CIA.name', 'Central Influencers Agency (CIA)')}
                       </option>
                       <option value="Enterprise Training / Tourism / Trade" className="bg-surface-elevated">
-                        Enterprise Training / Tourism / Trading
+                        {t('footer.divisions.d5', 'Executive Learning & Academies')} / {t('footer.divisions.d6', 'Tourism & Destination IP')}
                       </option>
                     </select>
                   </div>

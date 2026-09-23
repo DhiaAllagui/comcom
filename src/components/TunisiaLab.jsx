@@ -49,41 +49,49 @@ export default function TunisiaLab() {
 
         {/* 4 Entities Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {tunisiaLabEntities.map((ent, idx) => (
-            <div
-              key={ent.name}
-              className="card-surface p-6 flex flex-col justify-between space-y-6 border border-border-default hover:border-accent/40 transition-all group"
-            >
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-sm bg-surface-elevated border border-border-subtle flex items-center justify-center group-hover:scale-105 transition-transform">
-                    {getEntityIcon(idx)}
+          {tunisiaLabEntities.map((ent, idx) => {
+            const entName = t(`data.tunisiaLab.entities.${idx}.name`, ent.name);
+            const entEst = t(`data.tunisiaLab.entities.${idx}.est`, ent.est);
+            const entCert = t(`data.tunisiaLab.entities.${idx}.cert`, ent.cert);
+            const entDesc = t(`data.tunisiaLab.entities.${idx}.desc`, ent.desc);
+            const entLoc = t(`data.tunisiaLab.entities.${idx}.location`, ent.location);
+
+            return (
+              <div
+                key={ent.name}
+                className="card-surface p-6 flex flex-col justify-between space-y-6 border border-border-default hover:border-accent/40 transition-all group"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="w-10 h-10 rounded-sm bg-surface-elevated border border-border-subtle flex items-center justify-center group-hover:scale-105 transition-transform">
+                      {getEntityIcon(idx)}
+                    </div>
+                    <span className="badge-mono text-[10px]">
+                      {entEst}
+                    </span>
                   </div>
-                  <span className="badge-mono text-[10px]">
-                    {ent.est}
-                  </span>
+
+                  <div>
+                    <h3 className="font-display font-medium text-xl text-ink-primary">
+                      {entName}
+                    </h3>
+                    <div className="font-mono text-xs text-accent-strong font-semibold mt-0.5">
+                      {entCert}
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-ink-secondary leading-relaxed">
+                    {entDesc}
+                  </p>
                 </div>
 
-                <div>
-                  <h3 className="font-display font-medium text-xl text-ink-primary">
-                    {ent.name}
-                  </h3>
-                  <div className="font-mono text-xs text-accent-strong font-semibold mt-0.5">
-                    {ent.cert}
-                  </div>
+                <div className="pt-4 border-t border-border-subtle flex items-center gap-1.5 text-[11px] font-mono text-ink-tertiary">
+                  <MapPin className="w-3.5 h-3.5 text-accent-strong flex-shrink-0" />
+                  <span className="truncate">{entLoc}</span>
                 </div>
-
-                <p className="text-xs text-ink-secondary leading-relaxed">
-                  {ent.desc}
-                </p>
               </div>
-
-              <div className="pt-4 border-t border-border-subtle flex items-center gap-1.5 text-[11px] font-mono text-ink-tertiary">
-                <MapPin className="w-3.5 h-3.5 text-accent-strong flex-shrink-0" />
-                <span className="truncate">{ent.location}</span>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Value Arbitrage Banner */}
