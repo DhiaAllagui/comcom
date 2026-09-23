@@ -192,9 +192,12 @@ export default function Footer() {
 
             <div className="pt-2 border-t border-border-subtle space-y-1">
               <div className="text-ink-primary font-semibold">{t('contact.title')}</div>
-              <div>holding@comcomgroupcompany.com</div>
-              <div>UAE Desk: +971 55 253 8556</div>
-              <div>Tunisia Desk: +216 29 271 278</div>
+              <a href="mailto:contact@comcomgroupcompany.com" className="block text-ink-secondary hover:text-accent-strong transition-colors">
+                contact@comcomgroupcompany.com
+              </a>
+              <a href="tel:+971553438881" className="block text-ink-secondary hover:text-accent-strong transition-colors">
+                +971 55 343 8881
+              </a>
             </div>
           </div>
 

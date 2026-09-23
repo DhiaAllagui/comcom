@@ -14,16 +14,16 @@ export const agencyInfo = {
   hqUAE: "AMC Boulevard-B, Ajman Media City / Dubai, UAE",
   hqTunisia: "Centre César, Rue Jean-Jacques Rousseau, Montplaisir, Tunis",
   hqKSA: "Riyadh, Kingdom of Saudi Arabia",
-  phone: "+971 55 253 8556",
-  phoneOffice: "+971 4 567 8901",
+  phone: "+971 55 343 8881",
+  phoneOffice: "+971 55 343 8881",
   email: "contact@comcomgroupcompany.com",
-  emailInvest: "invest@comcomgroupcompany.com",
-  whatsappUrl: "https://wa.me/971552538556?text=Hello%20COMCOM%20Group%20International%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.",
+  emailInvest: "contact@comcomgroupcompany.com",
+  whatsappUrl: "https://wa.me/971553438881?text=Hello%20COMCOM%20Group%20International%2C%20I%20would%20like%20to%20inquire%20about%20your%20services.",
   socials: {
     instagram: "https://www.instagram.com/comcom.group/",
     facebook: "https://www.facebook.com/comcomgroup/?locale=fr_FR",
     youtube: "https://www.youtube.com/@drawersofficiel",
-    whatsapp: "https://wa.me/971552538556"
+    whatsapp: "https://wa.me/971553438881"
   }
 };
 

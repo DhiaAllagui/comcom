@@ -8,10 +8,10 @@ import { HourglassSpinner } from './HourglassSpinner';
 import bg3 from '../images/bg3.webp';
 
 const departmentContacts = [
-  { key: "hq", name: "Group Headquarters", email: "contact@comcomgroupcompany.com", phone: "+971 4 567 8901" },
-  { key: "studios", name: "COMCOM Studios (Audiovisual)", email: "contact@comcomgroupcompany.com", phone: "+971 4 567 8910" },
-  { key: "events", name: "COMCOM Events & Expo", email: "contact@comcomgroupcompany.com", phone: "+971 4 123 4567" },
-  { key: "advertising", name: "COMCOM Advertising & Media", email: "contact@comcomgroupcompany.com", phone: "+971 4 789 1234" },
+  { key: "hq", name: "Group Headquarters", email: "contact@comcomgroupcompany.com", phone: "+971 55 343 8881" },
+  { key: "studios", name: "COMCOM Studios (Audiovisual)", email: "contact@comcomgroupcompany.com", phone: "+971 55 343 8881" },
+  { key: "events", name: "COMCOM Events & Expo", email: "contact@comcomgroupcompany.com", phone: "+971 55 343 8881" },
+  { key: "advertising", name: "COMCOM Advertising & Media", email: "contact@comcomgroupcompany.com", phone: "+971 55 343 8881" },
 ];
 
 export default function ContactSection() {
@@ -147,7 +147,7 @@ export default function ContactSection() {
                     <MessageCircle className="w-5 h-5 text-accent-strong" />
                     <div>
                       <div className="text-[10px] uppercase font-mono tracking-wider text-ink-tertiary">{t('contact.whatsappDirect')}</div>
-                      <div className="text-sm font-semibold text-ink-primary">+971 55 253 8556</div>
+                      <div className="text-sm font-semibold text-ink-primary">+971 55 343 8881</div>
                     </div>
                   </div>
                   <span className="text-xs font-mono text-accent-strong group-hover:translate-x-1 transition-transform rtl-flip">→</span>
@@ -184,7 +184,7 @@ export default function ContactSection() {
 
                   <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                     <a
-                      href={`https://wa.me/971552538556?text=${waPreFilledText}`}
+                      href={`https://wa.me/971553438881?text=${waPreFilledText}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2"
@@ -353,7 +353,7 @@ export default function ContactSection() {
                   <div className="text-center text-[11px] font-mono text-ink-tertiary">
                     Need immediate assistance? Connect directly on WhatsApp at{' '}
                     <a href={agencyInfo.whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-accent-strong font-semibold underline">
-                      +971 55 253 8556
+                      +971 55 343 8881
                     </a>
                   </div>
 

@@ -20,15 +20,51 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lock body scroll when mobile menu is open
+  // Lock body scroll and prevent background touch scrolling when mobile menu is open
   useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    if (!mobileMenuOpen) return;
+
+    const scrollY = window.scrollY;
+    const prevBodyPosition = document.body.style.position;
+    const prevBodyTop = document.body.style.top;
+    const prevBodyLeft = document.body.style.left;
+    const prevBodyRight = document.body.style.right;
+    const prevBodyWidth = document.body.style.width;
+    const prevBodyOverflow = document.body.style.overflow;
+    const prevHtmlOverflow = document.documentElement.style.overflow;
+    const prevHtmlOverscroll = document.documentElement.style.overscrollBehavior;
+
+    // Pin body in place so the underlying website cannot be scrolled with touch or wheel
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.overscrollBehavior = 'none';
+
+    // Prevent any background touchmove leak outside drawer
+    const handleTouchMove = (e) => {
+      const drawer = document.getElementById('mobile-nav-drawer');
+      if (drawer && drawer.contains(e.target)) {
+        return;
+      }
+      e.preventDefault();
+    };
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
+
     return () => {
-      document.body.style.overflow = '';
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.body.style.position = prevBodyPosition;
+      document.body.style.top = prevBodyTop;
+      document.body.style.left = prevBodyLeft;
+      document.body.style.right = prevBodyRight;
+      document.body.style.width = prevBodyWidth;
+      document.body.style.overflow = prevBodyOverflow;
+      document.documentElement.style.overflow = prevHtmlOverflow;
+      document.documentElement.style.overscrollBehavior = prevHtmlOverscroll;
+      window.scrollTo(0, scrollY);
     };
   }, [mobileMenuOpen]);
 
@@ -47,7 +83,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 start-0 end-0 z-50 transition-all duration-300 ease-out ${
           mobileMenuOpen
-            ? 'bg-void border-b border-white/[0.08] py-3 sm:py-3.5 shadow-xl'
+            ? 'bg-void border-b border-white/[0.08] py-3 sm:py-3.5 shadow-xl touch-none'
             : isScrolled
             ? 'bg-void/85 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.6)] py-3 sm:py-3.5'
             : 'bg-void/40 backdrop-blur-md border-b border-white/[0.04] py-4 sm:py-5'
@@ -153,7 +189,9 @@ export default function Navbar() {
       {/* ── Mobile Slide-Over Drawer (Sibling of header to avoid backdrop-filter fixed clipping) ── */}
       {mobileMenuOpen && (
         <div
-          className="lg:hidden fixed inset-0 z-40 bg-void/98 backdrop-blur-2xl overflow-y-auto"
+          id="mobile-nav-drawer"
+          className="lg:hidden fixed inset-0 z-40 bg-void/98 backdrop-blur-2xl overflow-y-auto overscroll-contain touch-pan-y"
+          style={{ WebkitOverflowScrolling: 'touch' }}
           role="dialog"
           aria-modal="true"
           aria-label={t('navbar.navigation')}

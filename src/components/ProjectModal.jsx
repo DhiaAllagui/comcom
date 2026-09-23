@@ -214,7 +214,7 @@ export default function ProjectModal({ project, onClose }) {
             )}
 
             <a
-              href={`https://wa.me/971552538556?text=Hello%20COMCOM%20Group%2C%20I%20am%20interested%20in%20a%20production%20similar%20to%20your%20case%20study%3A%20${encodeURIComponent(projectTitle)}`}
+              href={`https://wa.me/971553438881?text=Hello%20COMCOM%20Group%2C%20I%20am%20interested%20in%20a%20production%20similar%20to%20your%20case%20study%3A%20${encodeURIComponent(projectTitle)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary flex-1 sm:flex-none flex items-center justify-center gap-2 !py-2.5"
