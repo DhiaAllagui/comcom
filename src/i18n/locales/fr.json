@@ -21,103 +21,99 @@
     "legalLine": "COMCOM GROUP LLC · Delaware n°10321177"
   },
   "hero": {
-    "quickJump": "Modèle Tri-Moteur",
+    "quickJump": "Notre méthode",
     "title": {
-      "prefix": "Architectes d'",
-      "line2": "Créateurs de Contenu.",
-      "line3": "Accélérateurs d'Impact.",
+      "prefix": "Nous produisons",
+      "line2": "pour les marques, institutions",
+      "line3": "et gouvernements.",
       "rotating": [
-        "Expériences.",
-        "Écosystèmes.",
-        "Entreprises.",
-        "Récits.",
-        "Influence.",
-        "Élan.",
-        "Héritages."
+        "des films.",
+        "des événements.",
+        "des campagnes.",
+        "des émissions.",
+        "des sommets.",
+        "des podcasts.",
+        "des expos."
       ]
     },
-    "subheadline": "Production médiatique transcontinentale, événements live en arène, et croissance commerciale à travers les États-Unis, les Émirats Arabes Unis, la Tunisie et l'Arabie Saoudite.",
-    "jurisdictions": {
-      "usa": "Holding du Delaware (Comcom Group LLC)",
-      "uae": "Hub Commercial EAU (Licence n°5643)",
-      "tunisia": "Lab & Studios Tunisie (Winkom SARL)",
-      "ksa": "Bureau Vision 2030 KSA"
-    },
-    "ctaPrimary": "Découvrir les Opérations Tri-Moteur",
-    "ctaSecondary": "Gouvernance d'Entreprise",
-    "partnerTrackRecord": "Bilan Partenaire Éprouvé :",
+    "subheadline": "COMCOM Group est une société internationale de production média et d'événements live. Nous gérons tout en interne — de la première idée aux caméras, à la scène, aux équipes et à la diffusion — aux États-Unis, aux Émirats Arabes Unis, en Tunisie et en Arabie Saoudite.",
+    "ctaPrimary": "Voir nos services",
+    "ctaSecondary": "Démarrer un projet",
+    "partnerTrackRecord": "Ils nous ont fait confiance :",
     "stats": {
       "attendees": {
-        "label": "Participants & Délégués",
-        "detail": "Mobilisés lors de sommets souverains, expos et tournées d'arènes"
+        "label": "Personnes touchées lors de nos événements",
+        "detail": "Sommets, expositions et tournées à ce jour"
       },
       "audience": {
-        "label": "Audience Numérique",
-        "detail": "Impressions multiplateformes sur nos canaux de diffusion"
+        "label": "Audience numérique",
+        "detail": "Vues et impressions sur nos canaux médias"
       },
       "presence": {
-        "label": "Présence Mondiale",
-        "detail": "USA (Delaware), ÉAU, Tunisie (Lab), Arabie Saoudite (Riyad)"
+        "label": "Pays",
+        "detail": "États-Unis, Émirats Arabes Unis, Tunisie et Arabie Saoudite"
       },
       "inHouse": {
-        "label": "Exécution Intégrée",
-        "detail": "Du concept stratégique à la logistique d'arène et télédiffusion"
+        "label": "Production",
+        "detail": "Concept, équipes, scène et diffusion sous un même toit"
       }
     },
     "ticker": [
-      "Holding du Delaware n°10321177",
-      "IRS EIN 98-1880888 LTR 147C",
-      "Licence ÉAU n°5643",
-      "Lab Tunisie RNE n°1275760R",
-      "8 Divisions Opérationnelles Intégrées",
-      "+500 000 Participants Mobilisés",
-      "+10M d'Impressions d'Audience Numérique",
-      "Conférence d'Investissement Arabo-Africaine (AAIC) Riyad",
-      "Podcasts Originaux : Drawers (أدراج) & Énergie +"
-    ]
+      "Enregistrée au Delaware, États-Unis",
+      "Licenciée à Ajman Media City, EAU",
+      "Studios à Tunis, Tunisie",
+      "Bureau de Riyad, Arabie Saoudite",
+      "8 divisions opérationnelles",
+      "500K+ personnes touchées lors de nos événements",
+      "10M+ d’audience numérique",
+      "Arab African Investment Conference — Riyad",
+      "Podcasts originaux : Drawers (أدراج) & Énergie +"
+    ],
+    "eyebrow": "Production média · Événements live · Croissance de marque",
+    "brandStatement": "Architectes d'Élan"
   },
   "audience": {
-    "eyebrow": "// ROUTEUR DE SEGMENTATION D'AUDIENCE",
-    "title": "Devenez Partenaire du Groupe COMCOM",
-    "desc": "Sélectionnez votre profil institutionnel pour déployer une capacité opérationnelle dédiée, des actifs de production technique ou accéder à notre gouvernance investisseur certifiée.",
+    "eyebrow": "Avec qui nous travaillons",
+    "title": "Travailler avec le Groupe COMCOM",
+    "desc": "Choisissez la description qui vous correspond le mieux et nous vous orienterons vers la bonne équipe.",
     "paths": {
       "brands": {
         "title": "Pour Marques & Gouvernements",
-        "badge": "Souverain & Entreprise",
+        "badge": "Marques & gouvernements",
         "desc": "Sommets souverains, pavillons d'expositions universelles et amplification numérique multi-territoires.",
-        "cta": "Demande pour Sommets & Médias"
+        "cta": "Organiser un événement ou une campagne"
       },
       "promoters": {
         "title": "Pour Promoteurs & Diffuseurs",
-        "badge": "Production Technique",
+        "badge": "Production technique",
         "desc": "Cars régie de diffusion, volumes LED incurvés de 180m²+, acoustique de stade et logistique clé en main.",
-        "cta": "Déployer la Flotte de Production"
+        "cta": "Demander un appui de production"
       },
       "investors": {
         "title": "Pour Partenaires Institutionnels",
-        "badge": "Gouvernance & Capital",
+        "badge": "Partenariats",
         "desc": "Gouvernance de holding Delaware, conformité multi-marchés et actifs culturels audités.",
-        "cta": "Échanger avec la Holding"
+        "cta": "Parler à notre équipe"
       }
     }
   },
   "services": {
-    "engineEyebrow": "// 02 ARCHITECTURE TRI-MOTEUR",
-    "engineTitle": "Le Modèle Tri-Moteur Souverain",
-    "engineDesc": "Trois moteurs opérationnels profondément intégrés propulsant la production cinématographique, les événements live à grande échelle et la croissance de l'audience commerciale.",
+    "engineEyebrow": "Ce que nous faisons",
+    "engineTitle": "Trois volets de notre activité",
+    "engineDesc": "Notre travail se divise en trois volets. Nous réalisons des films et des émissions, nous organisons des événements en direct, et nous développons l'audience des marques qui nous font confiance. Nous les appelons nos trois moteurs, et la plupart des projets en mobilisent plusieurs.",
     "capabilities": "Capacités :",
     "infrastructure": "Infrastructure Tri-Moteur",
-    "deployEngine": "Déployer le Moteur",
-    "divisionsEyebrow": "// 03 STRUCTURE DU CONGLOMÉRAT",
+    "deployEngine": "Voir ces réalisations",
+    "divisionsEyebrow": "Notre organisation",
     "divisionsTitle": "8 Divisions Opérationnelles Spécialisées",
     "divisionsDesc": "Des entités spécialisées autonomes opérant sous une gouvernance unifiée de holding au Delaware, excellant dans les disciplines créatives, techniques, événementielles et commerciales.",
-    "exploreDivision": "Explorer la Division",
+    "exploreDivision": "Voir cette division",
     "allDivisions": "Toutes les Divisions",
     "engineNumber": "Moteur {{num}}",
     "corePillarsLabel": "8 Piliers Majeurs"
   },
   "ventures": {
-    "eyebrow": "// 04 FILIALES PROPRIÉTAIRES & MÉDIAS",
+    "eyebrow": "Nos propres filiales",
     "title": "Projets Phares & Médias Culturels",
     "desc": "Propriété intellectuelle originale, magazines numériques à fort engagement, gestion de talents et productions culturelles primées.",
     "podcastBadge": "Podcast Vidéo Phare Original",
@@ -134,7 +130,7 @@
     "inquire": "Demande",
     "proprietaryIp": "PI Propriétaire",
     "digitalIssue": "Édition Numérique",
-    "mediaEyebrow": "// 04 MÉDIAS NUMÉRIQUES & DIFFUSION",
+    "mediaEyebrow": "Médias numériques",
     "officialArtwork": "VISUEL OFFICIEL DU SHOW",
     "season01": "Saison 01",
     "podcastNetworkBadge": "RÉSEAU DE PODCASTS NARRATIFS ORIGINAUX",
@@ -146,14 +142,14 @@
     "communityFacebook": "Facebook /drawersofficiel"
   },
   "tunisiaLab": {
-    "eyebrow": "// 05 HUB RÉGIONAL DE PRODUCTION",
+    "eyebrow": "Notre hub de production en Tunisie",
     "title": "Le Lab Tunisie & Centre d'Ingénierie",
     "desc": "Notre moteur opérationnel terrain fournissant une production de niveau cinéma, des équipes polyglottes et un arbitrage de coûts optimal pour nos partenaires du Golfe et d'Occident.",
     "whyTitle": "Pourquoi le Corridor de Production Tunisien ?",
     "location": "Tunis, Tunisie · Hub de Production Nearshore"
   },
   "portfolio": {
-    "eyebrow": "// 06 EXPÉRIENCE & RÉALISATIONS ÉPROUVÉES",
+    "eyebrow": "Réalisations choisies",
     "title": "Sommets Souverains, Tournées d'Arènes & Mégastructures",
     "desc": "Exécution d'expériences mondiales d'envergure avec une précision sans compromis et un impact mesuré dans les domaines souverains, culturels et commerciaux.",
     "filters": {
@@ -169,7 +165,7 @@
     "clientTrackRecord": "Partenaires Stratégiques et Clients Institutionnels :"
   },
   "about": {
-    "eyebrow": "// 07 Gouvernance d'Entreprise & Holding Mondiale",
+    "eyebrow": "À propos du groupe",
     "title": "Un Conglomérat Institutionnel au Service de la Culture & du Commerce Mondial.",
     "leadBold": "COMCOM GROUP INTERNATIONAL (Comcom Group LLC)",
     "leadRest": "est un conglomérat de holding du Delaware réunissant production médiatique transcontinentale, expériences live d'arène et développement commercial aux États-Unis, aux Émirats Arabes Unis, en Tunisie et en Arabie Saoudite.",
@@ -200,7 +196,7 @@
     "statutoryDocs": "Documentation Statutaire"
   },
   "contact": {
-    "eyebrow": "// 08 Coordination du Groupe",
+    "eyebrow": "Nous contacter",
     "title": "Contacter Nos Agences",
     "desc": "Pour discuter de vos solutions créatives, productions audiovisuelles, expositions majeures ou besoins publicitaires, contactez nos bureaux spécialisés ci-dessous.",
     "desksTitle": "Bureaux Spécialisés Accrédités",
@@ -237,7 +233,7 @@
     "notConfigured": "Le formulaire n'est pas disponible pour le moment. Écrivez-nous par e-mail ou via WhatsApp ci-dessous."
   },
   "footer": {
-    "eyebrow": "// Architecture d'Implantation Mondiale",
+    "eyebrow": "Où nous opérons",
     "title": "Quatre Juridictions Stratégiques. Une Opération Unifiée.",
     "mission": "Concevoir, produire, amplifier et développer des médias transformateurs, des sommets expérientiels de renommée mondiale et des projets commerciaux en Amérique du Nord, dans le Golfe et en Afrique du Nord.",
     "divisionsTitle": "Divisions Opérationnelles",

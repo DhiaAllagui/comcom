@@ -142,7 +142,7 @@ export default function Services() {
     <div className="space-y-0">
       
       {/* ================= SECTION: TRI-ENGINE MODEL ================= */}
-      <section id="tri-engine" className="relative py-28 bg-surface-base border-t border-border-subtle overflow-hidden">
+      <section id="what-we-do" className="relative py-28 bg-surface-base border-t border-border-subtle overflow-hidden">
         {/* ── Background Image (bg6) ── */}
         <img
           src={bg6}

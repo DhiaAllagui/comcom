@@ -30,18 +30,21 @@ export const agencyInfo = {
 // `labelKey` resolves against navbar.links.* in src/i18n/locales/{en,fr,ar}.json
 export const navLinks = [
   { labelKey: "theHolding", href: "#holding" },
-  { labelKey: "triEngine", href: "#tri-engine" },
+  { labelKey: "triEngine", href: "#what-we-do" },
   { labelKey: "divisions", href: "#divisions" },
   { labelKey: "labelsMedia", href: "#labels-publishing" },
   { labelKey: "tunisiaLab", href: "#tunisia-lab" },
   { labelKey: "flagship", href: "#flagship" },
 ];
 
+// Labels/details are translated via hero.stats.* (see STAT_KEYS in Hero.jsx).
+// Values use readable notation and render statically — useCountUp only animates
+// pure-digit strings, so these pass through unchanged by design.
 export const quickStats = [
-  { value: 500000, prefix: "+", suffix: "", label: "Attendees & Delegates", detail: "Mobilized across sovereign summits, expos & arena tours" },
-  { value: 10000000, prefix: "+", suffix: "", label: "Digital Audience Reach", detail: "Multi-platform impressions across syndication channels" },
-  { value: "4", prefix: "", suffix: " Hubs", label: "Global Presence", detail: "USA (Delaware), UAE, Tunisia (Lab), KSA (Riyadh)" },
-  { value: "100%", prefix: "", suffix: "", label: "In-House Execution", detail: "From strategic concept to arena logistics & TV broadcast" },
+  { value: "500K+", label: "People reached at our events", detail: "Across summits, expos and live tours to date" },
+  { value: "10M+", label: "Digital audience", detail: "Views and impressions across our media channels" },
+  { value: "4", label: "Countries", detail: "USA, UAE, Tunisia and Saudi Arabia" },
+  { value: "In-house", label: "Production", detail: "Concept, crew, staging and broadcast under one roof" },
 ];
 
 export const achievementTicker = [
@@ -60,26 +63,26 @@ export const achievementTicker = [
 export const audiencePaths = [
   {
     category: "Brands, Institutions & Governments",
-    badge: "Sovereign & Corporate",
+    badge: "Brands & government",
     title: "For Brands & Governments",
     desc: "Sovereign summits, world expo pavilions, and multi-territory digital amplification.",
-    cta: "Inquire for Summits & Media",
+    cta: "Plan an event or campaign",
     action: "sponsorship"
   },
   {
     category: "Event Promoters & Broadcasters",
-    badge: "Technical Production",
+    badge: "Technical production",
     title: "For Promoters & Broadcasters",
     desc: "Broadcast OB vans, 180m²+ curved LED volumes, stadium acoustics, and turnkey logistics.",
-    cta: "Deploy Production Fleet",
+    cta: "Request production support",
     action: "studios"
   },
   {
     category: "Institutional Investors & Sovereign Partners",
-    badge: "Governance & Capital",
+    badge: "Partnerships",
     title: "For Institutional Partners",
     desc: "Delaware holding governance, multi-market compliance, and audited cultural assets.",
-    cta: "Connect With Holding",
+    cta: "Talk to our team",
     action: "governance"
   }
 ];
@@ -88,7 +91,7 @@ export const audiencePaths = [
 export const triEngines = [
   {
     num: "01",
-    engine: "THE PRODUCTION ENGINE",
+    engine: "The Production Engine",
     subtitle: "Audiovisual, Cinema & Broadcast",
     badge: "Creative Studio",
     description: "Cinema-grade capture, broadcast series, and narrative digital audio.",
@@ -101,7 +104,7 @@ export const triEngines = [
   },
   {
     num: "02",
-    engine: "THE EVENT ENGINE",
+    engine: "The Event Engine",
     subtitle: "Live Experiences, Summits & Expos",
     badge: "Arena Scale",
     description: "Turnkey megastructures, sovereign conventions, and arena tours.",
@@ -114,7 +117,7 @@ export const triEngines = [
   },
   {
     num: "03",
-    engine: "THE GROWTH ENGINE",
+    engine: "The Growth Engine",
     subtitle: "Influence, Publishing & Academies",
     badge: "Media & Talent",
     description: "Talent rosters, digital publishing, and venture academies.",

@@ -62,29 +62,30 @@ export default function App() {
 
       {/* Main Agency & Conglomerate Architecture */}
       <main>
-        {/* 1. Global Holding & Tri-Engine Hero with Transcoded Video Background */}
+        {/* 1. WHAT WE ARE — hero: plain-language explanation of the company */}
         <Hero />
 
-        {/* 2. Three Intent Pathways (Investors, Brands & Governments, Talent) */}
-        <AudienceRouter />
-
-        {/* 3. The Tri-Engine Model & 8 Operational Divisions */}
+        {/* 2. WHAT WE DO — the three engines, explained before the term is used */}
         <Services />
 
-        {/* 4. Proprietary Labels, Digital Magazines & Featured Podcast ("Drawers — أدراج") */}
-        <Ventures />
+        {/* 3. WHO WE SERVE — three intent pathways */}
+        <AudienceRouter />
 
-        {/* 5. "The Lab" & Regional Production Hub (Tunisia: Winkom, COM COM, Pro Skills, Magic Box) */}
-        <TunisiaLab />
-
-        {/* 6. Proven Track Record & Global Summits (AAIC Riyadh, Street Food Fest Tunis, Rap Tour) */}
+        {/* 4. PROOF — track record: AAIC Riyadh, Street Food Fest Tunis, Rap Tour */}
         <Portfolio />
 
-        {/* 7. Institutional Corporate Governance & Delaware Holding */}
+        {/* 5. GLOBAL PRESENCE — corporate governance & Delaware holding */}
         <About />
 
-        {/* 8. Global Briefing & Institutional Inquiries */}
+        {/* 6. FLAGSHIP — proprietary labels, digital magazines & the "Drawers — أدراج" podcast */}
+        <Ventures />
+
+        {/* 7. "The Lab" — regional production hub (Winkom, COM COM, Pro Skills, Magic Box) */}
+        <TunisiaLab />
+
+        {/* 8. CONTACT */}
         <ContactSection />
+
       </main>
 
       {/* 9. Global Footprint 4-Hub Pillars & Unified Footer */}

@@ -21,103 +21,99 @@
     "legalLine": "COMCOM GROUP LLC · Delaware #10321177"
   },
   "hero": {
-    "quickJump": "Tri-Engine Model",
+    "quickJump": "How we work",
     "title": {
-      "prefix": "Architects of",
-      "line2": "Content Creators.",
-      "line3": "Impact Accelerators.",
+      "prefix": "We produce",
+      "line2": "for brands, institutions",
+      "line3": "and governments.",
       "rotating": [
-        "Experiences.",
-        "Ecosystems.",
-        "Enterprises.",
-        "Narratives.",
-        "Influence.",
-        "Momentum.",
-        "Legacies."
+        "films.",
+        "live events.",
+        "campaigns.",
+        "broadcasts.",
+        "summits.",
+        "podcasts.",
+        "expos."
       ]
     },
-    "subheadline": "Transcontinental media production, arena live events, and commercial growth across the USA, UAE, Tunisia, and Saudi Arabia.",
-    "jurisdictions": {
-      "usa": "Delaware Holding (Comcom Group LLC)",
-      "uae": "UAE Commercial Hub (License #5643)",
-      "tunisia": "Tunisia Lab & Studios (Winkom SARL)",
-      "ksa": "KSA Vision 2030 Desk"
-    },
-    "ctaPrimary": "Explore Tri-Engine Operations",
-    "ctaSecondary": "Corporate Governance",
-    "partnerTrackRecord": "Proven Partner Track Record:",
+    "subheadline": "COMCOM Group is an international media and live-events company. We handle the full job in-house — from the first idea to cameras, stage, crew and broadcast — across the USA, UAE, Tunisia and Saudi Arabia.",
+    "ctaPrimary": "See what we do",
+    "ctaSecondary": "Start a project",
+    "partnerTrackRecord": "Worked with:",
     "stats": {
       "attendees": {
-        "label": "Attendees & Delegates",
-        "detail": "Mobilized across sovereign summits, expos & arena tours"
+        "label": "People reached at our events",
+        "detail": "Across summits, expos and live tours to date"
       },
       "audience": {
-        "label": "Digital Audience Reach",
-        "detail": "Multi-platform impressions across syndication channels"
+        "label": "Digital audience",
+        "detail": "Views and impressions across our media channels"
       },
       "presence": {
-        "label": "Global Presence",
-        "detail": "USA (Delaware), UAE, Tunisia (Lab), KSA (Riyadh)"
+        "label": "Countries",
+        "detail": "USA, UAE, Tunisia and Saudi Arabia"
       },
       "inHouse": {
-        "label": "In-House Execution",
-        "detail": "From strategic concept to arena logistics & TV broadcast"
+        "label": "Production",
+        "detail": "Concept, crew, staging and broadcast under one roof"
       }
     },
     "ticker": [
-      "Delaware Holding Corp #10321177",
-      "IRS EIN 98-1880888 LTR 147C",
-      "UAE License No. 5643",
-      "Tunis Lab RNE #1275760R",
-      "8 Integrated Operating Divisions",
-      "+500,000 Attendees Mobilized",
-      "+10M Digital Audience Impressions",
-      "Arab African Investment Conference (AAIC) Riyadh",
-      "Original Podcast: Drawers (أدراج) & Énergie +"
-    ]
+      "Registered in Delaware, USA",
+      "Licensed in Ajman Media City, UAE",
+      "Studios in Tunis, Tunisia",
+      "Riyadh desk, Saudi Arabia",
+      "8 operating divisions",
+      "500K+ people reached at our events",
+      "10M+ digital audience",
+      "Arab African Investment Conference — Riyadh",
+      "Original podcasts: Drawers (أدراج) & Énergie +"
+    ],
+    "eyebrow": "Media production · Live events · Brand growth",
+    "brandStatement": "Architects of Momentum"
   },
   "audience": {
-    "eyebrow": "// AUDIENCE SEGMENTATION ROUTER",
-    "title": "Partner With COMCOM Group",
-    "desc": "Select your institutional profile to deploy dedicated operational capacity, technical production assets, or access certified investor governance.",
+    "eyebrow": "Who we work with",
+    "title": "Work with COMCOM Group",
+    "desc": "Pick the description that fits you best and we will point you to the right team.",
     "paths": {
       "brands": {
         "title": "For Brands & Governments",
-        "badge": "Sovereign & Corporate",
+        "badge": "Brands & government",
         "desc": "Sovereign summits, world expo pavilions, and multi-territory digital amplification.",
-        "cta": "Inquire for Summits & Media"
+        "cta": "Plan an event or campaign"
       },
       "promoters": {
         "title": "For Promoters & Broadcasters",
-        "badge": "Technical Production",
+        "badge": "Technical production",
         "desc": "Broadcast OB vans, 180m²+ curved LED volumes, stadium acoustics, and turnkey logistics.",
-        "cta": "Deploy Production Fleet"
+        "cta": "Request production support"
       },
       "investors": {
         "title": "For Institutional Partners",
-        "badge": "Governance & Capital",
+        "badge": "Partnerships",
         "desc": "Delaware holding governance, multi-market compliance, and audited cultural assets.",
-        "cta": "Connect With Holding"
+        "cta": "Talk to our team"
       }
     }
   },
   "services": {
-    "engineEyebrow": "// 02 THE TRI-ENGINE ARCHITECTURE",
-    "engineTitle": "The Sovereign Tri-Engine Model",
-    "engineDesc": "Three deeply integrated operational flywheels powering cinematic production, mega-scale live events, and commercial audience growth.",
+    "engineEyebrow": "What we do",
+    "engineTitle": "Three sides of the business",
+    "engineDesc": "Our work splits into three parts. We make films and shows, we run live events, and we grow audiences for the brands we work with. We call these our three engines, and most projects use more than one.",
     "capabilities": "Capabilities:",
     "infrastructure": "Tri-Engine Infrastructure",
-    "deployEngine": "Deploy Engine",
-    "divisionsEyebrow": "// 03 CONGLOMERATE STRUCTURE",
+    "deployEngine": "See this work",
+    "divisionsEyebrow": "How we are organised",
     "divisionsTitle": "8 Specialized Operating Divisions",
     "divisionsDesc": "Autonomous specialized entities operating under unified Delaware holding governance, executing across creative, technical, live, and commercial disciplines.",
-    "exploreDivision": "Explore Division",
+    "exploreDivision": "See this division",
     "allDivisions": "All Divisions",
     "engineNumber": "Engine {{num}}",
     "corePillarsLabel": "8 Core Pillars"
   },
   "ventures": {
-    "eyebrow": "// 04 PROPRIETARY VENTURES & MEDIA",
+    "eyebrow": "Our own ventures",
     "title": "Flagship Ventures & Cultural Media",
     "desc": "Original media IP, high-retention digital magazines, talent management, and award-winning cultural productions.",
     "podcastBadge": "Original Flagship Video Podcast",
@@ -134,7 +130,7 @@
     "inquire": "Inquire",
     "proprietaryIp": "Proprietary IP",
     "digitalIssue": "Digital Issue",
-    "mediaEyebrow": "// 04 DIGITAL MEDIA & SYNDICATION",
+    "mediaEyebrow": "Digital media",
     "officialArtwork": "OFFICIAL SHOW ARTWORK",
     "season01": "Season 01",
     "podcastNetworkBadge": "ORIGINAL NARRATIVE PODCAST NETWORK",
@@ -146,14 +142,14 @@
     "communityFacebook": "Facebook /drawersofficiel"
   },
   "tunisiaLab": {
-    "eyebrow": "// 05 REGIONAL PRODUCTION HUB",
+    "eyebrow": "Our Tunisia production hub",
     "title": "The Tunisia Lab & Engineering Hub",
     "desc": "Our primary operational field engine delivering cinema-grade production, multilingual crews, and high-margin cost arbitrage for GCC and Western partners.",
     "whyTitle": "Why the Tunisia Production Corridor?",
     "location": "Tunis, Tunisia · Nearshore Production Hub"
   },
   "portfolio": {
-    "eyebrow": "// 06 PROVEN TRACK RECORD",
+    "eyebrow": "Selected work",
     "title": "Sovereign Summits, Arena Tours & Megastructures",
     "desc": "Executing high-stakes global experiences with uncompromised precision and audited impact across sovereign, cultural, and commercial domains.",
     "filters": {
@@ -169,7 +165,7 @@
     "clientTrackRecord": "Proven Client & Strategic Partner Track Record:"
   },
   "about": {
-    "eyebrow": "// 07 Corporate Governance & Global Holding",
+    "eyebrow": "About the group",
     "title": "An Institutional Conglomerate Powering Global Culture & Commerce.",
     "leadBold": "COMCOM GROUP INTERNATIONAL (Comcom Group LLC)",
     "leadRest": "is a Delaware holding conglomerate uniting transcontinental media production, arena live experiences, and commercial venture growth across the USA, UAE, Tunisia, and Saudi Arabia.",
@@ -200,7 +196,7 @@
     "statutoryDocs": "Statutory Documentation"
   },
   "contact": {
-    "eyebrow": "// 08 Group Coordination",
+    "eyebrow": "Get in touch",
     "title": "Connect with Our Agencies",
     "desc": "To discuss your creative solutions, audiovisual productions, large-scale exhibitions, or advertising needs, please contact our specialized desks below.",
     "desksTitle": "Accredited Division Desks",
@@ -237,7 +233,7 @@
     "notConfigured": "The enquiry form isn't available right now. Please email us or use WhatsApp below."
   },
   "footer": {
-    "eyebrow": "// Global Footprint Architecture",
+    "eyebrow": "Where we operate",
     "title": "Four Strategic Jurisdictions. One Unified Operation.",
     "mission": "Conceiving, producing, amplifying, and scaling transformative media, world-class experiential summits, and commercial ventures across North America, the GCC, and North Africa.",
     "divisionsTitle": "Operating Divisions",

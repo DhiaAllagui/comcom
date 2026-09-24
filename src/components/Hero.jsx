@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { quickStats, clientLogos, achievementTicker } from '../data/agencyData';
-import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useReveal, useCountUp } from '../hooks/useReveal';
 import KineticHeadline from './KineticHeadline';
 import bgv from '../images/bgv.mp4';
@@ -58,7 +58,7 @@ export default function Hero() {
   const tickerItems = Array.isArray(rawTicker) ? rawTicker : achievementTicker;
 
   return (
-    <section id="holding" className="relative min-h-[100vh] flex flex-col justify-center pt-32 pb-20 overflow-hidden bg-void">
+    <section id="holding" className="relative min-h-[100vh] flex flex-col justify-center pt-32 pb-0 overflow-hidden bg-void">
 
       {/* ── Background Video (bgv) ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -83,7 +83,7 @@ export default function Hero() {
         {/* Quick jump to next section */}
         <div className="absolute bottom-6 end-6 z-20 flex items-center gap-2">
           <a
-            href="#tri-engine"
+            href="#what-we-do"
             className="flex items-center gap-2 px-3 py-2 rounded-sm bg-void/60 backdrop-blur-md border border-border-subtle text-ink-secondary hover:text-ink-primary hover:border-accent/40 text-xs font-mono transition-all group"
           >
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
@@ -96,6 +96,11 @@ export default function Hero() {
       {/* ── Hero Content ── */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 my-auto">
 
+        {/* Plain-language eyebrow: says what the company is before any branding */}
+        <p className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-ink-tertiary mb-5 animate-fade-up">
+          {t('hero.eyebrow')}
+        </p>
+
         {/* Main Kinetic Headline with Selection Frame */}
         <KineticHeadline className="mb-6" />
 
@@ -107,7 +112,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-16 animate-fade-up" style={{ animationDelay: '400ms' }}>
           <a
-            href="#tri-engine"
+            href="#what-we-do"
             className="btn-primary w-full sm:w-auto flex items-center justify-center gap-3 uppercase tracking-widest font-mono text-xs !py-3.5 !px-7"
           >
             <span>{t('hero.ctaPrimary')}</span>
@@ -115,13 +120,17 @@ export default function Hero() {
           </a>
 
           <a
-            href="#about"
+            href="#contact"
             className="btn-secondary w-full sm:w-auto flex items-center justify-center gap-3 uppercase tracking-widest font-mono text-xs !py-3.5 !px-7 group"
           >
-            <ShieldCheck className="w-4 h-4 text-accent-strong" />
             <span>{t('hero.ctaSecondary')}</span>
           </a>
         </div>
+
+        {/* Brand statement — kept as signature, not as the explanation */}
+        <p className="font-display text-sm sm:text-base tracking-[0.2em] uppercase text-ink-tertiary mb-10 animate-fade-up" style={{ animationDelay: '440ms' }}>
+          {t('hero.brandStatement')}
+        </p>
 
         {/* Audited Impact Metrics (4 KPI Counters) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto pt-8 border-t border-border-subtle">
@@ -133,7 +142,7 @@ export default function Hero() {
       </div>
 
       {/* Achievement marquee ticker */}
-      <div className="relative w-full border-t border-b border-border-subtle bg-surface-base py-4 mt-16 z-10 overflow-hidden">
+      <div className="relative w-full border-t border-b border-border-subtle bg-surface-base py-4 mt-20 z-10 overflow-hidden">
         <div className="marquee-track">
           {[...tickerItems, ...tickerItems].map((item, i) => (
             <span
