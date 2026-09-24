@@ -232,7 +232,9 @@
       "studios": "COMCOM Studios (Audiovisuel & Cinéma)",
       "events": "COMCOM Événements & Expositions",
       "advertising": "COMCOM Publicité & Médias"
-    }
+    },
+    "sendError": "Nous n'avons pas pu envoyer votre demande. Veuillez réessayer ou nous contacter via WhatsApp ci-dessous.",
+    "notConfigured": "Le formulaire n'est pas disponible pour le moment. Écrivez-nous par e-mail ou via WhatsApp ci-dessous."
   },
   "footer": {
     "eyebrow": "// Architecture d'Implantation Mondiale",

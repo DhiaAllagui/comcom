@@ -232,7 +232,9 @@
       "studios": "COMCOM Studios (Audiovisual)",
       "events": "COMCOM Events & Expo",
       "advertising": "COMCOM Advertising & Media"
-    }
+    },
+    "sendError": "We couldn't send your enquiry just now. Please try again, or reach us on WhatsApp below.",
+    "notConfigured": "The enquiry form isn't available right now. Please email us or use WhatsApp below."
   },
   "footer": {
     "eyebrow": "// Global Footprint Architecture",

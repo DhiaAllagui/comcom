@@ -7,6 +7,11 @@ import { useReveal } from '../hooks/useReveal';
 import { HourglassSpinner } from './HourglassSpinner';
 import bg3 from '../images/bg3.webp';
 
+// Web3Forms access key — set VITE_WEB3FORMS_KEY in .env (see .env.example).
+// Left empty, the form fails safe: it tells the visitor to email or use
+// WhatsApp instead of silently discarding their enquiry.
+const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY || '';
+
 const departmentContacts = [
   { key: "hq", name: "Group Headquarters", email: "contact@comcomgroupcompany.com", phone: "+971 55 343 8881" },
   { key: "studios", name: "COMCOM Studios (Audiovisual)", email: "contact@comcomgroupcompany.com", phone: "+971 55 343 8881" },
@@ -23,6 +28,7 @@ export default function ContactSection() {
     phone: '',
     department: 'Group Headquarters',
     brief: '',
+    website: '', // honeypot — real users never fill this; bots usually do
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,7 +44,7 @@ export default function ContactSection() {
     if (errorMsg) setErrorMsg('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
       setErrorMsg(t('contact.requiredNotice'));
@@ -48,20 +54,54 @@ export default function ContactSection() {
       setErrorMsg(t('contact.invalidEmail'));
       return;
     }
+    if (formData.website) return; // honeypot: silently drop bot submissions
+
+    if (!ACCESS_KEY) {
+      setErrorMsg(t('contact.notConfigured'));
+      return;
+    }
 
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setErrorMsg('');
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: ACCESS_KEY,
+          subject: `New enquiry — ${formData.department}`,
+          from_name: 'COMCOM Group website',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company || '—',
+          department: formData.department,
+          message: formData.brief || '(no additional detail provided)',
+        }),
+      });
+
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok || !result.success) {
+        throw new Error(result.message || 'Submission failed');
+      }
+
       setSubmitted(true);
       try {
         confetti({
           particleCount: 50,
           spread: 55,
           origin: { y: 0.65 },
-          colors: ['#E31A94', '#E843A7', '#F5F6F8']
+          colors: ['#E31A94', '#E843A7', '#F5F6F8'],
         });
-      } catch (err) {}
-    }, 2300);
+      } catch (err) {
+        /* confetti is decorative — never let it block the success state */
+      }
+    } catch (err) {
+      setErrorMsg(t('contact.sendError'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const waPreFilledText = encodeURIComponent(
@@ -203,6 +243,18 @@ export default function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+
+                  {/* Honeypot — hidden from people, tempting to bots. Not focusable. */}
+                  <input
+                    type="text"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleInputChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="absolute w-px h-px -left-[9999px] opacity-0 pointer-events-none"
+                  />
 
                   <div className="border-b border-border-subtle pb-4">
                     <h3 className="font-display font-medium text-xl text-ink-primary">
