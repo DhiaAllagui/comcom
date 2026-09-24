@@ -81,13 +81,12 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 start-0 end-0 z-50 transition-all duration-300 ease-out ${
-          mobileMenuOpen
+        className={`fixed top-0 start-0 end-0 z-50 transition-all duration-300 ease-out ${mobileMenuOpen
             ? 'bg-void border-b border-white/[0.08] py-3 sm:py-3.5 shadow-xl touch-none'
             : isScrolled
-            ? 'bg-void/85 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.6)] py-3 sm:py-3.5'
-            : 'bg-void/40 backdrop-blur-md border-b border-white/[0.04] py-4 sm:py-5'
-        }`}
+              ? 'bg-void/85 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.6)] py-3 sm:py-3.5'
+              : 'bg-void/40 backdrop-blur-md border-b border-white/[0.04] py-4 sm:py-5'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
@@ -131,11 +130,10 @@ export default function Navbar() {
                   key={link.labelKey}
                   href={link.href}
                   onClick={() => setActiveLink(link.href)}
-                  className={`whitespace-nowrap text-xs xl:text-sm font-medium px-2.5 xl:px-3.5 py-1.5 rounded-full transition-all duration-200 select-none ${
-                    activeLink === link.href
+                  className={`whitespace-nowrap text-xs xl:text-sm font-medium px-2.5 xl:px-3.5 py-1.5 rounded-full transition-all duration-200 select-none ${activeLink === link.href
                       ? 'text-white bg-white/[0.1] shadow-sm'
                       : 'text-zinc-400 hover:text-white hover:bg-white/[0.05]'
-                  }`}
+                    }`}
                 >
                   {t(`navbar.links.${link.labelKey}`)}
                 </a>
@@ -214,11 +212,10 @@ export default function Navbar() {
                         key={loc}
                         type="button"
                         onClick={() => i18n.changeLanguage(loc)}
-                        className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-150 ${
-                          isActive
+                        className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-150 ${isActive
                             ? 'bg-accent text-white shadow-sm'
                             : 'text-zinc-400 hover:text-white'
-                        } ${loc === 'ar' ? 'font-arabic' : ''}`}
+                          } ${loc === 'ar' ? 'font-arabic' : ''}`}
                       >
                         {LOCALE_META[loc]?.label || loc.toUpperCase()}
                       </button>
