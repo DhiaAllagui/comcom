@@ -105,7 +105,7 @@ export default function Navbar() {
                 alt="COMCOM Group Emblem"
                 loading="eager"
                 fetchPriority="high"
-                className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
 
               {/* Brand Title & Subtitle */}
