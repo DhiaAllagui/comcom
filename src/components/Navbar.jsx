@@ -110,8 +110,8 @@ export default function Navbar() {
             : compact
               ? 'bg-transparent border-b border-transparent py-3 sm:py-3.5'
               : isScrolled
-              ? 'bg-void/85 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.6)] py-3 sm:py-3.5'
-              : 'bg-void/40 backdrop-blur-md border-b border-white/[0.04] py-4 sm:py-5'
+              ? 'bg-white/[0.05] backdrop-blur-2xl backdrop-saturate-150 border-b border-white/[0.12] shadow-[0_8px_32px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.08)] py-3 sm:py-3.5'
+              : 'bg-white/[0.03] backdrop-blur-xl backdrop-saturate-150 border-b border-white/[0.08] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] py-4 sm:py-5'
           }`}
       >
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
