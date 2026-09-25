@@ -9,16 +9,39 @@ import { SUPPORTED_LOCALES, LOCALE_META } from '../i18n/config';
 export default function Navbar() {
   const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isCompact, setIsCompact] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('');
 
+  // Scrolling down collapses the bar to a centered logo; any scroll up restores it.
   useEffect(() => {
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    const update = () => {
+      const y = window.scrollY;
+      const delta = y - lastY;
+      setIsScrolled(y > 20);
+      if (y < 120) {
+        setIsCompact(false);
+      } else if (Math.abs(delta) > 6) {
+        setIsCompact(delta > 0);
+      }
+      if (Math.abs(delta) > 6 || y < 120) lastY = y;
+      ticking = false;
+    };
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const compact = isCompact && !mobileMenuOpen;
 
   // Lock body scroll and prevent background touch scrolling when mobile menu is open
   useEffect(() => {
@@ -81,15 +104,43 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 start-0 end-0 z-50 transition-all duration-300 ease-out ${mobileMenuOpen
+        onFocusCapture={() => setIsCompact(false)}
+        className={`fixed top-0 start-0 end-0 z-50 transition-all duration-500 ease-out ${mobileMenuOpen
             ? 'bg-void border-b border-white/[0.08] py-3 sm:py-3.5 shadow-xl touch-none'
-            : isScrolled
+            : compact
+              ? 'bg-transparent border-b border-transparent py-3 sm:py-3.5'
+              : isScrolled
               ? 'bg-void/85 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_30px_rgba(0,0,0,0.6)] py-3 sm:py-3.5'
               : 'bg-void/40 backdrop-blur-md border-b border-white/[0.04] py-4 sm:py-5'
           }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* ── Compact state: logo only, centered ── */}
+          <a
+            href="#holding"
+            aria-label="COMCOM Group International Homepage"
+            tabIndex={-1}
+            aria-hidden={!compact}
+            className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-out ${compact
+                ? 'opacity-100 scale-100 pointer-events-auto'
+                : 'opacity-0 scale-90 pointer-events-none'
+              }`}
+          >
+            <img
+              src={comcomLogo}
+              alt=""
+              className="h-11 sm:h-12 md:h-14 w-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.7)] hover:scale-105 transition-transform duration-300"
+            />
+          </a>
+
+          <div
+            aria-hidden={compact}
+            className={`flex items-center justify-between gap-4 transition-all duration-500 ease-out ${compact
+                ? 'opacity-0 -translate-y-3 pointer-events-none'
+                : 'opacity-100 translate-y-0'
+              }`}
+          >
 
             {/* ── Start: Brand Identity ── */}
             <a
