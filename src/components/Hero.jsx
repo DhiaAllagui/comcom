@@ -1,10 +1,13 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense, lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import { quickStats, clientLogos, achievementTicker } from '../data/agencyData';
 import { ArrowRight } from 'lucide-react';
 import { useReveal, useCountUp } from '../hooks/useReveal';
 import KineticHeadline from './KineticHeadline';
-import bgv from '../images/bgv.mp4';
+
+// Code-split: three.js + @react-three/fiber pull in ~900kb, so the shader
+// gradient loads as its own chunk instead of blocking the main bundle.
+const HeroShaderGradient = lazy(() => import('./HeroShaderGradient'));
 
 function StatItem({ stat, statKey }) {
   const { t } = useTranslation();
@@ -33,7 +36,6 @@ const STAT_KEYS = ['attendees', 'audience', 'presence', 'inHouse'];
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
-  const videoRef = useRef(null);
   const [reduceMotion, setReduceMotion] = useState(false);
 
   useEffect(() => {
@@ -44,39 +46,23 @@ export default function Hero() {
     return () => mq.removeEventListener('change', handler);
   }, []);
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-    if (reduceMotion) {
-      video.pause();
-    } else {
-      video.play().catch(() => {});
-    }
-  }, [reduceMotion]);
-
   const rawTicker = t('hero.ticker', { returnObjects: true });
   const tickerItems = Array.isArray(rawTicker) ? rawTicker : achievementTicker;
 
   return (
     <section id="holding" className="relative min-h-[100vh] flex flex-col justify-center pt-32 pb-0 overflow-hidden bg-void">
 
-      {/* ── Background Video (bgv) ── */}
+      {/* ── Background Shader Gradient ── */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-void" style={{ zIndex: -1 }} />
 
-        <video
-          ref={videoRef}
-          src={bgv}
-          autoPlay={!reduceMotion}
-          loop
-          muted
-          playsInline
-          preload="auto"
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <div aria-hidden="true" className="absolute inset-0">
+          <Suspense fallback={null}>
+            <HeroShaderGradient reduceMotion={reduceMotion} />
+          </Suspense>
+        </div>
 
-        {/* Dark overlay for text legibility over the video */}
+        {/* Dark overlay for text legibility over the gradient */}
         <div className="absolute inset-0 bg-void/55" />
         <div className="absolute inset-0 bg-gradient-to-b from-void/70 via-transparent to-void/90" />
 
