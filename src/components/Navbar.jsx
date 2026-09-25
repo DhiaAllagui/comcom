@@ -127,11 +127,13 @@ export default function Navbar() {
                 : 'opacity-0 scale-90 pointer-events-none'
               }`}
           >
-            <img
-              src={comcomLogo}
-              alt=""
-              className="h-11 sm:h-12 md:h-14 w-auto object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.7)] hover:scale-105 transition-transform duration-300"
-            />
+            <span className="flex items-center px-6 py-1.5 rounded-full bg-white/[0.06] backdrop-blur-xl backdrop-saturate-150 border border-white/[0.14] shadow-[0_8px_32px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.12)] hover:bg-white/[0.09] transition-colors duration-300">
+              <img
+                src={comcomLogo}
+                alt=""
+                className="h-9 sm:h-10 md:h-11 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              />
+            </span>
           </a>
 
           <div
