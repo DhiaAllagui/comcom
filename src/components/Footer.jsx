@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { agencyInfo, footerHubs } from '../data/agencyData';
 import { MessageCircle } from 'lucide-react';
+import comcomLogo from '../images/comcomadjutlogo.png';
 
 const InstagramIcon = () => (
   <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
@@ -73,17 +74,13 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-3.5">
-              <div className="flex items-center justify-center h-11 w-11 rounded-sm bg-void/90 border border-border-subtle p-1 hover:border-accent/40 transition-colors">
-                <img
-                  src="/comcom-emblem-square.webp"
-                  alt="COMCOM Group Emblem"
-                  loading="lazy"
-                  decoding="async"
-                  width="44"
-                  height="44"
-                  className="h-full w-full object-contain"
-                />
-              </div>
+              <img
+                src={comcomLogo}
+                alt="COMCOM Group Emblem"
+                loading="lazy"
+                decoding="async"
+                className="h-16 sm:h-20 w-auto object-contain shrink-0"
+              />
               <div>
                 <div className="flex items-center gap-1.5">
                   <span className="font-display font-medium tracking-tight text-lg text-ink-primary">

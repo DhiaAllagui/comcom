@@ -4,6 +4,7 @@ import { quickStats, clientLogos, achievementTicker } from '../data/agencyData';
 import { ArrowRight } from 'lucide-react';
 import { useReveal, useCountUp } from '../hooks/useReveal';
 import KineticHeadline from './KineticHeadline';
+import comcomLogo from '../images/comcomadjutlogo.png';
 
 // Code-split: three.js + @react-three/fiber pull in ~900kb, so the shader
 // gradient loads as its own chunk instead of blocking the main bundle.
@@ -81,6 +82,15 @@ export default function Hero() {
 
       {/* ── Hero Content ── */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 my-auto">
+
+        {/* Brand mark */}
+        <img
+          src={comcomLogo}
+          alt="COMCOM Group"
+          loading="eager"
+          fetchPriority="high"
+          className="mx-auto h-20 sm:h-24 md:h-28 w-auto object-contain mb-8 drop-shadow-[0_8px_32px_rgba(227,26,148,0.25)] animate-fade-up"
+        />
 
         {/* Plain-language eyebrow: says what the company is before any branding */}
         <p className="font-mono text-[11px] sm:text-xs uppercase tracking-widest text-ink-tertiary mb-5 animate-fade-up">

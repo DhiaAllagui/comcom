@@ -44,11 +44,13 @@ export default function App() {
           aria-hidden={!loading}
         >
           <div className="flex flex-col items-center gap-6">
-            <HourglassSpinner size={56} color="#E31A94" glow={true} />
+            <img
+              src="/comcomadjutlogo.png"
+              alt="COMCOM Group"
+              className="h-24 sm:h-28 w-auto object-contain"
+            />
+            <HourglassSpinner size={40} color="#E31A94" glow={true} />
             <div className="text-center space-y-1.5 animate-pulse">
-              <div className="font-display font-medium text-lg tracking-wider text-ink-primary">
-                COMCOM GROUP
-              </div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-accent-strong font-semibold">
                 Delaware Holding · Global Media Conglomerate
               </div>
